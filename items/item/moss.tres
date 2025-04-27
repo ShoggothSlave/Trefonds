@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dw2i3vyru8uap"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_x4neu"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_2anka"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4p0q"]
+atlas = ExtResource("2_2anka")
+region = Rect2(128, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_x4neu")
+name = "Lichen"
+description = "De la mousse sèche"
+item_type = "matériau"
+item_effect = "inflammable"
+stockable = true
+texture = SubResource("AtlasTexture_h4p0q")

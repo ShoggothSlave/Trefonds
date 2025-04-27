@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c76iu7naq08h7"]
+
+[ext_resource type="ArrayMesh" uid="uid://b32iw3mcidwuj" path="res://modeles3d/bush1.obj" id="1_dsm80"]
+[ext_resource type="Script" path="res://scenes/deco/bush.gd" id="1_rbvgo"]
+[ext_resource type="AudioStream" uid="uid://r55kali73ekm" path="res://sons/bushmovement-6986.wav" id="3_5in1w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ogwtv"]
+radius = 0.140983
+height = 0.396569
+
+[node name="bush" type="Node3D"]
+script = ExtResource("1_rbvgo")
+
+[node name="bush" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_dsm80")
+
+[node name="detect_body" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="body_coll" type="CollisionShape3D" parent="detect_body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221105, 0)
+shape = SubResource("CapsuleShape3D_ogwtv")
+
+[node name="audio_body" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_5in1w")
+
+[connection signal="area_shape_entered" from="detect_body" to="." method="_on_detect_body_area_shape_entered"]

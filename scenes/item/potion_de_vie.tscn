@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtsls5ujq5dvn"]
+
+[ext_resource type="ArrayMesh" uid="uid://dtxg5fx7frl4v" path="res://modeles3d/potion_premanente.obj" id="1_cxnlq"]
+[ext_resource type="Script" path="res://scenes/item/potion_de_vie.gd" id="1_vv8bq"]
+[ext_resource type="Texture2D" uid="uid://c0opy3beyrttp" path="res://images/textures/Concrete039_4K-JPG_Color.jpg" id="2_qg2lp"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_a8i7c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nqr7o"]
+albedo_texture = ExtResource("2_qg2lp")
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hmk1"]
+transparency = 1
+albedo_color = Color(0.25098, 0.486275, 0.709804, 0.239216)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ag45l"]
+transparency = 1
+albedo_color = Color(0.690196, 0, 0.0313726, 0.756863)
+metallic = 1.0
+roughness = 0.25
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h4scg"]
+height = 0.201377
+radius = 0.0506019
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2lcc1"]
+height = 0.299219
+radius = 0.120704
+
+[node name="Potion_de_vie" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_vv8bq")
+
+[node name="PotionPremanente" type="MeshInstance3D" parent="."]
+layers = 8
+mesh = ExtResource("1_cxnlq")
+surface_material_override/0 = SubResource("StandardMaterial3D_nqr7o")
+surface_material_override/1 = SubResource("StandardMaterial3D_6hmk1")
+surface_material_override/2 = SubResource("StandardMaterial3D_ag45l")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0332536, 0)
+shape = SubResource("CylinderShape3D_h4scg")
+
+[node name="Potion de vie" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Potion de vie"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0422906, 0)
+shape = SubResource("CylinderShape3D_2lcc1")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_a8i7c")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

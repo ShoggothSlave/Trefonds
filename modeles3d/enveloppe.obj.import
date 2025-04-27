@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cisawqvhahciw"
+path="res://.godot/imported/enveloppe.obj-ca3ebaca935c5c9e53522613745351ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/enveloppe.obj-ca3ebaca935c5c9e53522613745351ce.mesh"]
+
+source_file="res://modeles3d/enveloppe.obj"
+dest_files=["res://.godot/imported/enveloppe.obj-ca3ebaca935c5c9e53522613745351ce.mesh", "res://.godot/imported/enveloppe.obj-ca3ebaca935c5c9e53522613745351ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

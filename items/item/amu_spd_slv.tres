@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cvjl34s1828l3"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_4hfbp"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_at3s0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecxbk"]
+atlas = ExtResource("2_at3s0")
+region = Rect2(0, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_4hfbp")
+name = "Amulette de vitesse II"
+description = "Une amulette de vitesse en argent"
+item_type = "équipement"
+item_effect = "vitesse +10"
+stockable = false
+texture = SubResource("AtlasTexture_ecxbk")

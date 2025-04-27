@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://g6442rqi1nyj"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_ybtt8"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_e61yk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2pat"]
+atlas = ExtResource("2_e61yk")
+region = Rect2(320, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_ybtt8")
+name = "Anneau de respiration en argent"
+description = "Un anneau de respiration en argent"
+item_type = "équipement"
+item_effect = "respiration +5"
+stockable = false
+texture = SubResource("AtlasTexture_s2pat")

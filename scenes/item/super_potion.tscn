@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://cb0p3yobx4ku1"]
+
+[ext_resource type="Script" path="res://scenes/item/super_potion.gd" id="1_cqmr7"]
+[ext_resource type="ArrayMesh" uid="uid://c2edfpjwb8apq" path="res://modeles3d/super_potion.obj" id="1_ygby3"]
+[ext_resource type="Texture2D" uid="uid://c0opy3beyrttp" path="res://images/textures/Concrete039_4K-JPG_Color.jpg" id="2_njy80"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_ktea8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vd8xf"]
+albedo_texture = ExtResource("2_njy80")
+metallic = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tm3wx"]
+transparency = 1
+albedo_color = Color(0.25098, 0.486275, 0.709804, 0.239216)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytsuu"]
+transparency = 1
+albedo_color = Color(0.690196, 0, 0.0313726, 0.756863)
+metallic = 1.0
+roughness = 0.25
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t3ecg"]
+height = 0.291231
+radius = 0.059226
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_513qy"]
+height = 0.325476
+radius = 0.113369
+
+[node name="super_potion" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_cqmr7")
+
+[node name="SuperPotion" type="MeshInstance3D" parent="."]
+layers = 8
+mesh = ExtResource("1_ygby3")
+surface_material_override/0 = SubResource("StandardMaterial3D_vd8xf")
+surface_material_override/1 = SubResource("StandardMaterial3D_tm3wx")
+surface_material_override/2 = SubResource("StandardMaterial3D_ytsuu")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0416228, 0)
+shape = SubResource("CylinderShape3D_t3ecg")
+
+[node name="Super potion" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Super potion"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0395347, 0)
+shape = SubResource("CylinderShape3D_513qy")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ktea8")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

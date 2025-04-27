@@ -1,0 +1,275 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlda16yn6lins"]
+
+[ext_resource type="PackedScene" uid="uid://c7k728lvkemyp" path="res://modeles3d/champi2.glb" id="1_3o0e0"]
+[ext_resource type="Script" path="res://scenes/item/champi_v_2.gd" id="2_ouc00"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="3_33yya"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q0j8"]
+albedo_color = Color(0.473605, 0.396487, 0.26536, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4ynb"]
+albedo_color = Color(0.202613, 0.183223, 0.120193, 1)
+metallic = 0.48
+roughness = 0.51
+emission_enabled = true
+emission = Color(0.161644, 0.167402, 0.048826, 1)
+emission_energy_multiplier = 2.98
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v13by"]
+radius = 0.412769
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rbd5e"]
+radius = 0.425853
+
+[sub_resource type="Animation" id="Animation_oxhpf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Amanite Phalloïde:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Amanite Phalloïde/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rwdt3"]
+resource_name = "pick"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Amanite Phalloïde:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Amanite Phalloïde/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("audio_pick:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8667f"]
+resource_name = "respawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Amanite Phalloïde:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Amanite Phalloïde/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ibim"]
+_data = {
+"RESET": SubResource("Animation_oxhpf"),
+"pick": SubResource("Animation_rwdt3"),
+"respawn": SubResource("Animation_8667f")
+}
+
+[node name="champi_v_2" instance=ExtResource("1_3o0e0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("2_ouc00")
+
+[node name="Cylindre" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_1q0j8")
+
+[node name="Sphère" parent="." index="1"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_j4ynb")
+
+[node name="Cylindre_001" parent="." index="2"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_1q0j8")
+
+[node name="Sphère_001" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_j4ynb")
+
+[node name="respawn_timer" type="Timer" parent="." index="4"]
+wait_time = 900.0
+one_shot = true
+
+[node name="interaction_area" type="Area3D" parent="." index="5" groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00478968, 0.414621, 0)
+shape = SubResource("SphereShape3D_v13by")
+
+[node name="Amanite Phalloïde" type="StaticBody3D" parent="." index="6" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Amanite Phalloïde" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, 0.401485, 0)
+shape = SubResource("SphereShape3D_rbd5e")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("3_33yya")
+
+[node name="anim_champi" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_5ibim")
+}

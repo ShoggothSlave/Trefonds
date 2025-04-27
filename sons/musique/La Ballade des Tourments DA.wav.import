@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dq0lk06n6tlb5"
+path="res://.godot/imported/La Ballade des Tourments DA.wav-68dbdc87ad42752d4c76ca319cf57994.sample"
+
+[deps]
+
+source_file="res://sons/musique/La Ballade des Tourments DA.wav"
+dest_files=["res://.godot/imported/La Ballade des Tourments DA.wav-68dbdc87ad42752d4c76ca319cf57994.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

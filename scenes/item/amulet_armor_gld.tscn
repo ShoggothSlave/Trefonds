@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cuq0t0uqtt46p"]
+
+[ext_resource type="ArrayMesh" uid="uid://va2341uq3cm6" path="res://modeles3d/amulet.obj" id="1_7wo36"]
+[ext_resource type="Script" path="res://scenes/item/amulet_armor_gld.gd" id="1_sod1e"]
+[ext_resource type="AudioStream" uid="uid://bt54qyg4uwvnj" path="res://sons/ring-drop-263966.wav" id="2_6noa0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxnn3"]
+albedo_color = Color(0.667322, 0.52743, 0.204142, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aovmw"]
+transparency = 1
+albedo_color = Color(0.968627, 0.47451, 0.0941176, 0.941176)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jmivu"]
+height = 0.555748
+radius = 5.65666
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1j20q"]
+height = 1.64872
+radius = 6.79091
+
+[node name="amulet_armor_gld" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_sod1e")
+
+[node name="Amulet" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.60406e-05, 0, 0.00499926, 0, 0.005, 0, -0.00499926, 0, 8.60406e-05, 0, 0, 0)
+layers = 8
+mesh = ExtResource("1_7wo36")
+surface_material_override/0 = SubResource("StandardMaterial3D_nxnn3")
+surface_material_override/1 = SubResource("StandardMaterial3D_aovmw")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.0595974)
+shape = SubResource("CylinderShape3D_jmivu")
+
+[node name="Amulette d\'armure en or" type="StaticBody3D" parent="." groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0595974)
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Amulette d\'armure en or"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_1j20q")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6noa0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

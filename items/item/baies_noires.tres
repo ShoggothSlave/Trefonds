@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://di7axm711wp74"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_twkjn"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_nhs2w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xctd"]
+atlas = ExtResource("2_nhs2w")
+region = Rect2(320, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_twkjn")
+name = "Baie de belladone"
+description = "Petites baies noires"
+item_type = "consommable"
+item_effect = "poison +15"
+stockable = true
+texture = SubResource("AtlasTexture_5xctd")

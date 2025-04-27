@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn1uf8nn54udq"]
+
+[ext_resource type="Texture2D" uid="uid://blijwhj881s7y" path="res://images/textures/brique grise.png" id="1_w6swh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lerws"]
+albedo_texture = ExtResource("1_w6swh")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0dl2x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r72q1"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="tiles_base_brik_gris" type="Node3D"]
+
+[node name="rangee_brk_gris4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.333, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.5, 0.065, 0.936951)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris4"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris4/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="rangee_brk_gris4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.996486, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris4/MeshInstance3D3"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris4/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="rangee_brk_gris4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.996642, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris4/MeshInstance3D2"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris4/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="rangee_brk_gris5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.333, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.5, 0.065, 0.0662127)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris5"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris5/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="rangee_brk_gris5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.996486, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris5/MeshInstance3D3"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris5/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="rangee_brk_gris5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.996642, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="rangee_brk_gris5/MeshInstance3D2"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rangee_brk_gris5/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")

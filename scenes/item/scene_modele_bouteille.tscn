@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://12frvsvw8inb"]
+
+[ext_resource type="Texture2D" uid="uid://brqj5knjvik2a" path="res://images/items/jute.png" id="1_a8shg"]
+[ext_resource type="PackedScene" uid="uid://b1ee06fc7gddu" path="res://scenes/item/bouteille.tscn" id="2_t40r0"]
+[ext_resource type="ArrayMesh" uid="uid://dii5hqiw4fsu4" path="res://modeles3d/bouteille_contenu.obj" id="3_q8srn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yvv0"]
+transparency = 1
+albedo_color = Color(0.360784, 0.435294, 0, 0.952941)
+roughness = 0.0
+
+[node name="scene_modele_bouteille" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("1_a8shg")
+
+[node name="bouteille" parent="." instance=ExtResource("2_t40r0")]
+transform = Transform3D(0.63054, 0, -0.776156, 0, 1, 0, 0.776156, 0, 0.63054, 0, -0.0641395, 0.0657615)
+
+[node name="bouteille_poison_i" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.063054, 0, -0.0776156, 0, 0.1, 0, 0.0776156, 0, 0.063054, 0, -0.0641395, 0.0657615)
+material_override = SubResource("StandardMaterial3D_1yvv0")
+mesh = ExtResource("3_q8srn")

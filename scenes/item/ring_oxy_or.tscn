@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bh5ye1mv11agj"]
+
+[ext_resource type="PackedScene" uid="uid://mo48nbk7gxoj" path="res://modeles3d/ring.glb" id="1_nae5f"]
+[ext_resource type="Script" path="res://scenes/item/ring_oxy_or.gd" id="2_cdq5c"]
+[ext_resource type="AudioStream" uid="uid://bt54qyg4uwvnj" path="res://sons/ring-drop-263966.wav" id="3_1rdbx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbawk"]
+albedo_color = Color(0.667322, 0.52743, 0.204142, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7bqb"]
+albedo_color = Color(0.222905, 0.499207, 1, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_foda3"]
+height = 0.555748
+radius = 0.885508
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3wp2t"]
+height = 1.73476
+radius = 1.46267
+
+[node name="ring_oxy_or" groups=["prehensible"] instance=ExtResource("1_nae5f")]
+script = ExtResource("2_cdq5c")
+
+[node name="Cylindre" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_jbawk")
+
+[node name="Icosphère" parent="." index="1"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_y7bqb")
+
+[node name="interaction_area" type="Area3D" parent="." index="2" groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_foda3")
+
+[node name="Anneau de respiration en or" type="StaticBody3D" parent="." index="3" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Anneau de respiration en or" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_3wp2t")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_1rdbx")
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

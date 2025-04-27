@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://boik6y0703v25"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_u4fhg"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_7peuc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfduk"]
+atlas = ExtResource("2_7peuc")
+region = Rect2(192, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_u4fhg")
+name = "Amulette de vie II"
+description = "Une amulette de vie en argent"
+item_type = "équipement"
+item_effect = "points de vie max +10"
+stockable = false
+texture = SubResource("AtlasTexture_hfduk")

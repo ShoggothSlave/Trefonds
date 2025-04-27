@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://y2e2jmo7ly6c"]
+
+[ext_resource type="Script" path="res://scenes/item/jarre.gd" id="1_iepnh"]
+[ext_resource type="ArrayMesh" uid="uid://bxop0ue8abkie" path="res://modeles3d/jarre.obj" id="1_s1qq4"]
+[ext_resource type="Texture2D" uid="uid://c0opy3beyrttp" path="res://images/textures/Concrete039_4K-JPG_Color.jpg" id="2_ghvfw"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_xd2uc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3m2ji"]
+transparency = 1
+albedo_color = Color(0.372549, 0.560784, 0.568627, 0.254902)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ceoq1"]
+albedo_texture = ExtResource("2_ghvfw")
+metallic = 1.0
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s1a45"]
+size = Vector3(1, 1.47766, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fh4ji"]
+size = Vector3(1, 1.53931, 1)
+
+[node name="jarre" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0516673, 0)
+script = ExtResource("1_iepnh")
+
+[node name="jarre" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 8
+mesh = ExtResource("1_s1qq4")
+surface_material_override/0 = SubResource("StandardMaterial3D_3m2ji")
+surface_material_override/1 = SubResource("StandardMaterial3D_ceoq1")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 7.37724e-05, 0.0124252, 0)
+shape = SubResource("BoxShape3D_s1a45")
+
+[node name="Jarre" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Jarre"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -0.000170385, 0.0116051, 0)
+shape = SubResource("BoxShape3D_fh4ji")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xd2uc")
+pitch_scale = 0.75
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bp88pmfrfdpit"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_fbv32"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_1ooh8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjcge"]
+atlas = ExtResource("2_1ooh8")
+region = Rect2(384, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_fbv32")
+name = "Anneau d'armure en argent"
+description = "Un anneau d'armure en argent"
+item_type = "équipement"
+item_effect = "armure +5"
+stockable = false
+texture = SubResource("AtlasTexture_wjcge")

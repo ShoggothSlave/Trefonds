@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://codddrx5kvr0r"]
+
+[ext_resource type="Texture2D" uid="uid://dt4r0ioms4j2p" path="res://images/textures/Rock012_8K-JPG_Color.png" id="1_577hi"]
+[ext_resource type="Script" path="res://scenes/item/silex.gd" id="1_gxpoo"]
+[ext_resource type="ArrayMesh" uid="uid://cfive5rxghsab" path="res://modeles3d/flint.obj" id="2_mxh7t"]
+[ext_resource type="AudioStream" uid="uid://dwb5rj5ayxxo2" path="res://sons/flint-strike-38491.wav" id="4_6utbx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfeqa"]
+albedo_texture = ExtResource("1_577hi")
+metallic_specular = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bnew0"]
+radius = 0.0382862
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s2vqr"]
+radius = 0.0418487
+
+[node name="silex" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_gxpoo")
+
+[node name="Flint" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+layers = 8
+material_override = SubResource("StandardMaterial3D_qfeqa")
+mesh = ExtResource("2_mxh7t")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0141946, 0.00255437, 0)
+shape = SubResource("SphereShape3D_bnew0")
+
+[node name="Morceau de silex" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Morceau de silex"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, 0.00177956, 0)
+shape = SubResource("SphereShape3D_s2vqr")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6utbx")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

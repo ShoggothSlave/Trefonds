@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp7uwtf5a1v3n"]
+
+[ext_resource type="ArrayMesh" uid="uid://hr7c4sqdkq78" path="res://modeles3d/touffedherbe.obj" id="1_54cqs"]
+
+[node name="herbe_touffe" type="Node3D"]
+
+[node name="Touffedherbe" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_54cqs")

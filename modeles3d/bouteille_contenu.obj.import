@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dii5hqiw4fsu4"
+path="res://.godot/imported/bouteille_contenu.obj-4fe3ec0160aa2e6f332d2c8c7a54420a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bouteille_contenu.obj-4fe3ec0160aa2e6f332d2c8c7a54420a.mesh"]
+
+source_file="res://modeles3d/bouteille_contenu.obj"
+dest_files=["res://.godot/imported/bouteille_contenu.obj-4fe3ec0160aa2e6f332d2c8c7a54420a.mesh", "res://.godot/imported/bouteille_contenu.obj-4fe3ec0160aa2e6f332d2c8c7a54420a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

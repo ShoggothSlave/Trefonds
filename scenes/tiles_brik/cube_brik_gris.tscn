@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://wvj4l8isgwxn"]
+
+[ext_resource type="Texture2D" uid="uid://duucc65tpgutt" path="res://images/textures/brique grises.png" id="1_esjad"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ae17"]
+albedo_texture = ExtResource("1_esjad")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ghcl5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x85g5"]
+albedo_texture = ExtResource("1_esjad")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n8e3a"]
+
+[node name="cube_brik_gris" type="Node3D"]
+
+[node name="brik_gris3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_4ae17")
+mesh = SubResource("BoxMesh_ghcl5")
+surface_material_override/0 = SubResource("StandardMaterial3D_x85g5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="brik_gris3"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="brik_gris3/StaticBody3D"]
+shape = SubResource("BoxShape3D_n8e3a")

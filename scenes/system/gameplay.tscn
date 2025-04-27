@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy3pd2dx07puw"]
+
+[ext_resource type="Script" path="res://scripts/gameplay_manager.gd" id="1_eldj3"]
+[ext_resource type="PackedScene" uid="uid://df1j577q7vw2c" path="res://scenes/system/pause_menu.tscn" id="2_eb8pl"]
+
+[node name="gameplay" type="Node"]
+
+[node name="gameplay_manager" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_eldj3")
+
+[node name="gameplay_layer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ui" type="Control" parent="gameplay_layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="pause_menu" parent="gameplay_layer/ui" instance=ExtResource("2_eb8pl")]
+process_mode = 2
+layout_mode = 1

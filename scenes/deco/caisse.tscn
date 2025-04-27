@@ -1,0 +1,135 @@
+[gd_scene load_steps=21 format=3 uid="uid://dejm5f7xav0le"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwhdnan7df1dj" path="res://modeles3d/caisse1.obj" id="1_i2mh5"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_obwxj"]
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="3_ple2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw2wh"]
+albedo_texture = ExtResource("2_obwxj")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(4, 4, 4)
+texture_filter = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogn1r"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r20tm"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vgr4"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukydv"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt1gg"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_322dg"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg2cm"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvo7q"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7dow"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.7
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6r1xl"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueb23"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wad1"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gev21"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7je7"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6tyk"]
+albedo_texture = ExtResource("3_ple2l")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cclj0"]
+points = PackedVector3Array(0.262351, 0.2594, 0.261154, -0.26055, 0.2594, 0.261154, 0.141282, -0.2581, 0.264012, 0.262351, 0.2594, -0.261754, -0.26055, 0.2594, -0.261754, -0.263202, -0.257846, 0.263806, 0.264402, -0.257255, -0.263805, -0.2639, -0.258533, -0.265104, 0.264999, -0.257842, 0.263801, 0.141282, -0.2581, -0.264612, -0.0486182, -0.2581, 0.264012)
+
+[node name="caisse" type="Node3D"]
+
+[node name="Caisse1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.129487, 0)
+layers = 4
+mesh = ExtResource("1_i2mh5")
+surface_material_override/0 = SubResource("StandardMaterial3D_aw2wh")
+surface_material_override/1 = SubResource("StandardMaterial3D_ogn1r")
+surface_material_override/2 = SubResource("StandardMaterial3D_r20tm")
+surface_material_override/3 = SubResource("StandardMaterial3D_5vgr4")
+surface_material_override/4 = SubResource("StandardMaterial3D_ukydv")
+surface_material_override/5 = SubResource("StandardMaterial3D_lt1gg")
+surface_material_override/6 = SubResource("StandardMaterial3D_322dg")
+surface_material_override/7 = SubResource("StandardMaterial3D_kg2cm")
+surface_material_override/8 = SubResource("StandardMaterial3D_vvo7q")
+surface_material_override/9 = SubResource("StandardMaterial3D_y7dow")
+surface_material_override/10 = SubResource("StandardMaterial3D_6r1xl")
+surface_material_override/11 = SubResource("StandardMaterial3D_ueb23")
+surface_material_override/12 = SubResource("StandardMaterial3D_3wad1")
+surface_material_override/13 = SubResource("StandardMaterial3D_gev21")
+surface_material_override/14 = SubResource("StandardMaterial3D_k7je7")
+surface_material_override/15 = SubResource("StandardMaterial3D_e6tyk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Caisse1"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Caisse1/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cclj0")

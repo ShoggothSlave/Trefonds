@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://q427c6occrn3"]
+
+[ext_resource type="Script" path="res://scripts/plante_feuillue.gd" id="1_met1o"]
+[ext_resource type="ArrayMesh" uid="uid://dnoqjhwjvalge" path="res://modeles3d/plante feuillue1.obj" id="1_re3wj"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="3_d7cqj"]
+[ext_resource type="AudioStream" uid="uid://r55kali73ekm" path="res://sons/bushmovement-6986.wav" id="3_i2yh4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf3g6"]
+albedo_texture = ExtResource("3_d7cqj")
+metallic = 0.75
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4voep"]
+albedo_texture = ExtResource("3_d7cqj")
+metallic = 0.75
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crhnh"]
+albedo_color = Color(0.218261, 0.266299, 0.120627, 1)
+metallic = 0.5
+roughness = 0.65
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4n4cu"]
+radius = 0.17978
+
+[node name="plante_feuillue" type="Node3D"]
+script = ExtResource("1_met1o")
+
+[node name="PlanteFeuillue1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.063, 0, 0, 0, 0.125, 0, 0, 0, 0.063, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_re3wj")
+surface_material_override/0 = SubResource("StandardMaterial3D_xf3g6")
+surface_material_override/1 = SubResource("StandardMaterial3D_4voep")
+surface_material_override/2 = SubResource("StandardMaterial3D_crhnh")
+
+[node name="body_detection" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="body_detector" type="CollisionShape3D" parent="body_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.179133, 0)
+shape = SubResource("SphereShape3D_4n4cu")
+
+[node name="audio_mouvement" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.187205, 0)
+stream = ExtResource("3_i2yh4")
+area_mask = 3
+
+[connection signal="body_entered" from="body_detection" to="." method="_on_body_detection_body_entered"]

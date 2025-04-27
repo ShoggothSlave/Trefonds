@@ -1,0 +1,197 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs0rfika1apuq"]
+
+[ext_resource type="PackedScene" uid="uid://c5j77c55s5l8m" path="res://scenes/tiles_brik/brique.tscn" id="1_ugcdt"]
+
+[node name="puit" type="Node3D"]
+
+[node name="brique29" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.251157, -0.230862)
+
+[node name="brique35" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.42104, -0.251157, -0.192797)
+
+[node name="brique36" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.887973, -0.251157, -0.666015)
+
+[node name="brique33" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.786705, -0.251157, -0.427192)
+
+[node name="brique34" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.33039, -0.251157, -0.908613)
+
+[node name="brique31" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.757342, -0.251157, -0.674654)
+
+[node name="brique32" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0957918, -0.251157, -0.674654)
+
+[node name="brique30" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.251157, -0.894777)
+
+[node name="brique45" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.764845, -0.125525, -0.314304)
+
+[node name="brique46" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.547134, -0.118774, -0.182805)
+
+[node name="brique47" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.797162, -0.118774, -0.798798)
+
+[node name="brique48" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.795109, -0.118774, -0.5394)
+
+[node name="brique49" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.189179, -0.118774, -0.809286)
+
+[node name="brique50" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.673187, -0.125525, -0.756735)
+
+[node name="brique51" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.062105, -0.125525, -0.503304)
+
+[node name="brique52" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.510508, -0.125525, -0.927571)
+
+[node name="brique37" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.508417, -0.230862)
+
+[node name="brique38" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.42104, -0.508417, -0.192797)
+
+[node name="brique39" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.887973, -0.508417, -0.666015)
+
+[node name="brique40" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.786705, -0.508417, -0.427192)
+
+[node name="brique41" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.33039, -0.508417, -0.908613)
+
+[node name="brique42" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.757342, -0.508417, -0.674654)
+
+[node name="brique43" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0957918, -0.508417, -0.674654)
+
+[node name="brique44" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.508417, -0.894777)
+
+[node name="brique53" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.764845, -0.382785, -0.314304)
+
+[node name="brique54" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.547134, -0.376034, -0.182805)
+
+[node name="brique55" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.797162, -0.376034, -0.798798)
+
+[node name="brique56" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.795109, -0.376034, -0.5394)
+
+[node name="brique57" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.189179, -0.376034, -0.809286)
+
+[node name="brique58" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.673187, -0.382785, -0.756735)
+
+[node name="brique59" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.062105, -0.382785, -0.503304)
+
+[node name="brique60" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.510508, -0.382785, -0.927571)
+
+[node name="brique61" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.763692, -0.230862)
+
+[node name="brique62" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.42104, -0.763692, -0.192797)
+
+[node name="brique63" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.887973, -0.763692, -0.666015)
+
+[node name="brique64" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.786705, -0.763692, -0.427192)
+
+[node name="brique65" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.33039, -0.763692, -0.908613)
+
+[node name="brique66" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.757342, -0.763692, -0.674654)
+
+[node name="brique67" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0957918, -0.763692, -0.674654)
+
+[node name="brique68" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -0.763692, -0.894777)
+
+[node name="brique69" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.764845, -0.63806, -0.314304)
+
+[node name="brique70" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.547134, -0.631309, -0.182805)
+
+[node name="brique71" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.797162, -0.631309, -0.798798)
+
+[node name="brique72" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.795109, -0.631309, -0.5394)
+
+[node name="brique73" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.189179, -0.631309, -0.809286)
+
+[node name="brique74" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.673187, -0.63806, -0.756735)
+
+[node name="brique75" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.062105, -0.63806, -0.503304)
+
+[node name="brique76" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.510508, -0.63806, -0.927571)
+
+[node name="brique77" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -1.02095, -0.230862)
+
+[node name="brique78" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.42104, -1.02095, -0.192797)
+
+[node name="brique79" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0.887973, -1.02095, -0.666015)
+
+[node name="brique80" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.786705, -1.02095, -0.427192)
+
+[node name="brique81" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 0.33039, -1.02095, -0.908613)
+
+[node name="brique82" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.757342, -1.02095, -0.674654)
+
+[node name="brique83" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0957918, -1.02095, -0.674654)
+
+[node name="brique84" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.672518, -1.02095, -0.894777)
+
+[node name="brique85" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.764845, -0.89532, -0.314304)
+
+[node name="brique86" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.547134, -0.888569, -0.182805)
+
+[node name="brique87" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.924046, 0, 0.38228, 0, 1, 0, -0.38228, 0, -0.924046, 0.797162, -0.888569, -0.798798)
+
+[node name="brique88" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.795109, -0.888569, -0.5394)
+
+[node name="brique89" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.38228, 0, -0.924046, 0, 1, 0, 0.924046, 0, -0.38228, 0.189179, -0.888569, -0.809286)
+
+[node name="brique90" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.673187, -0.89532, -0.756735)
+
+[node name="brique91" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(0.383087, 0, -0.923713, 0, 1, 0, 0.923713, 0, 0.383087, 0.062105, -0.89532, -0.503304)
+
+[node name="brique92" parent="." instance=ExtResource("1_ugcdt")]
+transform = Transform3D(-0.923712, 0, -0.383086, 0, 1, 0, 0.383086, 0, -0.923712, 0.510508, -0.89532, -0.927571)

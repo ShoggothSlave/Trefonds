@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7ka4u6468r55"]
+
+[ext_resource type="Script" path="res://scenes/item/plaque_entree.gd" id="1_4r31r"]
+[ext_resource type="Texture2D" uid="uid://c7m5the3h3vbv" path="res://images/deco/introplaque.png" id="1_qoi14"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="3_6e7lh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cb853"]
+albedo_texture = ExtResource("1_qoi14")
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bbvtk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8r81"]
+albedo_texture = ExtResource("1_qoi14")
+texture_filter = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_jaod3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3y8id"]
+size = Vector3(0.200134, 0.143311, 0.022644)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7vad"]
+size = Vector3(0.199829, 0.149658, 0.0343018)
+
+[node name="plaque_entree" type="Node3D" groups=["lisible"]]
+script = ExtResource("1_4r31r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["lisible"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.15, 0, 0, 0, 0.005, 0, 0.200899, 0.00383194)
+layers = 4
+material_override = SubResource("StandardMaterial3D_cb853")
+mesh = SubResource("BoxMesh_bbvtk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0.201217, 0.00680584)
+layers = 4
+material_override = SubResource("StandardMaterial3D_f8r81")
+mesh = SubResource("QuadMesh_jaod3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(544, 327)
+scale = Vector2(13.0625, 12.4167)
+texture = ExtResource("1_qoi14")
+
+[node name="Control" type="Control" parent="CanvasLayer/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.043
+anchor_right = 0.837
+anchor_bottom = 1.0
+offset_left = 0.279991
+offset_top = 0.136
+offset_right = -0.223999
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.217752, 0.170484, 0.0381809, 1)
+theme_override_colors/font_shadow_color = Color(0.968412, 0.811533, 0.283052, 1)
+theme_override_fonts/font = ExtResource("3_6e7lh")
+theme_override_font_sizes/font_size = 88
+text = "Si vous lisez
+ceci
+Que Dieu aie
+pitié de vous"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 443.0
+offset_top = 552.0
+offset_right = 659.0
+offset_bottom = 575.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_6e7lh")
+text = "(Retour pour arrêter de lire)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plaque Décorative2" type="StaticBody3D" parent="." groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200899, 0.00558431)
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plaque Décorative2" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000579834, 0.00280762, 0.0060475)
+shape = SubResource("BoxShape3D_3y8id")
+
+[node name="Plaque Décorative" type="Area3D" parent="." groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200899, 0.00383194)
+collision_layer = 4
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Plaque Décorative" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000793457, 0.00256348, 0.0121658)
+shape = SubResource("BoxShape3D_o7vad")

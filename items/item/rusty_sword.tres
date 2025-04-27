@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://chil61v7d5klf"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_tgtlf"]
+[ext_resource type="Texture2D" uid="uid://ds2tmguupeqji" path="res://items/items_spritesheet_1.png" id="2_4oxxn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce1jc"]
+atlas = ExtResource("2_4oxxn")
+region = Rect2(576, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_tgtlf")
+name = "Épée rouillée"
+description = "Une épée rouillée"
+item_type = "arme"
+item_effect = "dommages:2\\portée: 1.5"
+stockable = false
+texture = SubResource("AtlasTexture_ce1jc")

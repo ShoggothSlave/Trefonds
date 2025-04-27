@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhe8al8xupbj6"]
+
+[ext_resource type="PackedScene" uid="uid://dm2ujrsujwgsp" path="res://modeles3d/chaudron.glb" id="1_qgphj"]
+[ext_resource type="Texture2D" uid="uid://dt4r0ioms4j2p" path="res://images/textures/Rock012_8K-JPG_Color.png" id="2_43jui"]
+[ext_resource type="Script" path="res://scenes/item/chaudron.gd" id="2_m4f0h"]
+[ext_resource type="AudioStream" uid="uid://cniey8ogy4khu" path="res://sons/shield-guard-6963.wav" id="4_05dny"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_th5u4"]
+albedo_texture = ExtResource("2_43jui")
+metallic = 0.89
+roughness = 0.75
+uv1_scale = Vector3(0.01, 0.01, 0.01)
+uv1_triplanar = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_luf5w"]
+height = 4.01701
+radius = 4.44255
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_03dl4"]
+height = 4.91879
+radius = 4.71884
+
+[node name="chaudron" groups=["prehensible"] instance=ExtResource("1_qgphj")]
+script = ExtResource("2_m4f0h")
+
+[node name="Tore_001" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_th5u4")
+
+[node name="interaction_area" type="Area3D" parent="." index="1" groups=["prehensible"]]
+transform = Transform3D(0.018, 0, 0, 0, 0.018, 0, 0, 0, 0.018, -0.0725523, 0.0761919, 0)
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09115, -1.96608, -1.52588e-05)
+shape = SubResource("CylinderShape3D_luf5w")
+
+[node name="Chaudron" type="StaticBody3D" parent="." index="2" groups=["prehensible"]]
+transform = Transform3D(0.018, 0, 0, 0, 0.018, 0, 0, 0, 0.018, -0.0725523, 0.0761919, 0)
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Chaudron" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08711, -1.76684, -0.000808716)
+shape = SubResource("CylinderShape3D_03dl4")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_05dny")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

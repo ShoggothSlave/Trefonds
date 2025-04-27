@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1ee06fc7gddu"]
+
+[ext_resource type="ArrayMesh" uid="uid://8rehevp88c0y" path="res://modeles3d/bouteille.obj" id="1_6a4od"]
+[ext_resource type="Script" path="res://scenes/item/bouteille.gd" id="1_p2q60"]
+[ext_resource type="Texture2D" uid="uid://c0opy3beyrttp" path="res://images/textures/Concrete039_4K-JPG_Color.jpg" id="2_ccyxo"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_fxgnk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0imvu"]
+transparency = 1
+albedo_color = Color(0.372549, 0.560784, 0.568627, 0.254902)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs0li"]
+albedo_texture = ExtResource("2_ccyxo")
+metallic = 1.0
+metallic_specular = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjbyg"]
+size = Vector3(0.563904, 1.83078, 0.544647)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10dhm"]
+size = Vector3(0.652832, 1.91943, 0.680298)
+
+[node name="bouteille" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_p2q60")
+
+[node name="Bouteille" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+layers = 8
+mesh = ExtResource("1_6a4od")
+surface_material_override/0 = SubResource("StandardMaterial3D_0imvu")
+surface_material_override/1 = SubResource("StandardMaterial3D_bs0li")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.001372, 0.1154, -0.00134087)
+shape = SubResource("BoxShape3D_tjbyg")
+
+[node name="Bouteille vide" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Bouteille vide"]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.000200902, 0.114878, -8.39233e-05)
+shape = SubResource("BoxShape3D_10dhm")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fxgnk")
+pitch_scale = 0.25
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm00th5s4xiiq"]
+
+[ext_resource type="Script" path="res://scenes/item/skullcasque.gd" id="1_lbs5r"]
+[ext_resource type="Texture2D" uid="uid://dtnkrd2s0seat" path="res://images/items/skeletoncasque.png" id="1_unbrh"]
+[ext_resource type="AudioStream" uid="uid://d3l167i5nh0pt" path="res://sons/leather-stress-4-long-97254.wav" id="2_x3m5c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qrh8x"]
+radius = 0.309296
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i6l5d"]
+radius = 0.343939
+
+[node name="skullcasque" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0959325, 0)
+script = ExtResource("1_lbs5r")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+layers = 8
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_unbrh")
+vframes = 2
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.0059239, 0.0296321, 0)
+shape = SubResource("SphereShape3D_qrh8x")
+
+[node name="Casque en cuir" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Casque en cuir"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.00700876, 0.0463605, 0)
+shape = SubResource("SphereShape3D_i6l5d")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_x3m5c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

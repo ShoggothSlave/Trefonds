@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2fn3eportvca"]
+
+[ext_resource type="ArrayMesh" uid="uid://b5lhhyv1hwj7o" path="res://modeles3d/demi_potion_mineure.obj" id="1_4l17u"]
+[ext_resource type="Script" path="res://scenes/item/demi_potion_mineure.gd" id="1_kvm5x"]
+[ext_resource type="Texture2D" uid="uid://c0opy3beyrttp" path="res://images/textures/Concrete039_4K-JPG_Color.jpg" id="2_v5ep3"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_j02yd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk3qu"]
+transparency = 1
+albedo_color = Color(0.25098, 0.486275, 0.709804, 0.239216)
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vj88p"]
+transparency = 1
+albedo_color = Color(0.690196, 0, 0.0313726, 0.756863)
+metallic = 1.0
+roughness = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drmnp"]
+albedo_texture = ExtResource("2_v5ep3")
+metallic = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ou3e5"]
+height = 0.382899
+radius = 0.0339125
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2mn6c"]
+height = 0.466159
+radius = 0.0540791
+
+[node name="demi_potion_mineure" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_kvm5x")
+
+[node name="DemiPotionMineure" type="MeshInstance3D" parent="."]
+layers = 8
+mesh = ExtResource("1_4l17u")
+surface_material_override/0 = SubResource("StandardMaterial3D_tk3qu")
+surface_material_override/1 = SubResource("StandardMaterial3D_vj88p")
+surface_material_override/2 = SubResource("StandardMaterial3D_drmnp")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.0543368, 0)
+shape = SubResource("CylinderShape3D_ou3e5")
+
+[node name="Demi potion mineure" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Demi potion mineure"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.055753, 0)
+shape = SubResource("CylinderShape3D_2mn6c")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_j02yd")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

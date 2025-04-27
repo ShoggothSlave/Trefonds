@@ -1,0 +1,3045 @@
+[gd_scene load_steps=128 format=3 uid="uid://dhcttrm3b0khw"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_a5gpx"]
+[ext_resource type="Script" path="res://scripts/player_raycast.gd" id="2_3tigm"]
+[ext_resource type="Texture2D" uid="uid://ch12xx7neiql3" path="res://images/personnage/SpritesheetCursor .png" id="3_4nwum"]
+[ext_resource type="Script" path="res://scripts/lanterne.gd" id="3_wc587"]
+[ext_resource type="Script" path="res://scripts/canvas_hud.gd" id="4_o6tfk"]
+[ext_resource type="Texture2D" uid="uid://cpe6qksx2nfex" path="res://images/autresimages/JaugeFrame (1).png" id="6_e4etg"]
+[ext_resource type="Script" path="res://scripts/sprite_jauge.gd" id="7_tfkso"]
+[ext_resource type="Texture2D" uid="uid://brsksxisnmr8e" path="res://images/autresimages/spritesheetJaugeFeu (1).png" id="8_p7a8u"]
+[ext_resource type="Texture2D" uid="uid://do2smld5l6ey6" path="res://images/autresimages/SpriteJaugeAir.png" id="9_vxcp7"]
+[ext_resource type="Texture2D" uid="uid://c5j2ueddq3ooj" path="res://images/autresimages/spritesheetJaugeEau.png" id="10_xrh6v"]
+[ext_resource type="Texture2D" uid="uid://cymbpb74xo7qp" path="res://images/autresimages/SpriteJaugeTerre.png" id="11_uwxky"]
+[ext_resource type="Texture2D" uid="uid://6e2c6pxvx8x" path="res://images/personnage/fist attack sheet (1).png" id="12_kox7i"]
+[ext_resource type="Texture2D" uid="uid://c65xqbogiueqx" path="res://images/personnage/sprite knife.png" id="13_oe4w4"]
+[ext_resource type="Texture2D" uid="uid://dyy0o8gpefifm" path="res://images/personnage/sprite epee.png" id="14_s4i8g"]
+[ext_resource type="Texture2D" uid="uid://b8k8d58u0hqq6" path="res://images/personnage/stick (1).png" id="15_oo4d1"]
+[ext_resource type="Texture2D" uid="uid://dpvlnekilhfio" path="res://images/personnage/rondache.png" id="16_vxhxm"]
+[ext_resource type="Texture2D" uid="uid://b16pw2xkdtpsd" path="res://images/autresimages/equip_casque_cuir.png" id="26_pwft0"]
+[ext_resource type="Texture2D" uid="uid://bbeckaduvsxfx" path="res://images/autresimages/SpritesheetDefiler.png" id="27_appcr"]
+[ext_resource type="Script" path="res://scenes/system/sprite_hat.gd" id="27_st7q1"]
+[ext_resource type="Texture2D" uid="uid://dhif5cw08oh2m" path="res://images/autresimages/equip_amulet.png" id="28_k5k05"]
+[ext_resource type="Texture2D" uid="uid://vpfu7i1m2i2o" path="res://images/autresimages/equip_ring.png" id="29_b0gog"]
+[ext_resource type="Texture2D" uid="uid://c7xitt20bq5t5" path="res://images/autresimages/equip_weapon.png" id="30_a07w2"]
+[ext_resource type="Script" path="res://scenes/system/sprite_amulet.gd" id="30_lum3k"]
+[ext_resource type="Texture2D" uid="uid://cen5rlrqfdj5n" path="res://images/autresimages/equip_shield.png" id="31_6du6p"]
+[ext_resource type="AudioStream" uid="uid://degdwrqwxb6iu" path="res://sons/SWSH_Whoosh 4 (ID 1796)_LS.wav" id="32_k4o2a"]
+[ext_resource type="Texture2D" uid="uid://bpqktvdl0pvcs" path="res://images/autresimages/equip_chandail_cuir.png" id="32_pw7c2"]
+[ext_resource type="Script" path="res://scenes/system/sprite_ring_1.gd" id="32_tf02n"]
+[ext_resource type="Script" path="res://scenes/system/sprite_weapon.gd" id="32_vvjfs"]
+[ext_resource type="Texture2D" uid="uid://cnh5qip0qhw46" path="res://images/autresimages/equip_ceinture.png" id="33_0hnet"]
+[ext_resource type="Script" path="res://scenes/system/sprite_ring_2.gd" id="33_jav3a"]
+[ext_resource type="Texture2D" uid="uid://b0k8gmspdjge5" path="res://images/personnage/knife attack spritesheet.png" id="33_ne863"]
+[ext_resource type="Texture2D" uid="uid://bixwpu0dhw5r4" path="res://images/autresimages/equip_pentalon_cuir.png" id="34_338c8"]
+[ext_resource type="Texture2D" uid="uid://coj0fhu08j4yx" path="res://images/personnage/spritesheet sword attak (2).png" id="34_j6qed"]
+[ext_resource type="Texture2D" uid="uid://7erillqwlf2e" path="res://images/personnage/fightingstickspritesheet.png" id="35_d2o5o"]
+[ext_resource type="Texture2D" uid="uid://cthlaevp4lqin" path="res://images/autresimages/equip_bottes_cuir.png" id="35_u725j"]
+[ext_resource type="Texture2D" uid="uid://duwul0k626fjy" path="res://images/autresimages/equip_potion.png" id="36_e24dy"]
+[ext_resource type="Texture2D" uid="uid://fsb62qtkgt6n" path="res://images/personnage/spritesheetrondache.png" id="36_htxtn"]
+[ext_resource type="Script" path="res://scenes/system/sprite_shield.gd" id="37_75v6o"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="37_haypi"]
+[ext_resource type="Script" path="res://scripts/attributs_label.gd" id="38_8drrm"]
+[ext_resource type="Script" path="res://scripts/controls_label.gd" id="39_qarmq"]
+[ext_resource type="Script" path="res://scenes/system/sprite_torso.gd" id="39_u8pqi"]
+[ext_resource type="Texture2D" uid="uid://185pngrdr8kv" path="res://images/personnage/blessure.png" id="40_4kgif"]
+[ext_resource type="PackedScene" uid="uid://dc8yw131hk05i" path="res://scenes/system/inventaire_visuel.tscn" id="41_h3lc5"]
+[ext_resource type="Script" path="res://scenes/system/sprite_ceinture.gd" id="41_r8sxo"]
+[ext_resource type="AudioStream" uid="uid://uvyn5qhuxevo" path="res://sons/aie.mp3" id="41_v1us4"]
+[ext_resource type="Texture2D" uid="uid://bqf2teuuqq10n" path="res://images/textures/gas (1).png" id="42_lkx0j"]
+[ext_resource type="Script" path="res://scenes/system/sprite_pants.gd" id="42_n2jtk"]
+[ext_resource type="Script" path="res://scripts/anim_sleep.gd" id="43_i8abs"]
+[ext_resource type="Texture2D" uid="uid://coqaui0o15ue6" path="res://images/autresimages/blackscreen.png" id="44_7iemd"]
+[ext_resource type="Script" path="res://scenes/system/sprite_boots.gd" id="44_t13vk"]
+[ext_resource type="AudioStream" uid="uid://c3k5nsqh7uvvl" path="res://sons/yawn-87560.wav" id="45_i2qfl"]
+[ext_resource type="AudioStream" uid="uid://cbodnbryej5ri" path="res://sons/bubbles-108320.wav" id="46_p1l1b"]
+[ext_resource type="AudioStream" uid="uid://c1j2b4urd83k0" path="res://sons/underwater-white-noise-46423.wav" id="47_1rcbd"]
+[ext_resource type="Script" path="res://scenes/system/sprite_po_1.gd" id="47_ob4fi"]
+[ext_resource type="Script" path="res://scenes/system/sprite_po_2.gd" id="48_8q2pd"]
+[ext_resource type="Texture2D" uid="uid://dh146op250ioh" path="res://images/textures/Inwater (1).png" id="48_u3fjm"]
+[ext_resource type="AudioStream" uid="uid://6ftpswtlu58e" path="res://sons/concrete-footsteps-1-6265 (1).wav" id="49_4x8k4"]
+[ext_resource type="Script" path="res://scenes/system/sprite_po_3.gd" id="49_nmmsp"]
+[ext_resource type="AudioStream" uid="uid://wac4hbrk6a6f" path="res://sons/running.wav" id="50_dgb8b"]
+[ext_resource type="Script" path="res://scenes/system/po_demi_min.gd" id="50_kjlf2"]
+[ext_resource type="Script" path="res://scenes/system/po_min.gd" id="51_i1f35"]
+[ext_resource type="Texture2D" uid="uid://d0lddbsvheea6" path="res://images/autresimages/game over.png" id="51_vhgfc"]
+[ext_resource type="Script" path="res://scenes/system/po_demi_con.gd" id="52_03kyb"]
+[ext_resource type="Script" path="res://scripts/sprite_demo_fin.gd" id="52_ywps6"]
+[ext_resource type="AudioStream" uid="uid://doqfuamyvh7rh" path="res://sons/gulp-37759.wav" id="53_a0j0c"]
+[ext_resource type="Script" path="res://scenes/system/po_con.gd" id="53_jqayw"]
+[ext_resource type="AudioStream" uid="uid://c5t73jo4avmlr" path="res://sons/glug-glug-glug-39140.wav" id="54_e1hug"]
+[ext_resource type="Script" path="res://scenes/system/po_demi_sup.gd" id="54_w7e4q"]
+[ext_resource type="Script" path="res://scenes/system/po_sup.gd" id="55_guh20"]
+[ext_resource type="AudioStream" uid="uid://ntnn0a2fi40v" path="res://sons/musique/Dunjeon ambiance.wav" id="55_oqls5"]
+[ext_resource type="Texture2D" uid="uid://dqy8x03ecvn3d" path="res://images/autresimages/spritesheet_perm_po.png" id="56_rfdhw"]
+[ext_resource type="Script" path="res://scenes/system/po_fo.gd" id="57_ftdna"]
+[ext_resource type="Script" path="res://scenes/system/po_arm.gd" id="58_2n03n"]
+[ext_resource type="Script" path="res://scenes/system/po_lif.gd" id="59_l4eff"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dg6ih"]
+radius = 0.125
+height = 0.75
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qrl5w"]
+radius = 0.125
+height = 0.75
+
+[sub_resource type="Animation" id="Animation_3e3dt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_fbo3p"]
+resource_name = "action"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_bi6qv"]
+resource_name = "ajouter"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
+[sub_resource type="Animation" id="Animation_dxv4i"]
+resource_name = "attak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_x2487"]
+resource_name = "cuisine"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_71a66"]
+resource_name = "demolis"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_1h7m0"]
+resource_name = "dort"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_2tlel"]
+resource_name = "faisdufeu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_plk05"]
+resource_name = "fouiller"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_pnxtk"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_43wou"]
+resource_name = "inspect"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_noi6f"]
+resource_name = "lis"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_lh41l"]
+resource_name = "ouvrir"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_f31ag"]
+resource_name = "prend"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_ixjlv"]
+resource_name = "rangeattak"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_acxja"]
+resource_name = "retirer"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+
+[sub_resource type="Animation" id="Animation_8tff7"]
+resource_name = "unlock"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xmfs5"]
+_data = {
+"RESET": SubResource("Animation_3e3dt"),
+"action": SubResource("Animation_fbo3p"),
+"ajouter": SubResource("Animation_bi6qv"),
+"attak": SubResource("Animation_dxv4i"),
+"cuisine": SubResource("Animation_x2487"),
+"demolis": SubResource("Animation_71a66"),
+"dort": SubResource("Animation_1h7m0"),
+"faisdufeu": SubResource("Animation_2tlel"),
+"fouiller": SubResource("Animation_plk05"),
+"idle": SubResource("Animation_pnxtk"),
+"inspect": SubResource("Animation_43wou"),
+"lis": SubResource("Animation_noi6f"),
+"ouvrir": SubResource("Animation_lh41l"),
+"prend": SubResource("Animation_f31ag"),
+"rangeattak": SubResource("Animation_ixjlv"),
+"retirer": SubResource("Animation_acxja"),
+"unlock": SubResource("Animation_8tff7")
+}
+
+[sub_resource type="Animation" id="Animation_kyp5e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("control_fight/sprite_fist:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("control_fight/sprite_knife:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("control_fight/sprite_sword:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("control_fight/sprite_stick:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_7ond4"]
+resource_name = "attack_fist"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("control_fight/sprite_fist:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 3, 2, 1, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("control_fight/sprite_fist/audio_fist:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ewadn"]
+resource_name = "attack_knife"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("control_fight/sprite_knife:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 4, 3, 2, 1, 0, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("control_fight/sprite_knife/audio_knife:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_evura"]
+resource_name = "attack_stick"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("control_fight/sprite_stick:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("control_fight/sprite_stick/audio_stick:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5acbf"]
+resource_name = "attack_sword"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("control_fight/sprite_sword:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 1, 0, 5, 4, 3, 8, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("control_fight/sprite_sword/audio_sword:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3fsr5"]
+_data = {
+"RESET": SubResource("Animation_kyp5e"),
+"attack_fist": SubResource("Animation_7ond4"),
+"attack_knife": SubResource("Animation_ewadn"),
+"attack_stick": SubResource("Animation_evura"),
+"attack_sword": SubResource("Animation_5acbf")
+}
+
+[sub_resource type="Animation" id="Animation_ltge4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas_hud/control_fight/sprite_stick:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("canvas_hud/control_fight/sprite_rondache:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qvmfh"]
+resource_name = "rondache_block"
+length = 30.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas_hud/control_fight/sprite_rondache:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 29.8, 29.85, 29.9, 29.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_hcras"]
+resource_name = "rondache_deblock"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas_hud/control_fight/sprite_rondache:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_2il2n"]
+resource_name = "stick_block"
+length = 30.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas_hud/control_fight/sprite_stick:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 29.7, 29.8, 29.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 6, 5, 7, 7, 6, 8]
+}
+
+[sub_resource type="Animation" id="Animation_wptpc"]
+resource_name = "stick_deblock"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas_hud/control_fight/sprite_stick:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 6, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncie1"]
+_data = {
+"RESET": SubResource("Animation_ltge4"),
+"rondache_block": SubResource("Animation_qvmfh"),
+"rondache_deblock": SubResource("Animation_hcras"),
+"stick_block": SubResource("Animation_2il2n"),
+"stick_deblock": SubResource("Animation_wptpc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u078j"]
+size = Vector2(78, 74)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fbhng"]
+
+[sub_resource type="Animation" id="Animation_0258d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_blessure/sprite_blessure:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ovihj"]
+resource_name = "blessure"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_blessure/sprite_blessure:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 0.45, 0.9, 0.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim_blessure/sprite_blessure:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.45, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.513726), Color(1, 1, 1, 1), Color(1, 1, 1, 0.513726)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("anim_blessure/sprite_blessure/audio_blessure:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fw26s"]
+_data = {
+"RESET": SubResource("Animation_0258d"),
+"blessure": SubResource("Animation_ovihj")
+}
+
+[sub_resource type="Animation" id="Animation_hxyyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_in_gas/sprite_in_gas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nf76b"]
+resource_name = "in_gas"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_in_gas/sprite_in_gas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1ejis"]
+resource_name = "not_in_gas"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_in_gas/sprite_in_gas:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cmxks"]
+_data = {
+"RESET": SubResource("Animation_hxyyd"),
+"in_gas": SubResource("Animation_nf76b"),
+"not_in_gas": SubResource("Animation_1ejis")
+}
+
+[sub_resource type="Animation" id="Animation_qy3cx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_sleep/sprite_sleep:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim_sleep/sprite_sleep:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u5ks7"]
+resource_name = "sleep"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_sleep/sprite_sleep:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 4.95),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim_sleep/sprite_sleep:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 2.5, 4.95),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("anim_sleep/audio_baillement:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imli1"]
+_data = {
+"RESET": SubResource("Animation_qy3cx"),
+"sleep": SubResource("Animation_u5ks7")
+}
+
+[sub_resource type="Animation" id="Animation_blcgg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_swim/audio-bubble:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim_swim/audio-underwater:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_747kq"]
+resource_name = "swim"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("anim_swim/audio-underwater:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("anim_swim/audio-bubble:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rlwdo"]
+_data = {
+"RESET": SubResource("Animation_blcgg"),
+"swim": SubResource("Animation_747kq")
+}
+
+[sub_resource type="Animation" id="Animation_ipy8v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player/head_original_position/player_head/audio_walk:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player/head_original_position/player_head/audio_run:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7hw2p"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player/head_original_position/player_head/audio_walk:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player/head_original_position/player_head/audio_run:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_d6hws"]
+resource_name = "running"
+length = 6.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player/head_original_position/player_head/audio_run:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player/head_original_position/player_head/audio_walk:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_be4yw"]
+resource_name = "walk"
+length = 7.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player/head_original_position/player_head/audio_walk:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player/head_original_position/player_head/audio_run:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gh4ix"]
+_data = {
+"RESET": SubResource("Animation_ipy8v"),
+"idle": SubResource("Animation_7hw2p"),
+"running": SubResource("Animation_d6hws"),
+"walk": SubResource("Animation_be4yw")
+}
+
+[node name="player" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0035564, 0)
+
+[node name="player" type="CharacterBody3D" parent="."]
+collision_mask = 65534
+floor_max_angle = 1.13446
+platform_wall_layers = 4
+script = ExtResource("1_a5gpx")
+
+[node name="player_collisioner" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
+shape = SubResource("CapsuleShape3D_dg6ih")
+
+[node name="player_mesh" type="MeshInstance3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_qrl5w")
+
+[node name="head_original_position" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+
+[node name="player_head" type="Node3D" parent="player/head_original_position"]
+unique_name_in_owner = true
+
+[node name="player_camera" type="Camera3D" parent="player/head_original_position/player_head"]
+unique_name_in_owner = true
+current = true
+fov = 37.8493
+
+[node name="player_raycast" type="RayCast3D" parent="player/head_original_position/player_head/player_camera" groups=["activable", "cuisinable", "deverrouillable", "fragile", "inflammable", "inspectable", "lisible", "monstres", "prehensible", "repos"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+collision_mask = 65486
+collide_with_areas = true
+script = ExtResource("2_3tigm")
+
+[node name="controler" type="Control" parent="player/head_original_position/player_head/player_camera/player_raycast"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="texture_rect" type="TextureRect" parent="player/head_original_position/player_head/player_camera/player_raycast/controler"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="anim_cursor" type="AnimationPlayer" parent="player/head_original_position/player_head/player_camera/player_raycast/controler/texture_rect"]
+libraries = {
+"": SubResource("AnimationLibrary_xmfs5")
+}
+
+[node name="interact_label" type="Label" parent="player/head_original_position/player_head/player_camera/player_raycast/controler/texture_rect"]
+z_index = 1
+layout_mode = 0
+offset_left = -69.0
+offset_top = -87.0
+offset_right = 67.0
+offset_bottom = -32.0
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sprite_cursor" type="Sprite2D" parent="player/head_original_position/player_head/player_camera/player_raycast/controler/texture_rect/interact_label"]
+z_index = 1
+texture_filter = 1
+position = Vector2(69, 87)
+texture = ExtResource("3_4nwum")
+hframes = 4
+vframes = 5
+frame = 1
+
+[node name="audio_walk" type="AudioStreamPlayer3D" parent="player/head_original_position/player_head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.494791, 0)
+stream = ExtResource("49_4x8k4")
+volume_db = 50.0
+max_db = 6.0
+
+[node name="audio_run" type="AudioStreamPlayer3D" parent="player/head_original_position/player_head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.489816, 0)
+stream = ExtResource("50_dgb8b")
+volume_db = -30.0
+
+[node name="lanterne" type="OmniLight3D" parent="player/head_original_position/player_head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.133791)
+visible = false
+light_color = Color(1, 0.776972, 0.229175, 1)
+light_energy = 3.0
+light_size = 0.01
+shadow_enabled = true
+omni_range = 3.0
+script = ExtResource("3_wc587")
+
+[node name="canvas_hud" type="CanvasLayer" parent="."]
+script = ExtResource("4_o6tfk")
+
+[node name="anim_attack" type="AnimationPlayer" parent="canvas_hud"]
+libraries = {
+"": SubResource("AnimationLibrary_3fsr5")
+}
+
+[node name="anim_block" type="AnimationPlayer" parent="canvas_hud"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ncie1")
+}
+
+[node name="cooldown_timer" type="Timer" parent="canvas_hud"]
+wait_time = 0.6
+one_shot = true
+
+[node name="control_fight" type="Control" parent="canvas_hud"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="texture_hud" type="TextureRect" parent="canvas_hud/control_fight"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -13.9
+anchor_top = -15.2
+anchor_right = 15.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="sprite_jauge" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+z_index = 9
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(65, 583)
+texture = ExtResource("6_e4etg")
+script = ExtResource("7_tfkso")
+
+[node name="sprite_jeuge_feu" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(65, 583)
+texture = ExtResource("8_p7a8u")
+hframes = 5
+vframes = 4
+
+[node name="sprite_jeuge_air" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(65, 583)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("9_vxcp7")
+hframes = 5
+vframes = 4
+
+[node name="sprite_jeuge_eau" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(65, 583)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("10_xrh6v")
+hframes = 5
+vframes = 4
+frame = 4
+
+[node name="sprite_jeuge_terre" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(65, 583)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("11_uwxky")
+hframes = 5
+vframes = 4
+
+[node name="sprite_fist_hud" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+texture_filter = 1
+position = Vector2(21, 6)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_kox7i")
+hframes = 4
+frame = 3
+
+[node name="sprite_knife_hud" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(41, 40)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("13_oe4w4")
+
+[node name="sprite_sword_hud" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(41, 40)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("14_s4i8g")
+
+[node name="sprite_stick_hud" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(41, 40)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("15_oo4d1")
+
+[node name="sprite_rondache_hud" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+position = Vector2(107, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_vxhxm")
+
+[node name="access_po1" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(914, 593)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+
+[node name="Label" type="Label" parent="canvas_hud/control_fight/texture_hud/access_po1"]
+offset_right = 36.0
+offset_bottom = 35.0
+text = "\"\"
+"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="access_po2" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(1002, 593)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+
+[node name="Label" type="Label" parent="canvas_hud/control_fight/texture_hud/access_po2"]
+offset_right = 36.0
+offset_bottom = 36.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="access_po3" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
+visible = false
+texture_filter = 1
+position = Vector2(1091, 593)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+
+[node name="Label" type="Label" parent="canvas_hud/control_fight/texture_hud/access_po3"]
+offset_right = 36.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="audio_boire" type="AudioStreamPlayer" parent="canvas_hud/control_fight"]
+stream = ExtResource("54_e1hug")
+
+[node name="sprite_fist" type="Sprite2D" parent="canvas_hud/control_fight"]
+texture_filter = 1
+position = Vector2(-1, -240)
+scale = Vector2(7, 7)
+texture = ExtResource("12_kox7i")
+hframes = 4
+
+[node name="audio_fist" type="AudioStreamPlayer" parent="canvas_hud/control_fight/sprite_fist"]
+stream = ExtResource("32_k4o2a")
+pitch_scale = 1.25
+
+[node name="sprite_knife" type="Sprite2D" parent="canvas_hud/control_fight"]
+texture_filter = 1
+position = Vector2(-1, -99)
+scale = Vector2(7, 7)
+texture = ExtResource("33_ne863")
+hframes = 3
+vframes = 2
+frame = 5
+
+[node name="audio_knife" type="AudioStreamPlayer" parent="canvas_hud/control_fight/sprite_knife"]
+stream = ExtResource("32_k4o2a")
+pitch_scale = 1.5
+
+[node name="sprite_sword" type="Sprite2D" parent="canvas_hud/control_fight"]
+texture_filter = 1
+position = Vector2(5, -153)
+scale = Vector2(3, 3)
+texture = ExtResource("34_j6qed")
+hframes = 3
+vframes = 3
+frame = 6
+
+[node name="audio_sword" type="AudioStreamPlayer" parent="canvas_hud/control_fight/sprite_sword"]
+stream = ExtResource("32_k4o2a")
+
+[node name="sprite_stick" type="Sprite2D" parent="canvas_hud/control_fight"]
+texture_filter = 1
+position = Vector2(2, -121)
+scale = Vector2(5, 5)
+texture = ExtResource("35_d2o5o")
+hframes = 3
+vframes = 3
+frame = 8
+
+[node name="audio_stick" type="AudioStreamPlayer" parent="canvas_hud/control_fight/sprite_stick"]
+stream = ExtResource("32_k4o2a")
+pitch_scale = 0.75
+
+[node name="sprite_rondache" type="Sprite2D" parent="canvas_hud/control_fight"]
+texture_filter = 1
+position = Vector2(4, -149)
+scale = Vector2(3, 3)
+texture = ExtResource("36_htxtn")
+hframes = 2
+vframes = 2
+
+[node name="timer_faim" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="timer_soif" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="timer_soif_2" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="attributs_label" type="Label" parent="."]
+z_index = 25
+y_sort_enabled = true
+offset_left = 503.0
+offset_top = 8.0
+offset_right = 1354.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "    ATTRIBUTS:
+
+Niveau:
+Points de vie:
+Points de vie max:
+Points d'xp:
+Xp nécessaires:
+Armure:
+Force:"
+vertical_alignment = 1
+script = ExtResource("38_8drrm")
+
+[node name="lvl_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -34.357
+offset_top = 27.073
+offset_right = -34.9651
+offset_bottom = 27.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="pv_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -31.357
+offset_top = 80.073
+offset_right = -31.9651
+offset_bottom = 80.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="pv_max_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -32.357
+offset_top = 133.073
+offset_right = -32.9651
+offset_bottom = 133.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="xp_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -31.357
+offset_top = 183.073
+offset_right = -31.9651
+offset_bottom = 183.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="xp_max_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -25.357
+offset_top = 231.073
+offset_right = -25.9651
+offset_bottom = 231.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="armure_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -24.357
+offset_top = 279.073
+offset_right = -24.9651
+offset_bottom = 279.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="force_label" type="Label" parent="attributs_label"]
+z_index = 25
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.407
+anchor_top = 0.241
+anchor_right = 0.701
+anchor_bottom = 0.366
+offset_left = -24.357
+offset_top = 328.073
+offset_right = -24.9651
+offset_bottom = 328.198
+theme_override_colors/font_color = Color(0.640134, 0.533082, 0.237988, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 40
+text = "XxXxX"
+vertical_alignment = 1
+
+[node name="sprite_hat" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-256, 69)
+texture = ExtResource("26_pwft0")
+hframes = 2
+script = ExtResource("27_st7q1")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_hat"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_hat" type="StaticBody2D" parent="attributs_label/sprite_hat"]
+input_pickable = true
+
+[node name="coll_body_hat" type="CollisionShape2D" parent="attributs_label/sprite_hat/body_hat"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_hat"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_hat_g" type="CollisionShape2D" parent="attributs_label/sprite_hat/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_hat/defiler_g/coll_hat_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_hat"]
+input_pickable = true
+
+[node name="coll_hat_d" type="CollisionShape2D" parent="attributs_label/sprite_hat/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_hat/defiler_d/coll_hat_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="hat_label" type="Label" parent="attributs_label/sprite_hat"]
+visible = false
+offset_left = -58.0
+offset_top = -65.0
+offset_right = 58.0
+offset_bottom = -42.0
+text = "\"\""
+horizontal_alignment = 1
+
+[node name="sprite_amulet" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-256, 150)
+texture = ExtResource("28_k5k05")
+hframes = 4
+vframes = 4
+script = ExtResource("30_lum3k")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_amulet"]
+visible = false
+z_index = 1
+z_as_relative = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_amu" type="StaticBody2D" parent="attributs_label/sprite_amulet"]
+input_pickable = true
+
+[node name="coll_body_amu" type="CollisionShape2D" parent="attributs_label/sprite_amulet/body_amu"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_amulet"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_amu_g" type="CollisionShape2D" parent="attributs_label/sprite_amulet/defiler_g"]
+z_index = 1
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_amulet/defiler_g/coll_amu_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_amulet"]
+input_pickable = true
+
+[node name="coll_amu_d" type="CollisionShape2D" parent="attributs_label/sprite_amulet/defiler_d"]
+z_index = 1
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_amulet/defiler_d/coll_amu_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="amu_label" type="Label" parent="attributs_label/sprite_amulet"]
+visible = false
+offset_left = -88.0
+offset_top = -63.0
+offset_right = 85.0
+offset_bottom = -40.0
+text = "\"\""
+horizontal_alignment = 1
+
+[node name="sprite_ring_1" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-337, 191)
+texture = ExtResource("29_b0gog")
+hframes = 4
+vframes = 4
+script = ExtResource("32_tf02n")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_ring_1"]
+visible = false
+z_index = 1
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_ringi" type="StaticBody2D" parent="attributs_label/sprite_ring_1"]
+input_pickable = true
+
+[node name="coll_body_ringi" type="CollisionShape2D" parent="attributs_label/sprite_ring_1/body_ringi"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_ring_1"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_ringi_g" type="CollisionShape2D" parent="attributs_label/sprite_ring_1/defiler_g"]
+z_index = 1
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_ring_1/defiler_g/coll_ringi_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_ring_1"]
+input_pickable = true
+
+[node name="coll_ringi_d" type="CollisionShape2D" parent="attributs_label/sprite_ring_1/defiler_d"]
+z_index = 1
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_ring_1/defiler_d/coll_ringi_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="iring_label" type="Label" parent="attributs_label/sprite_ring_1"]
+visible = false
+offset_left = -81.0
+offset_top = -64.0
+offset_right = 83.0
+offset_bottom = -41.0
+
+[node name="sprite_ring_2" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-176, 191)
+texture = ExtResource("29_b0gog")
+hframes = 4
+vframes = 4
+script = ExtResource("33_jav3a")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_ring_2"]
+visible = false
+z_index = 1
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_ringii" type="StaticBody2D" parent="attributs_label/sprite_ring_2"]
+input_pickable = true
+
+[node name="coll_body_ringii" type="CollisionShape2D" parent="attributs_label/sprite_ring_2/body_ringii"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_ring_2"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_ringii_g" type="CollisionShape2D" parent="attributs_label/sprite_ring_2/defiler_g"]
+z_index = 1
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_ring_2/defiler_g/coll_ringii_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_ring_2"]
+input_pickable = true
+
+[node name="coll_ringii_d" type="CollisionShape2D" parent="attributs_label/sprite_ring_2/defiler_d"]
+z_index = 1
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_ring_2/defiler_d/coll_ringii_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="iiring_label" type="Label" parent="attributs_label/sprite_ring_2"]
+visible = false
+offset_left = -79.0
+offset_top = -62.0
+offset_right = 79.0
+offset_bottom = -39.0
+text = "\"\""
+
+[node name="sprite_weapon" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-418, 271)
+texture = ExtResource("30_a07w2")
+hframes = 2
+vframes = 2
+script = ExtResource("32_vvjfs")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_weapon"]
+visible = false
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_weapon" type="StaticBody2D" parent="attributs_label/sprite_weapon"]
+input_pickable = true
+
+[node name="coll_body_weapon" type="CollisionShape2D" parent="attributs_label/sprite_weapon/body_weapon"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_weapon"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_weap_g" type="CollisionShape2D" parent="attributs_label/sprite_weapon/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_weapon/defiler_g/coll_weap_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_weapon"]
+input_pickable = true
+
+[node name="coll_weap_d" type="CollisionShape2D" parent="attributs_label/sprite_weapon/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_weapon/defiler_d/coll_weap_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="weapon_label" type="Label" parent="attributs_label/sprite_weapon"]
+visible = false
+offset_left = -84.0
+offset_top = -63.0
+offset_right = 84.0
+offset_bottom = -40.0
+
+[node name="sprite_shield" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-95, 269)
+texture = ExtResource("31_6du6p")
+hframes = 3
+script = ExtResource("37_75v6o")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_shield"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_shield" type="StaticBody2D" parent="attributs_label/sprite_shield"]
+input_pickable = true
+
+[node name="coll_body_shield" type="CollisionShape2D" parent="attributs_label/sprite_shield/body_shield"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_shield"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_shield_g" type="CollisionShape2D" parent="attributs_label/sprite_shield/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_shield/defiler_g/coll_shield_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_shield"]
+input_pickable = true
+
+[node name="coll_shield_d" type="CollisionShape2D" parent="attributs_label/sprite_shield/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_shield/defiler_d/coll_shield_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="shield_label" type="Label" parent="attributs_label/sprite_shield"]
+visible = false
+offset_left = -99.0
+offset_top = -65.0
+offset_right = 99.0
+offset_bottom = -42.0
+
+[node name="sprite_torso" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-257, 232)
+texture = ExtResource("32_pw7c2")
+hframes = 2
+script = ExtResource("39_u8pqi")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_torso"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_torso" type="StaticBody2D" parent="attributs_label/sprite_torso"]
+input_pickable = true
+
+[node name="coll_body_torso" type="CollisionShape2D" parent="attributs_label/sprite_torso/body_torso"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_torso"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_torso_g" type="CollisionShape2D" parent="attributs_label/sprite_torso/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_torso/defiler_g/coll_torso_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_torso"]
+input_pickable = true
+
+[node name="coll_torso_d" type="CollisionShape2D" parent="attributs_label/sprite_torso/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_torso/defiler_d/coll_torso_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="torso_label" type="Label" parent="attributs_label/sprite_torso"]
+visible = false
+offset_left = -97.0
+offset_top = -65.0
+offset_right = 101.0
+offset_bottom = -42.0
+
+[node name="sprite_ceinture" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(-257, 313)
+texture = ExtResource("33_0hnet")
+hframes = 2
+vframes = 2
+script = ExtResource("41_r8sxo")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_ceinture"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_belt" type="StaticBody2D" parent="attributs_label/sprite_ceinture"]
+input_pickable = true
+
+[node name="coll_body_belt" type="CollisionShape2D" parent="attributs_label/sprite_ceinture/body_belt"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_ceinture"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_belt_g" type="CollisionShape2D" parent="attributs_label/sprite_ceinture/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_ceinture/defiler_g/coll_belt_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_ceinture"]
+input_pickable = true
+
+[node name="coll_belt_d" type="CollisionShape2D" parent="attributs_label/sprite_ceinture/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_ceinture/defiler_d/coll_belt_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="belt_label" type="Label" parent="attributs_label/sprite_ceinture"]
+visible = false
+offset_left = -97.0
+offset_top = -66.0
+offset_right = 98.0
+offset_bottom = -43.0
+
+[node name="sprite_pants" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-256, 476)
+texture = ExtResource("34_338c8")
+hframes = 2
+script = ExtResource("42_n2jtk")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_pants"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_pants" type="StaticBody2D" parent="attributs_label/sprite_pants"]
+input_pickable = true
+
+[node name="coll_body_pants" type="CollisionShape2D" parent="attributs_label/sprite_pants/body_pants"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_pants"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_pants_g" type="CollisionShape2D" parent="attributs_label/sprite_pants/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_pants/defiler_g/coll_pants_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_pants"]
+input_pickable = true
+
+[node name="coll_pants_d" type="CollisionShape2D" parent="attributs_label/sprite_pants/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_pants/defiler_d/coll_pants_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="pants_label" type="Label" parent="attributs_label/sprite_pants"]
+visible = false
+offset_left = -98.0
+offset_top = -63.0
+offset_right = 99.0
+offset_bottom = -40.0
+
+[node name="sprite_boots" type="Sprite2D" parent="attributs_label"]
+z_as_relative = false
+position = Vector2(-256, 559)
+texture = ExtResource("35_u725j")
+hframes = 2
+script = ExtResource("44_t13vk")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_boots"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_boots" type="StaticBody2D" parent="attributs_label/sprite_boots"]
+input_pickable = true
+
+[node name="coll_body_boots" type="CollisionShape2D" parent="attributs_label/sprite_boots/body_boots"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_boots"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_boots_g" type="CollisionShape2D" parent="attributs_label/sprite_boots/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_boots/defiler_g/coll_boots_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_boots"]
+input_pickable = true
+
+[node name="coll_boots_d" type="CollisionShape2D" parent="attributs_label/sprite_boots/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_boots/defiler_d/coll_boots_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="boots_label" type="Label" parent="attributs_label/sprite_boots"]
+visible = false
+offset_left = -94.0
+offset_top = -63.0
+offset_right = 96.0
+offset_bottom = -40.0
+
+[node name="sprite_po_1" type="Sprite2D" parent="attributs_label"]
+visible = false
+z_as_relative = false
+position = Vector2(-339, 394)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+script = ExtResource("47_ob4fi")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_po_1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_po1" type="StaticBody2D" parent="attributs_label/sprite_po_1"]
+input_pickable = true
+
+[node name="coll_body_po1" type="CollisionShape2D" parent="attributs_label/sprite_po_1/body_po1"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_po_1"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_po1_g" type="CollisionShape2D" parent="attributs_label/sprite_po_1/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_po_1/defiler_g/coll_po1_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_po_1"]
+input_pickable = true
+
+[node name="coll_po1_d" type="CollisionShape2D" parent="attributs_label/sprite_po_1/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_po_1/defiler_d/coll_po1_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="po1_label" type="Label" parent="attributs_label/sprite_po_1"]
+visible = false
+offset_left = -99.0
+offset_top = -63.0
+offset_right = 100.0
+offset_bottom = -40.0
+
+[node name="po1_enum" type="Label" parent="attributs_label/sprite_po_1"]
+offset_right = 40.0
+offset_bottom = 38.0
+text = "\"\""
+
+[node name="sprite_po_2" type="Sprite2D" parent="attributs_label"]
+visible = false
+z_as_relative = false
+position = Vector2(-256, 394)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+script = ExtResource("48_8q2pd")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_po_2"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_po2" type="StaticBody2D" parent="attributs_label/sprite_po_2"]
+input_pickable = true
+
+[node name="coll_body_po2" type="CollisionShape2D" parent="attributs_label/sprite_po_2/body_po2"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_po_2"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_po2_g" type="CollisionShape2D" parent="attributs_label/sprite_po_2/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_po_2/defiler_g/coll_po2_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_po_2"]
+input_pickable = true
+
+[node name="coll_po2_d" type="CollisionShape2D" parent="attributs_label/sprite_po_2/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_po_2/defiler_d/coll_po2_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="po2_label" type="Label" parent="attributs_label/sprite_po_2"]
+visible = false
+offset_left = -103.0
+offset_top = -67.0
+offset_right = 102.0
+offset_bottom = -44.0
+
+[node name="po2_enum" type="Label" parent="attributs_label/sprite_po_2"]
+offset_right = 40.0
+offset_bottom = 39.0
+text = "\"\""
+
+[node name="sprite_po_3" type="Sprite2D" parent="attributs_label"]
+visible = false
+z_as_relative = false
+position = Vector2(-172, 394)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+script = ExtResource("49_nmmsp")
+
+[node name="defiler" type="Sprite2D" parent="attributs_label/sprite_po_3"]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_appcr")
+hframes = 3
+
+[node name="body_po3" type="StaticBody2D" parent="attributs_label/sprite_po_3"]
+input_pickable = true
+
+[node name="coll_body_po3" type="CollisionShape2D" parent="attributs_label/sprite_po_3/body_po3"]
+shape = SubResource("RectangleShape2D_u078j")
+
+[node name="defiler_g" type="StaticBody2D" parent="attributs_label/sprite_po_3"]
+position = Vector2(1, 0)
+input_pickable = true
+
+[node name="coll_po3_g" type="CollisionShape2D" parent="attributs_label/sprite_po_3/defiler_g"]
+position = Vector2(-37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_g" type="Button" parent="attributs_label/sprite_po_3/defiler_g/coll_po3_g"]
+visible = false
+z_index = 1
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+action_mode = 0
+
+[node name="defiler_d" type="StaticBody2D" parent="attributs_label/sprite_po_3"]
+input_pickable = true
+
+[node name="coll_po3_d" type="CollisionShape2D" parent="attributs_label/sprite_po_3/defiler_d"]
+position = Vector2(37, 0)
+shape = SubResource("CircleShape2D_fbhng")
+
+[node name="button_d" type="Button" parent="attributs_label/sprite_po_3/defiler_d/coll_po3_d"]
+visible = false
+z_index = 1
+z_as_relative = false
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 5.0
+action_mode = 0
+
+[node name="po3_label" type="Label" parent="attributs_label/sprite_po_3"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="po3_enum" type="Label" parent="attributs_label/sprite_po_3"]
+offset_right = 40.0
+offset_bottom = 39.0
+text = "\"\""
+
+[node name="po_demi_min" type="Sprite2D" parent="attributs_label"]
+position = Vector2(601, 126)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 1
+script = ExtResource("50_kjlf2")
+
+[node name="Label" type="Label" parent="attributs_label/po_demi_min"]
+offset_right = 36.0
+offset_bottom = 36.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_demi_min"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_demi_min"]
+visible = false
+offset_left = -204.0
+offset_top = -62.0
+offset_right = 47.0
+offset_bottom = -39.0
+text = "Demi potion de soin mineure"
+horizontal_alignment = 2
+
+[node name="po_min" type="Sprite2D" parent="attributs_label"]
+position = Vector2(600, 206)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 1
+script = ExtResource("51_i1f35")
+
+[node name="Label" type="Label" parent="attributs_label/po_min"]
+offset_right = 35.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_min"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_min"]
+visible = false
+offset_left = -203.0
+offset_top = -66.0
+offset_right = 48.0
+offset_bottom = -43.0
+text = "Potion de soin mineure"
+horizontal_alignment = 2
+
+[node name="po_demi_con" type="Sprite2D" parent="attributs_label"]
+position = Vector2(600, 287)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 3
+script = ExtResource("52_03kyb")
+
+[node name="Label" type="Label" parent="attributs_label/po_demi_con"]
+offset_right = 34.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_demi_con"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_demi_con"]
+visible = false
+offset_left = -220.0
+offset_top = -65.0
+offset_right = 49.0
+offset_bottom = -42.0
+text = "Demi potion de soin conséquente"
+horizontal_alignment = 2
+
+[node name="po_con" type="Sprite2D" parent="attributs_label"]
+position = Vector2(600, 368)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 4
+script = ExtResource("53_jqayw")
+
+[node name="Label" type="Label" parent="attributs_label/po_con"]
+offset_right = 35.0
+offset_bottom = 36.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_con"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_con"]
+visible = false
+offset_left = -196.0
+offset_top = -64.0
+offset_right = 49.0
+offset_bottom = -41.0
+text = "Potion de soin conséquente"
+horizontal_alignment = 2
+
+[node name="po_demi_sup" type="Sprite2D" parent="attributs_label"]
+position = Vector2(599, 448)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 5
+script = ExtResource("54_w7e4q")
+
+[node name="Label" type="Label" parent="attributs_label/po_demi_sup"]
+offset_right = 35.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_demi_sup"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_demi_sup"]
+visible = false
+offset_left = -193.0
+offset_top = -64.0
+offset_right = 50.0
+offset_bottom = -41.0
+text = "Demi super_potion de soin"
+horizontal_alignment = 2
+
+[node name="po_sup" type="Sprite2D" parent="attributs_label"]
+position = Vector2(600, 526)
+texture = ExtResource("36_e24dy")
+hframes = 4
+vframes = 2
+frame = 6
+script = ExtResource("55_guh20")
+
+[node name="Label" type="Label" parent="attributs_label/po_sup"]
+offset_right = 36.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_sup"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_sup"]
+visible = false
+offset_left = -193.0
+offset_top = -64.0
+offset_right = 49.0
+offset_bottom = -41.0
+text = "Super_potion de soin
+"
+horizontal_alignment = 2
+
+[node name="po_fo" type="Sprite2D" parent="attributs_label"]
+texture_filter = 1
+position = Vector2(437, 37)
+texture = ExtResource("56_rfdhw")
+hframes = 2
+vframes = 2
+frame = 2
+script = ExtResource("57_ftdna")
+
+[node name="Label" type="Label" parent="attributs_label/po_fo"]
+offset_right = 35.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_fo"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_fo"]
+visible = false
+z_index = 1
+offset_left = -98.0
+offset_top = -45.0
+offset_right = 98.0
+offset_bottom = -22.0
+text = "Potion de force permanente"
+horizontal_alignment = 1
+
+[node name="po_arm" type="Sprite2D" parent="attributs_label"]
+texture_filter = 1
+position = Vector2(519, 37)
+texture = ExtResource("56_rfdhw")
+hframes = 2
+vframes = 2
+frame = 1
+script = ExtResource("58_2n03n")
+
+[node name="Label" type="Label" parent="attributs_label/po_arm"]
+offset_right = 35.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_arm"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_arm"]
+visible = false
+z_index = 1
+offset_left = -99.0
+offset_top = -44.0
+offset_right = 101.0
+offset_bottom = -21.0
+text = "Potion d'armure permanente"
+horizontal_alignment = 1
+
+[node name="po_lif" type="Sprite2D" parent="attributs_label"]
+texture_filter = 1
+position = Vector2(601, 37)
+texture = ExtResource("56_rfdhw")
+hframes = 2
+vframes = 2
+frame = 3
+script = ExtResource("59_l4eff")
+
+[node name="Label" type="Label" parent="attributs_label/po_lif"]
+offset_right = 35.0
+offset_bottom = 35.0
+text = "\"\""
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="attributs_label/po_lif"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="attributs_label/po_lif"]
+visible = false
+z_index = 1
+offset_left = -150.0
+offset_top = -44.0
+offset_right = 48.0
+offset_bottom = -21.0
+text = "Potion de vie permanente"
+horizontal_alignment = 2
+
+[node name="audio_boire2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("54_e1hug")
+
+[node name="controls_label" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.262
+anchor_top = 0.009
+anchor_right = 0.741
+anchor_bottom = 0.992
+offset_left = 0.175964
+offset_top = 0.168
+offset_right = 0.36792
+offset_bottom = 0.18396
+theme_override_colors/font_color = Color(0.713625, 0.602112, 0.286265, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 30
+text = "MANUEL DE CONTROLES
+
+Touches directionnelles : W, A, S, D
+Allumer/éteindre la lanterne : T
+Attaque : Clic gauche
+Bloquer : Clic droit
+Ramper : Ctlr Gauche
+Courir : Shift Gauche
+Afficher/cacher les attributs : C
+Changement d'arme : Chiffres (1, 2, 3...)
+Afficher/cacher le manuel de controles : Retour arriere
+Afficher/cacher HUD : h
+Manger : M
+Boire : B
+Équiper bouuclier : TAB
+Soins : N
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("39_qarmq")
+
+[node name="anim_blessure" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fw26s")
+}
+
+[node name="sprite_blessure" type="Sprite2D" parent="anim_blessure"]
+visible = false
+modulate = Color(1, 1, 1, 0.513726)
+z_index = 1
+texture_filter = 1
+position = Vector2(577, 325)
+scale = Vector2(9.04688, 6.8125)
+texture = ExtResource("40_4kgif")
+
+[node name="audio_blessure" type="AudioStreamPlayer" parent="anim_blessure/sprite_blessure"]
+stream = ExtResource("41_v1us4")
+
+[node name="anim_in_gas" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cmxks")
+}
+
+[node name="sprite_in_gas" type="Sprite2D" parent="anim_in_gas"]
+visible = false
+modulate = Color(1, 1, 1, 0.941176)
+z_index = 1
+position = Vector2(581, 325)
+scale = Vector2(37.3125, 21.3125)
+texture = ExtResource("42_lkx0j")
+
+[node name="anim_sleep" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_imli1")
+}
+script = ExtResource("43_i8abs")
+
+[node name="sprite_sleep" type="Sprite2D" parent="anim_sleep"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(576, 318)
+texture = ExtResource("44_7iemd")
+
+[node name="audio_baillement" type="AudioStreamPlayer" parent="anim_sleep"]
+stream = ExtResource("45_i2qfl")
+
+[node name="sleep_timer" type="Timer" parent="anim_sleep"]
+wait_time = 2.5
+one_shot = true
+
+[node name="anim_swim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rlwdo")
+}
+
+[node name="audio-bubble" type="AudioStreamPlayer" parent="anim_swim"]
+stream = ExtResource("46_p1l1b")
+
+[node name="audio-underwater" type="AudioStreamPlayer" parent="anim_swim"]
+stream = ExtResource("47_1rcbd")
+
+[node name="sprite_in_water" type="Sprite2D" parent="anim_swim"]
+visible = false
+modulate = Color(1, 1, 1, 0.392157)
+z_index = 1
+position = Vector2(576, 329)
+scale = Vector2(3.01563, 2.58594)
+texture = ExtResource("48_u3fjm")
+
+[node name="anim_step" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gh4ix")
+}
+
+[node name="sprite_game_over" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(575.5, 324)
+scale = Vector2(7.99306, 6.75)
+texture = ExtResource("51_vhgfc")
+
+[node name="sprite_demo_fin" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(574, 331)
+texture = ExtResource("44_7iemd")
+script = ExtResource("52_ywps6")
+
+[node name="Label" type="Label" parent="sprite_demo_fin"]
+offset_left = -312.0
+offset_top = -108.0
+offset_right = 328.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.667958, 0.544765, 0.234192, 1)
+theme_override_colors/font_shadow_color = Color(0.133196, 0.133196, 0.133196, 1)
+theme_override_fonts/font = ExtResource("37_haypi")
+theme_override_font_sizes/font_size = 50
+text = "Félicitation!
+Vous avez terminé le niveau 1 (démo)
+de condamné!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="audio_eat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("53_a0j0c")
+
+[node name="audio_boire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("54_e1hug")
+
+[node name="audio_ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("55_oqls5")
+
+[node name="inventaire_visuel" parent="." instance=ExtResource("41_h3lc5")]
+
+[node name="fall_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.09
+anchor_right = 0.108
+anchor_bottom = -0.054
+offset_left = -0.256001
+offset_top = 0.320004
+offset_right = -0.416
+offset_bottom = -0.00799942
+
+[connection signal="timeout" from="canvas_hud/cooldown_timer" to="player" method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="timer_faim" to="player" method="_on_timer_faim_timeout"]
+[connection signal="timeout" from="timer_soif" to="player" method="_on_timer_soif_timeout"]
+[connection signal="timeout" from="timer_soif_2" to="player" method="_on_timer_soif_2_timeout"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_hat/body_hat" to="attributs_label/sprite_hat" method="_on_body_hat_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_hat/body_hat" to="attributs_label/sprite_hat" method="_on_body_hat_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_hat/defiler_g" to="attributs_label/sprite_hat" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_hat/defiler_g" to="attributs_label/sprite_hat" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_hat/defiler_g/coll_hat_g/button_g" to="attributs_label/sprite_hat" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_hat/defiler_d" to="attributs_label/sprite_hat" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_hat/defiler_d" to="attributs_label/sprite_hat" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_hat/defiler_d/coll_hat_d/button_d" to="attributs_label/sprite_hat" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_amulet/body_amu" to="attributs_label/sprite_amulet" method="_on_body_amu_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_amulet/body_amu" to="attributs_label/sprite_amulet" method="_on_body_amu_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_amulet/defiler_g" to="attributs_label/sprite_amulet" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_amulet/defiler_g" to="attributs_label/sprite_amulet" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_amulet/defiler_g/coll_amu_g/button_g" to="attributs_label/sprite_amulet" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_amulet/defiler_d" to="attributs_label/sprite_amulet" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_amulet/defiler_d" to="attributs_label/sprite_amulet" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_amulet/defiler_d/coll_amu_d/button_d" to="attributs_label/sprite_amulet" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_1/body_ringi" to="attributs_label/sprite_ring_1" method="_on_body_ringi_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_1/body_ringi" to="attributs_label/sprite_ring_1" method="_on_body_ringi_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_1/defiler_g" to="attributs_label/sprite_ring_1" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_1/defiler_g" to="attributs_label/sprite_ring_1" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ring_1/defiler_g/coll_ringi_g/button_g" to="attributs_label/sprite_ring_1" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_1/defiler_d" to="attributs_label/sprite_ring_1" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_1/defiler_d" to="attributs_label/sprite_ring_1" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ring_1/defiler_d/coll_ringi_d/button_d" to="attributs_label/sprite_ring_1" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_2/body_ringii" to="attributs_label/sprite_ring_2" method="_on_body_ringii_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_2/body_ringii" to="attributs_label/sprite_ring_2" method="_on_body_ringii_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_2/defiler_g" to="attributs_label/sprite_ring_2" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_2/defiler_g" to="attributs_label/sprite_ring_2" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ring_2/defiler_g/coll_ringii_g/button_g" to="attributs_label/sprite_ring_2" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ring_2/defiler_d" to="attributs_label/sprite_ring_2" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ring_2/defiler_d" to="attributs_label/sprite_ring_2" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ring_2/defiler_d/coll_ringii_d/button_d" to="attributs_label/sprite_ring_2" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_weapon/body_weapon" to="attributs_label/sprite_weapon" method="_on_body_weapon_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_weapon/body_weapon" to="attributs_label/sprite_weapon" method="_on_body_weapon_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_weapon/defiler_g" to="attributs_label/sprite_weapon" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_weapon/defiler_g" to="attributs_label/sprite_weapon" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_weapon/defiler_g/coll_weap_g/button_g" to="attributs_label/sprite_weapon" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_weapon/defiler_d" to="attributs_label/sprite_weapon" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_weapon/defiler_d" to="attributs_label/sprite_weapon" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_weapon/defiler_d/coll_weap_d/button_d" to="attributs_label/sprite_weapon" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_shield/body_shield" to="attributs_label/sprite_shield" method="_on_body_shield_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_shield/body_shield" to="attributs_label/sprite_shield" method="_on_body_shield_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_shield/defiler_g" to="attributs_label/sprite_shield" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_shield/defiler_g" to="attributs_label/sprite_shield" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_shield/defiler_g/coll_shield_g/button_g" to="attributs_label/sprite_shield" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_shield/defiler_d" to="attributs_label/sprite_shield" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_shield/defiler_d" to="attributs_label/sprite_shield" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_shield/defiler_d/coll_shield_d/button_d" to="attributs_label/sprite_shield" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_torso/body_torso" to="attributs_label/sprite_torso" method="_on_body_torso_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_torso/body_torso" to="attributs_label/sprite_torso" method="_on_body_torso_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_torso/defiler_g" to="attributs_label/sprite_torso" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_torso/defiler_g" to="attributs_label/sprite_torso" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_torso/defiler_g/coll_torso_g/button_g" to="attributs_label/sprite_torso" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_torso/defiler_d" to="attributs_label/sprite_torso" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_torso/defiler_d" to="attributs_label/sprite_torso" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_torso/defiler_d/coll_torso_d/button_d" to="attributs_label/sprite_torso" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ceinture/body_belt" to="attributs_label/sprite_ceinture" method="_on_body_belt_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ceinture/body_belt" to="attributs_label/sprite_ceinture" method="_on_body_belt_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ceinture/defiler_g" to="attributs_label/sprite_ceinture" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ceinture/defiler_g" to="attributs_label/sprite_ceinture" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ceinture/defiler_g/coll_belt_g/button_g" to="attributs_label/sprite_ceinture" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_ceinture/defiler_d" to="attributs_label/sprite_ceinture" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_ceinture/defiler_d" to="attributs_label/sprite_ceinture" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_ceinture/defiler_d/coll_belt_d/button_d" to="attributs_label/sprite_ceinture" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_pants/body_pants" to="attributs_label/sprite_pants" method="_on_body_pants_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_pants/body_pants" to="attributs_label/sprite_pants" method="_on_body_pants_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_pants/defiler_g" to="attributs_label/sprite_pants" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_pants/defiler_g" to="attributs_label/sprite_pants" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_pants/defiler_g/coll_pants_g/button_g" to="attributs_label/sprite_pants" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_pants/defiler_d" to="attributs_label/sprite_pants" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_pants/defiler_d" to="attributs_label/sprite_pants" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_pants/defiler_d/coll_pants_d/button_d" to="attributs_label/sprite_pants" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_boots/body_boots" to="attributs_label/sprite_boots" method="_on_body_boots_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_boots/body_boots" to="attributs_label/sprite_boots" method="_on_body_boots_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_boots/defiler_g" to="attributs_label/sprite_boots" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_boots/defiler_g" to="attributs_label/sprite_boots" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_boots/defiler_g/coll_boots_g/button_g" to="attributs_label/sprite_boots" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_boots/defiler_d" to="attributs_label/sprite_boots" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_boots/defiler_d" to="attributs_label/sprite_boots" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_boots/defiler_d/coll_boots_d/button_d" to="attributs_label/sprite_boots" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_1/body_po1" to="attributs_label/sprite_po_1" method="_on_body_po_1_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_1/body_po1" to="attributs_label/sprite_po_1" method="_on_body_po_1_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_1/defiler_g" to="attributs_label/sprite_po_1" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_1/defiler_g" to="attributs_label/sprite_po_1" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_1/defiler_g/coll_po1_g/button_g" to="attributs_label/sprite_po_1" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_1/defiler_d" to="attributs_label/sprite_po_1" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_1/defiler_d" to="attributs_label/sprite_po_1" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_1/defiler_d/coll_po1_d/button_d" to="attributs_label/sprite_po_1" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_2/body_po2" to="attributs_label/sprite_po_2" method="_on_body_po_2_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_2/body_po2" to="attributs_label/sprite_po_2" method="_on_body_po_2_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_2/defiler_g" to="attributs_label/sprite_po_2" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_2/defiler_g" to="attributs_label/sprite_po_2" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_2/defiler_g/coll_po2_g/button_g" to="attributs_label/sprite_po_2" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_2/defiler_d" to="attributs_label/sprite_po_2" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_2/defiler_d" to="attributs_label/sprite_po_2" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_2/defiler_d/coll_po2_d/button_d" to="attributs_label/sprite_po_2" method="_on_button_d_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_3/body_po3" to="attributs_label/sprite_po_3" method="_on_body_po_3_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_3/body_po3" to="attributs_label/sprite_po_3" method="_on_body_po_3_mouse_shape_exited"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_3/defiler_g" to="attributs_label/sprite_po_3" method="_on_defiler_g_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_3/defiler_g" to="attributs_label/sprite_po_3" method="_on_defiler_g_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_3/defiler_g/coll_po3_g/button_g" to="attributs_label/sprite_po_3" method="_on_button_g_pressed"]
+[connection signal="mouse_shape_entered" from="attributs_label/sprite_po_3/defiler_d" to="attributs_label/sprite_po_3" method="_on_defiler_d_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="attributs_label/sprite_po_3/defiler_d" to="attributs_label/sprite_po_3" method="_on_defiler_d_mouse_shape_exited"]
+[connection signal="pressed" from="attributs_label/sprite_po_3/defiler_d/coll_po3_d/button_d" to="attributs_label/sprite_po_3" method="_on_button_d_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_demi_min/Button" to="attributs_label/po_demi_min" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_demi_min/Button" to="attributs_label/po_demi_min" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_demi_min/Button" to="attributs_label/po_demi_min" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_min/Button" to="attributs_label/po_min" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_min/Button" to="attributs_label/po_min" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_min/Button" to="attributs_label/po_min" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_demi_con/Button" to="attributs_label/po_demi_con" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_demi_con/Button" to="attributs_label/po_demi_con" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_demi_con/Button" to="attributs_label/po_demi_con" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_con/Button" to="attributs_label/po_con" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_con/Button" to="attributs_label/po_con" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_con/Button" to="attributs_label/po_con" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_demi_sup/Button" to="attributs_label/po_demi_sup" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_demi_sup/Button" to="attributs_label/po_demi_sup" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_demi_sup/Button" to="attributs_label/po_demi_sup" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_sup/Button" to="attributs_label/po_sup" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_sup/Button" to="attributs_label/po_sup" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_sup/Button" to="attributs_label/po_sup" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_fo/Button" to="attributs_label/po_fo" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_fo/Button" to="attributs_label/po_fo" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_fo/Button" to="attributs_label/po_fo" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_arm/Button" to="attributs_label/po_arm" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_arm/Button" to="attributs_label/po_arm" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_arm/Button" to="attributs_label/po_arm" method="_on_button_pressed"]
+[connection signal="mouse_entered" from="attributs_label/po_lif/Button" to="attributs_label/po_lif" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="attributs_label/po_lif/Button" to="attributs_label/po_lif" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="attributs_label/po_lif/Button" to="attributs_label/po_lif" method="_on_button_pressed"]
+[connection signal="animation_finished" from="anim_in_gas" to="player" method="_on_anim_in_gas_animation_finished"]
+[connection signal="timeout" from="anim_sleep/sleep_timer" to="anim_sleep" method="_on_sleep_timer_timeout"]
+[connection signal="animation_finished" from="anim_swim" to="player" method="_on_anim_swim_animation_finished"]

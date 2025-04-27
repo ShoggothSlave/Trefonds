@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://df43qh4w02cyw"]
+
+[ext_resource type="PackedScene" uid="uid://cxm4tqbhtp4hu" path="res://modeles3d/flowerpot.glb" id="1_tksfe"]
+[ext_resource type="Texture2D" uid="uid://cu7bwx4tgbcxe" path="res://images/textures/terre.png" id="2_t4xa2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3el4"]
+albedo_color = Color(0.357761, 0.221893, 0.147426, 1)
+metallic = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjls2"]
+albedo_texture = ExtResource("2_t4xa2")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="flowerpot" instance=ExtResource("1_tksfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0426851, 0)
+
+[node name="Cylindre" parent="." index="0"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 8
+material_override = SubResource("StandardMaterial3D_d3el4")
+
+[node name="Cylindre_001" parent="." index="1"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.0393787, 0)
+layers = 8
+material_override = SubResource("StandardMaterial3D_bjls2")

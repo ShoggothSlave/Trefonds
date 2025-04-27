@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://debie3bd78dtk"]
+
+[ext_resource type="ArrayMesh" uid="uid://s6d0l1t5den5" path="res://modeles3d/tablechevet.obj" id="1_e4alo"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_ricpk"]
+[ext_resource type="Texture2D" uid="uid://bpvvx4mqxypvl" path="res://images/textures/boisplain 2.png" id="3_akh1n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv2rv"]
+albedo_texture = ExtResource("2_ricpk")
+metallic = 0.75
+metallic_specular = 0.75
+roughness = 0.75
+uv1_scale = Vector3(2, 2, 2)
+uv1_offset = Vector3(0, 0, -0.505)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvhqa"]
+albedo_texture = ExtResource("3_akh1n")
+metallic = 0.75
+metallic_specular = 0.75
+roughness = 0.75
+uv1_scale = Vector3(4, 4, 4)
+uv1_offset = Vector3(-0.175, 0, 0)
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5qvmp"]
+points = PackedVector3Array(-0.256302, 0.165864, -0.212586, 0.244169, 0.371176, 0.23719, 0.230746, 0.373517, 0.240258, -0.209071, -2.77556e-17, 0.22448, 0.212076, 0.00249073, -0.221492, 0.240034, 0.36595, -0.249562, -0.240625, 0.372885, 0.239444, 0.211772, 0.00275378, 0.221176, -0.240957, 0.373143, -0.239777, -0.209071, -2.77556e-17, -0.22448, 0.211375, 0.182872, 0.272152, -0.213795, 0.182872, -0.272152, 0.253882, 0.165864, -0.212586, -0.213795, 0.182872, 0.272152, 0.205547, 0.125128, -0.264691, -0.256302, 0.165864, 0.204114, 0.253882, 0.165864, 0.212586, -0.256302, 0.327401, 0.246631, 0.253882, 0.327401, -0.246578, 0.23119, 0.373874, -0.240718, -0.256302, 0.327401, -0.246631, 0.240013, 0.365934, 0.24954, 0.206063, 0.124974, 0.265352, 0.211375, 0.182872, -0.272152, 0.253882, 0.327401, 0.246578, -0.247811, 0.327401, 0.255103, -0.247811, 0.327401, -0.255103, -0.207888, 0.125152, -0.264589, -0.207639, 0.125227, 0.264271, -0.215, 0.0103147, 0.222015, 0.204137, 0.0105132, -0.23, 0.204137, 0.0105132, 0.23)
+
+[node name="table_de_chevet" type="Node3D"]
+
+[node name="Tablechevet" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, 0.5)
+layers = 4
+mesh = ExtResource("1_e4alo")
+surface_material_override/0 = SubResource("StandardMaterial3D_vv2rv")
+surface_material_override/1 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/2 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/3 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/4 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/5 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/6 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/7 = SubResource("StandardMaterial3D_kvhqa")
+surface_material_override/8 = SubResource("StandardMaterial3D_kvhqa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tablechevet"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tablechevet/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5qvmp")

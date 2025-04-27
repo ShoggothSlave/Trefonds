@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxbs8wor1uoe3"
+path="res://.godot/imported/plantesimple2.obj-923cbb53b9295b528a8d5c58b6885033.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plantesimple2.obj-923cbb53b9295b528a8d5c58b6885033.mesh"]
+
+source_file="res://modeles3d/plantesimple2.obj"
+dest_files=["res://.godot/imported/plantesimple2.obj-923cbb53b9295b528a8d5c58b6885033.mesh", "res://.godot/imported/plantesimple2.obj-923cbb53b9295b528a8d5c58b6885033.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

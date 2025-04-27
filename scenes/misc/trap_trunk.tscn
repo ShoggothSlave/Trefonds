@@ -1,0 +1,151 @@
+[gd_scene load_steps=24 format=3 uid="uid://dq6jxwxi86ltq"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd7520bl4ja2k" path="res://modeles3d/bioencordé.obj" id="1_q67nf"]
+[ext_resource type="Texture2D" uid="uid://2vitltt7nmnn" path="res://images/textures/text bout woodlog.png" id="2_p7g4p"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="3_mimel"]
+[ext_resource type="Texture2D" uid="uid://baht8y26giqu4" path="res://images/textures/textcordage.png" id="4_5d72f"]
+[ext_resource type="ArrayMesh" uid="uid://vyrob366qt0a" path="res://modeles3d/cordepourbio.obj" id="5_6b07p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h27j"]
+albedo_texture = ExtResource("2_p7g4p")
+metallic = 0.5
+metallic_specular = 0.75
+roughness = 0.75
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3h2f"]
+albedo_texture = ExtResource("3_mimel")
+metallic = 0.5
+uv1_scale = Vector3(5, 5, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wxeo"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkapn"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5svaw"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an2w8"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qkj6"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibblf"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dq4jt"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tfo4"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scbqe"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwd67"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgdo2"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 20, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hig75"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 25, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xe7po"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 25, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2gcxy"]
+albedo_texture = ExtResource("4_5d72f")
+metallic = 1.0
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hcpwx"]
+points = PackedVector3Array(-0.0841896, -0.129596, -0.788299, 0.15978, 0.0411642, 0.773199, 0.135377, 0.114374, 0.724288, -0.157399, -0.0807896, 0.748743, -0.0597865, 0.138777, -0.788299, 0.135377, -0.105193, -0.64187, 0.0621674, -0.153999, 0.724288, -0.108593, 0.16318, 0.651073, 0.110974, 0.16318, -0.5442, -0.157399, 0.0411642, -0.666173, 0.135377, 0.0655674, -0.788299, 0.0377642, -0.153999, -0.788299, -0.0841896, -0.153999, 0.724288, -0.157399, 0.0655674, 0.748743, 0.15978, -0.0563865, 0.748743, 0.110974, 0.16318, 0.651073, 0.15978, 0.0411642, -0.666173, -0.132996, -0.105193, -0.64187, -0.132996, 0.114374, -0.617415, 0.15978, -0.0563865, -0.666173, -0.157399, -0.0563865, -0.666173, -0.0597865, -0.153999, -0.617415, 0.0865706, -0.153999, -0.593112, 0.135377, -0.105193, 0.724288, -0.0597865, 0.138777, 0.748743, -0.132996, 0.0655674, -0.788299, 0.0865706, 0.138777, -0.788299, -0.157399, -0.0319833, 0.773199, 0.135377, -0.0807896, -0.788299, 0.0865706, -0.129596, 0.748743, -0.132996, -0.0807896, -0.788299, 0.135377, 0.114374, -0.617415)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wbmxm"]
+albedo_texture = ExtResource("4_5d72f")
+uv1_scale = Vector3(1, 50, 1)
+texture_filter = 0
+
+[node name="trap_trunk" type="Node3D"]
+
+[node name="Bioencordé" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_q67nf")
+surface_material_override/0 = SubResource("StandardMaterial3D_7h27j")
+surface_material_override/1 = SubResource("StandardMaterial3D_d3h2f")
+surface_material_override/2 = SubResource("StandardMaterial3D_8wxeo")
+surface_material_override/3 = SubResource("StandardMaterial3D_nkapn")
+surface_material_override/4 = SubResource("StandardMaterial3D_5svaw")
+surface_material_override/5 = SubResource("StandardMaterial3D_an2w8")
+surface_material_override/6 = SubResource("StandardMaterial3D_5qkj6")
+surface_material_override/7 = SubResource("StandardMaterial3D_ibblf")
+surface_material_override/8 = SubResource("StandardMaterial3D_dq4jt")
+surface_material_override/9 = SubResource("StandardMaterial3D_1tfo4")
+surface_material_override/10 = SubResource("StandardMaterial3D_scbqe")
+surface_material_override/11 = SubResource("StandardMaterial3D_gwd67")
+surface_material_override/12 = SubResource("StandardMaterial3D_hgdo2")
+surface_material_override/13 = SubResource("StandardMaterial3D_hig75")
+surface_material_override/14 = SubResource("StandardMaterial3D_xe7po")
+surface_material_override/15 = SubResource("StandardMaterial3D_2gcxy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bioencordé"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bioencordé/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_hcpwx")
+
+[node name="Cordepourbio" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0965055, 0, 0)
+material_override = SubResource("StandardMaterial3D_wbmxm")
+mesh = ExtResource("5_6b07p")
+
+[node name="Cordepourbio2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00274456, 0, 0)
+material_override = SubResource("StandardMaterial3D_wbmxm")
+mesh = ExtResource("5_6b07p")

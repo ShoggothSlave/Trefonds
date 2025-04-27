@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://clr71vtm2u1vj"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_2o62j"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_kcuag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6n1h"]
+atlas = ExtResource("2_kcuag")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_2o62j")
+name = "Amulette de force II"
+description = "Une amulette de force en argent"
+item_type = "équipement"
+item_effect = "force +10"
+stockable = false
+texture = SubResource("AtlasTexture_x6n1h")

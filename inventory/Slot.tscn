@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcgxag2y8ie1r"]
+
+[ext_resource type="Script" path="res://inventory/Slot.gd" id="1_fgaxw"]
+[ext_resource type="FontFile" uid="uid://bv6d3sm7jqort" path="res://autres/Regothic Medieval.ttf" id="2_u6t3j"]
+
+[node name="Slot" type="PanelContainer"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fgaxw")
+
+[node name="slot_margin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="texture_slot" type="TextureRect" parent="slot_margin"]
+texture_filter = 1
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="quantity_label" type="Label" parent="."]
+visible = false
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.568502, 0.517856, 0.225537, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_u6t3j")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1

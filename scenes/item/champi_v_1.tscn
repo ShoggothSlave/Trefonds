@@ -1,0 +1,283 @@
+[gd_scene load_steps=13 format=3 uid="uid://crv7npqc2w8uk"]
+
+[ext_resource type="PackedScene" uid="uid://c0tvvrykduevl" path="res://modeles3d/champi1.glb" id="1_0cgte"]
+[ext_resource type="Script" path="res://scenes/item/champi_v_1.gd" id="2_6abu5"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="3_umwog"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7a1c"]
+albedo_color = Color(0.168971, 0.145676, 0.0873393, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm7u4"]
+albedo_color = Color(0.426194, 0.383814, 0.311825, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_squma"]
+albedo_color = Color(0.353455, 0.338603, 0.2071, 1)
+metallic = 1.0
+metallic_specular = 0.35
+emission_enabled = true
+emission = Color(0.0974044, 0.0953264, 0.0491432, 1)
+emission_energy_multiplier = 3.16
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pw75n"]
+radius = 0.109909
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bo0js"]
+radius = 0.108041
+
+[sub_resource type="Animation" id="Animation_dqkam"]
+resource_name = "pick"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Agaric:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Agaric/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("audio_pick:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wkuyf"]
+resource_name = "respawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Agaric:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Agaric/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_s11r3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Agaric:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Agaric/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_veavw"]
+_data = {
+"RESET": SubResource("Animation_s11r3"),
+"pick": SubResource("Animation_dqkam"),
+"respawn": SubResource("Animation_wkuyf")
+}
+
+[node name="champi_v_1" instance=ExtResource("1_0cgte")]
+script = ExtResource("2_6abu5")
+
+[node name="Sphère" parent="." index="0"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0114775, 0.0862838, -0.0120882)
+layers = 8
+surface_material_override/0 = SubResource("StandardMaterial3D_s7a1c")
+surface_material_override/1 = SubResource("StandardMaterial3D_wm7u4")
+surface_material_override/2 = SubResource("StandardMaterial3D_squma")
+
+[node name="Sphère_001" parent="." index="1"]
+transform = Transform3D(-0.0320124, 0.0225293, -0.0159436, 0.00536942, 0.0374682, 0.0259453, 0.0234784, 0.0221494, -0.0276724, 0.0311442, 0.0302882, 0.00646323)
+layers = 8
+surface_material_override/0 = SubResource("StandardMaterial3D_s7a1c")
+surface_material_override/1 = SubResource("StandardMaterial3D_wm7u4")
+surface_material_override/2 = SubResource("StandardMaterial3D_squma")
+
+[node name="Sphère_002" parent="." index="2"]
+transform = Transform3D(0.0134305, -0.0362161, 0.0332349, 0.00591643, 0.0434441, 0.0295986, -0.0416308, -0.00550953, 0.0149284, -0.057925, 0.0350109, -0.034669)
+layers = 8
+surface_material_override/0 = SubResource("StandardMaterial3D_s7a1c")
+surface_material_override/1 = SubResource("StandardMaterial3D_wm7u4")
+surface_material_override/2 = SubResource("StandardMaterial3D_squma")
+
+[node name="respawn_timer" type="Timer" parent="." index="3"]
+wait_time = 900.0
+one_shot = true
+
+[node name="interaction_area" type="Area3D" parent="." index="4" groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00478968, 0.103567, 0)
+shape = SubResource("SphereShape3D_pw75n")
+
+[node name="Agaric" type="StaticBody3D" parent="." index="5" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Agaric" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, 0.0937191, 0)
+shape = SubResource("SphereShape3D_bo0js")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("3_umwog")
+
+[node name="anim_champi" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+"": SubResource("AnimationLibrary_veavw")
+}

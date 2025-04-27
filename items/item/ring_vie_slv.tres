@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://3joherkg463g"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_bap86"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_i4o8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_742no"]
+atlas = ExtResource("2_i4o8y")
+region = Rect2(128, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_bap86")
+name = "Anneau de vie en argent"
+description = "Un anneau de vie en argent"
+item_type = "équipement"
+item_effect = "points de vie max +5"
+stockable = false
+texture = SubResource("AtlasTexture_742no")

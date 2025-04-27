@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://52fhn53efwlj"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_xl2fk"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_dsydb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wuq7"]
+atlas = ExtResource("2_dsydb")
+region = Rect2(448, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_xl2fk")
+name = "Amulette de respiration II"
+description = "Une amulette de respiration en argent"
+item_type = "équipement"
+item_effect = "respiration +10"
+stockable = false
+texture = SubResource("AtlasTexture_1wuq7")

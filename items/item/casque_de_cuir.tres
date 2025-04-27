@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dq6kga71w6wyf"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_yxv4i"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_d8fw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xopd1"]
+atlas = ExtResource("2_d8fw2")
+region = Rect2(576, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_yxv4i")
+name = "Capine de cuir"
+description = "Un casque en cuir bouillie"
+item_type = "équipement"
+item_effect = "armure +2"
+stockable = false
+texture = SubResource("AtlasTexture_xopd1")

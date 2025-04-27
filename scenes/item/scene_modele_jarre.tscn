@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3qv1aju24ou3"]
+
+[ext_resource type="Texture2D" uid="uid://brqj5knjvik2a" path="res://images/items/jute.png" id="1_x2opp"]
+[ext_resource type="PackedScene" uid="uid://y2e2jmo7ly6c" path="res://scenes/item/jarre.tscn" id="2_ujt8b"]
+[ext_resource type="ArrayMesh" uid="uid://bp34tlfukxety" path="res://modeles3d/jarre_contenu.obj" id="3_jwnuk"]
+[ext_resource type="Texture2D" uid="uid://kekqjq8f21gs" path="res://images/textures/compotte_myrtilles.png" id="4_g68dg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er1fr"]
+albedo_texture = ExtResource("4_g68dg")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80v4u"]
+albedo_color = Color(0.043505, 0.000728248, 0.108038, 1)
+
+[node name="scene_modele_jarre" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("1_x2opp")
+
+[node name="jarre" parent="." instance=ExtResource("2_ujt8b")]
+transform = Transform3D(0.654332, 0, -0.756208, 0, 1, 0, 0.756208, 0, 0.654332, 0, 0, 0.0541237)
+
+[node name="jarre_compotte" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0327166, 0, -0.0378104, 0, 0.05, 0, 0.0378104, 0, 0.0327166, 0, -0.00948223, 0.0541237)
+mesh = ExtResource("3_jwnuk")
+surface_material_override/0 = SubResource("StandardMaterial3D_er1fr")
+surface_material_override/1 = SubResource("StandardMaterial3D_80v4u")

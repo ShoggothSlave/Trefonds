@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://csooyf4hl8sew"]
+
+[ext_resource type="ArrayMesh" uid="uid://bjqnif785g3tw" path="res://modeles3d/assiette.obj" id="1_lg774"]
+[ext_resource type="Script" path="res://scenes/item/assiette_bronze.gd" id="1_w3b85"]
+[ext_resource type="AudioStream" uid="uid://c2rhfg7ot4fdq" path="res://sons/WEAPSwrd_Epee (ID 0129)_LS.wav" id="3_iwb8s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgrrp"]
+albedo_color = Color(0.2688, 0.233771, 0.0775725, 1)
+metallic = 0.75
+metallic_specular = 0.25
+roughness = 0.75
+uv1_triplanar = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lexs0"]
+height = 0.0123554
+radius = 0.101004
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tqh21"]
+height = 0.023257
+radius = 0.105294
+
+[node name="assiette_bronze" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_w3b85")
+
+[node name="Assiette" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_xgrrp")
+mesh = ExtResource("1_lg774")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.37724e-05, -0.00548712, 0)
+shape = SubResource("CylinderShape3D_lexs0")
+
+[node name="Assiette de bronze" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Assiette de bronze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000170385, -0.00328743, 0)
+shape = SubResource("CylinderShape3D_tqh21")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iwb8s")
+pitch_scale = 1.5
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://4ptskf21sgm5"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_u58ql"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_m2vdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgiko"]
+atlas = ExtResource("2_m2vdw")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_u58ql")
+name = "Amulette d'armure II"
+description = "Une amulette d'armure en argent"
+item_type = "équipement"
+item_effect = "armure +10"
+stockable = false
+texture = SubResource("AtlasTexture_jgiko")

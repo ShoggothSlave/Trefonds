@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlppewd2my67f"]
+
+[ext_resource type="ArrayMesh" uid="uid://crnam1no8vksk" path="res://modeles3d/bio.obj" id="1_7eody"]
+[ext_resource type="Texture2D" uid="uid://2vitltt7nmnn" path="res://images/textures/text bout woodlog.png" id="2_6s7dg"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="3_gomau"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ea4th"]
+albedo_texture = ExtResource("2_6s7dg")
+metallic = 0.5
+uv1_scale = Vector3(1.635, 2, 2)
+uv1_offset = Vector3(0.115, 0, 0.485)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xguht"]
+albedo_texture = ExtResource("3_gomau")
+metallic = 0.75
+metallic_specular = 0.0
+uv1_scale = Vector3(5, 5, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ipw4a"]
+points = PackedVector3Array(-0.116404, -0.0983429, -0.788149, 0.148632, 0.0221019, 0.754149, 0.148632, -0.0501367, 0.754149, -0.140549, 0.0461909, 0.754149, 0.0763365, 0.142632, -0.788149, 0.124514, -0.0983429, -0.788149, -0.0441084, -0.146549, 0.754149, -0.140549, 0.0703082, -0.763994, -0.0682257, 0.142632, 0.729994, 0.100425, 0.118486, 0.754149, 0.148632, 0.0461909, -0.69168, -0.140549, -0.074254, 0.729994, 0.0522192, -0.146549, -0.788149, 0.100425, -0.122432, 0.754149, -0.0682257, 0.142632, -0.788149, -0.0441084, -0.146549, -0.788149, -0.140549, -0.074254, -0.739839, 0.0522192, 0.142632, 0.705839, 0.148632, -0.0501367, -0.739839, 0.0522192, -0.146549, 0.754149, -0.0923146, -0.122432, 0.754149, 0.124514, 0.0943972, -0.788149, 0.124514, 0.0943972, 0.754149, -0.140549, 0.0703082, 0.65768, -0.0923146, -0.122432, -0.788149, 0.124514, -0.0983429, 0.754149, 0.100425, -0.122432, -0.788149, 0.148632, 0.0461909, 0.729994, -0.0441084, 0.142632, 0.754149, -0.140549, 0.0461909, -0.788149, -0.116404, 0.0943972, 0.754149, -0.140549, -0.0501367, -0.788149)
+
+[node name="logger" type="Node3D"]
+
+[node name="Bio" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0642432, 0)
+layers = 4
+mesh = ExtResource("1_7eody")
+surface_material_override/0 = SubResource("StandardMaterial3D_ea4th")
+surface_material_override/1 = SubResource("StandardMaterial3D_xguht")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bio"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bio/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ipw4a")

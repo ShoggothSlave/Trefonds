@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bwyncndergfd"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_64xqq"]
+[ext_resource type="Texture2D" uid="uid://ds2tmguupeqji" path="res://items/items_spritesheet_1.png" id="2_m83fn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i05kk"]
+atlas = ExtResource("2_m83fn")
+region = Rect2(0, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_64xqq")
+name = "Bolet Blafard"
+description = "Un bolet blafard"
+item_type = "consommable"
+item_effect = "faim -15"
+stockable = true
+texture = SubResource("AtlasTexture_i05kk")

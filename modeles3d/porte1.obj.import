@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mp3w2jge326p"
+path="res://.godot/imported/porte1.obj-e1e58a48739ec27acf74863083a68389.mesh"
+
+[deps]
+
+files=["res://.godot/imported/porte1.obj-e1e58a48739ec27acf74863083a68389.mesh"]
+
+source_file="res://modeles3d/porte1.obj"
+dest_files=["res://.godot/imported/porte1.obj-e1e58a48739ec27acf74863083a68389.mesh", "res://.godot/imported/porte1.obj-e1e58a48739ec27acf74863083a68389.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

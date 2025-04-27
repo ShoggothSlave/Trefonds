@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://fc1ftn0y7tgi"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_tdyus"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_xue86"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th548"]
+atlas = ExtResource("2_xue86")
+region = Rect2(192, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_tdyus")
+name = "Anneau de vie en or"
+description = "Un anneau de vie en or"
+item_type = "équipement"
+item_effect = "points de vie max +7"
+stockable = false
+texture = SubResource("AtlasTexture_th548")

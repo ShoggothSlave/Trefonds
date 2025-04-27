@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq7vxrvw3nl58"]
+
+[ext_resource type="PackedScene" uid="uid://cy3pd2dx07puw" path="res://scenes/system/gameplay.tscn" id="1_0stll"]
+[ext_resource type="PackedScene" uid="uid://b1gq6xcb6abtr" path="res://scenes/system/niveau_1.tscn" id="2_aj7as"]
+[ext_resource type="PackedScene" uid="uid://dhcttrm3b0khw" path="res://scenes/system/player.tscn" id="3_d6n0t"]
+
+[node name="Main" type="Node"]
+
+[node name="gameplay" parent="." instance=ExtResource("1_0stll")]
+
+[node name="Niveau1" parent="." instance=ExtResource("2_aj7as")]
+
+[node name="player" parent="." instance=ExtResource("3_d6n0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428132, 15.0036, 0)

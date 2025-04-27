@@ -1,0 +1,286 @@
+[gd_scene load_steps=12 format=3 uid="uid://drn7ddl4jt6oa"]
+
+[ext_resource type="ArrayMesh" uid="uid://dnoqjhwjvalge" path="res://modeles3d/plante feuillue1.obj" id="1_0j7ng"]
+[ext_resource type="Script" path="res://scenes/item/buisson_a_mirtilles.gd" id="1_h6hga"]
+[ext_resource type="PackedScene" uid="uid://dld1m6ca0ervs" path="res://scenes/item/mirtille.tscn" id="2_goi53"]
+[ext_resource type="AudioStream" uid="uid://r55kali73ekm" path="res://sons/bushmovement-6986.wav" id="4_ftnje"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="5_hj7up"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_okynr"]
+radius = 0.179479
+
+[sub_resource type="Animation" id="Animation_mrflc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mirtille:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mirtille2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mirtille3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("mirtille4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mirtille5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cj2p0"]
+resource_name = "pick_berries"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mirtille:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mirtille2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mirtille3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("mirtille4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mirtille5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("audio_berry:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cq6df"]
+resource_name = "respawn_berries"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mirtille:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mirtille2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mirtille3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("mirtille4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mirtille5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6x1a"]
+_data = {
+"RESET": SubResource("Animation_mrflc"),
+"pick_berries": SubResource("Animation_cj2p0"),
+"respawn_berries": SubResource("Animation_cq6df")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wvxsp"]
+radius = 0.180819
+
+[node name="buisson_a_mirtilles" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_h6hga")
+
+[node name="buisson_a_mirtilles" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.063, 0, 0, 0, 0.125, 0, 0, 0, 0.063, 0, 0, 0)
+layers = 512
+mesh = ExtResource("1_0j7ng")
+
+[node name="mirtille" parent="." instance=ExtResource("2_goi53")]
+transform = Transform3D(1, 0, 0, 0, 0.87998, -0.47501, 0, 0.47501, 0.87998, -0.0468951, 0.174724, 0.151739)
+
+[node name="mirtille2" parent="." instance=ExtResource("2_goi53")]
+transform = Transform3D(0.439621, 0.071179, 0.895359, 0.0977522, 0.987142, -0.126472, -0.892848, 0.143123, 0.427011, -0.155483, 0.237188, 0.0377337)
+
+[node name="mirtille3" parent="." instance=ExtResource("2_goi53")]
+transform = Transform3D(0.697124, 0.222226, -0.681641, -0.303717, 0.952762, 0, 0.649442, 0.207026, 0.731687, 0.122763, 0.23962, -0.00643354)
+
+[node name="mirtille4" parent="." instance=ExtResource("2_goi53")]
+transform = Transform3D(-0.179403, 0, -0.983776, -0.14935, 0.988409, 0.0272357, 0.972373, 0.151813, -0.177324, 0.115699, 0.188329, -0.123498)
+
+[node name="mirtille5" parent="." instance=ExtResource("2_goi53")]
+transform = Transform3D(0.660255, -0.208549, 0.721506, -0.18963, 0.883256, 0.428834, -0.726708, -0.419959, 0.543627, -0.0987995, 0.14482, -0.175391)
+
+[node name="body_detection" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="body_collision" type="CollisionShape3D" parent="body_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17677, 0)
+shape = SubResource("SphereShape3D_okynr")
+
+[node name="audio_foliage" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ftnje")
+area_mask = 3
+
+[node name="anim_berries" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q6x1a")
+}
+
+[node name="audio_berry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hj7up")
+
+[node name="respawn_timer" type="Timer" parent="."]
+wait_time = 900.0
+one_shot = true
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.170776, 0)
+shape = SubResource("SphereShape3D_wvxsp")
+
+[node name="Mirtilles" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Mirtilles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17677, 0)
+shape = SubResource("SphereShape3D_okynr")
+
+[connection signal="body_entered" from="body_detection" to="." method="_on_body_detection_body_entered"]
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]

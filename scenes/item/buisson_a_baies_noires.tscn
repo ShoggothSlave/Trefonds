@@ -1,0 +1,291 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw1mxrcjo0fwe"]
+
+[ext_resource type="ArrayMesh" uid="uid://dnoqjhwjvalge" path="res://modeles3d/plante feuillue1.obj" id="1_a5ivp"]
+[ext_resource type="Script" path="res://scenes/item/buisson_a_baies_noires.gd" id="1_rkpig"]
+[ext_resource type="PackedScene" uid="uid://c7lf3rafqtf20" path="res://scenes/item/baies_noires.tscn" id="2_qfiwf"]
+[ext_resource type="AudioStream" uid="uid://r55kali73ekm" path="res://sons/bushmovement-6986.wav" id="4_4flq8"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="5_sf7au"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8tuh6"]
+radius = 0.179479
+
+[sub_resource type="Animation" id="Animation_bomhj"]
+length = 0.001
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("baies_noires:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("baies_noires2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("baies_noires3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("baies_noires4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("baies_noires5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pdnem"]
+resource_name = "pick_berries"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("baies_noires:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("baies_noires2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("baies_noires3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("baies_noires4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("baies_noires5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("audio_berry:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_caxt0"]
+resource_name = "spawn_berries"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("baies_noires:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("baies_noires2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("baies_noires3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("baies_noires4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("baies_noires5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b4o18"]
+_data = {
+"RESET": SubResource("Animation_bomhj"),
+"pick_berries": SubResource("Animation_pdnem"),
+"spawn_berries": SubResource("Animation_caxt0")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rqxum"]
+radius = 0.180819
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p27bo"]
+radius = 0.179479
+
+[node name="buisson_a_baies_noires" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_rkpig")
+
+[node name="buisson_a_baies_noires" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.063, 0, 0, 0, 0.125, 0, 0, 0, 0.063, 0, 0, 0)
+layers = 5
+mesh = ExtResource("1_a5ivp")
+
+[node name="baies_noires" parent="." instance=ExtResource("2_qfiwf")]
+transform = Transform3D(1, 0, 0, 0, 0.963821, 0.266549, 0, -0.266549, 0.963821, 0.0616257, 0.222493, 0.145598)
+
+[node name="baies_noires2" parent="." instance=ExtResource("2_qfiwf")]
+transform = Transform3D(0.795706, -0.0780617, 0.600631, 0, 0.99166, 0.128882, -0.605683, -0.102552, 0.78907, 0.128333, 0.188226, 0.0101951)
+
+[node name="baies_noires3" parent="." instance=ExtResource("2_qfiwf")]
+transform = Transform3D(-0.854622, 0, 0.519251, 0.0473859, 0.995827, 0.0779913, -0.517084, 0.0912583, -0.851056, -0.00300678, 0.204171, -0.166252)
+
+[node name="baies_noires4" parent="." instance=ExtResource("2_qfiwf")]
+transform = Transform3D(-0.644615, 0.32735, 0.690879, 0.370363, 0.924282, -0.0923781, -0.668807, 0.196327, -0.717045, -0.165112, 0.199527, -0.121367)
+
+[node name="baies_noires5" parent="." instance=ExtResource("2_qfiwf")]
+transform = Transform3D(0.0742627, 0.236807, 0.968714, -0.190302, 0.956911, -0.219333, -0.978913, -0.16806, 0.116127, -0.126916, 0.190562, 0.132638)
+
+[node name="body_detection" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="body_collision" type="CollisionShape3D" parent="body_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17677, 0)
+shape = SubResource("SphereShape3D_8tuh6")
+
+[node name="audio_foliage" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_4flq8")
+area_mask = 3
+
+[node name="audio_berry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sf7au")
+
+[node name="anim_blackberries" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b4o18")
+}
+
+[node name="respawn_timer" type="Timer" parent="."]
+wait_time = 900.0
+one_shot = true
+
+[node name="interaction_area" type="Area3D" parent="."]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.170776, 0)
+shape = SubResource("SphereShape3D_rqxum")
+
+[node name="Baies Noires" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Baies Noires" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17677, 0)
+shape = SubResource("SphereShape3D_p27bo")
+
+[connection signal="body_entered" from="body_detection" to="." method="_on_body_detection_body_entered"]
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]

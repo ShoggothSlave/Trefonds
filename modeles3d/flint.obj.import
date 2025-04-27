@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfive5rxghsab"
+path="res://.godot/imported/flint.obj-fe1cd33dfb38a2a79b8013439b4a870c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flint.obj-fe1cd33dfb38a2a79b8013439b4a870c.mesh"]
+
+source_file="res://modeles3d/flint.obj"
+dest_files=["res://.godot/imported/flint.obj-fe1cd33dfb38a2a79b8013439b4a870c.mesh", "res://.godot/imported/flint.obj-fe1cd33dfb38a2a79b8013439b4a870c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

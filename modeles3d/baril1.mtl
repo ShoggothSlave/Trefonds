@@ -1,0 +1,22 @@
+# Blender 4.3.2 MTL File: 'baril1.blend'
+# www.blender.org
+
+newmtl Bois2
+Ns 62.500000
+Ka 0.250000 0.250000 0.250000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Users/Admin/Downloads/boisplainB2.png
+
+newmtl bois
+Ns 42250.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Users/Admin/Downloads/boisplainB.png

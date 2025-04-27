@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdqtbgl5lm5qs"
+path="res://.godot/imported/potion_consequente.obj-6768d88ea5b1588c5c526339d55e0d4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/potion_consequente.obj-6768d88ea5b1588c5c526339d55e0d4a.mesh"]
+
+source_file="res://modeles3d/potion_consequente.obj"
+dest_files=["res://.godot/imported/potion_consequente.obj-6768d88ea5b1588c5c526339d55e0d4a.mesh", "res://.godot/imported/potion_consequente.obj-6768d88ea5b1588c5c526339d55e0d4a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

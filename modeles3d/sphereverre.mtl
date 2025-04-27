@@ -1,0 +1,12 @@
+# Blender 4.3.2 MTL File: 'sphereverre.blend'
+# www.blender.org
+
+newmtl verre
+Ns 980.100037
+Ka 1.000000 1.000000 1.000000
+Kd 0.406266 0.631978 0.800133
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.000000
+illum 6

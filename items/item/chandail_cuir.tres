@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://kvg223yku7nt"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_nwpy5"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_tt12y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58j82"]
+atlas = ExtResource("2_tt12y")
+region = Rect2(0, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_nwpy5")
+name = "Chandail de cuir"
+description = "Un solide chandail de cuir bouillie"
+item_type = "équipement"
+item_effect = "armure +3"
+stockable = false
+texture = SubResource("AtlasTexture_58j82")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dld1m6ca0ervs"]
+
+[ext_resource type="PackedScene" uid="uid://drd7jw0sxn78a" path="res://modeles3d/baie1.glb" id="1_rlv0q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtbip"]
+albedo_color = Color(0.00204579, 0, 0.26685, 1)
+metallic = 0.25
+metallic_specular = 0.25
+roughness = 0.5
+
+[node name="mirtille" instance=ExtResource("1_rlv0q")]
+
+[node name="Sphère" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_vtbip")
+
+[node name="Sphère_001" parent="." index="1"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_vtbip")
+
+[node name="Sphère_002" parent="." index="2"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_vtbip")

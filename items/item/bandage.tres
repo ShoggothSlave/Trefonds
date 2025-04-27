@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cg5iv6cnp4k17"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_ea573"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_4yqvv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id64g"]
+atlas = ExtResource("2_4yqvv")
+region = Rect2(384, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_ea573")
+name = "Bandage"
+description = "bandage artisanale à base de plantes"
+item_type = "consommable"
+item_effect = "points de vie + 15"
+stockable = true
+texture = SubResource("AtlasTexture_id64g")

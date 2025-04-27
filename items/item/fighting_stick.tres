@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://j1rrhicrmqko"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_52xxu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sb37b"]
+load_path = "res://.godot/imported/items_spritesheet_1.png-cb31a3416411dfa41388d5d68ce85bcc.s3tc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1t6k"]
+atlas = SubResource("CompressedTexture2D_sb37b")
+region = Rect2(256, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_52xxu")
+name = "Bâton de combat"
+description = "Un bâton de combat finement sculpté"
+item_type = "arme"
+item_effect = "dommages: 1.5\\bouclier: 10\\portée: 2"
+stockable = false
+texture = SubResource("AtlasTexture_o1t6k")

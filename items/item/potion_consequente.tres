@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cj07v6aw7a14e"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_rytay"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_laws7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b81i"]
+atlas = ExtResource("2_laws7")
+region = Rect2(384, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_rytay")
+name = "Potion conséquente"
+description = "Un flacon remplie d'un liquide visqueux"
+item_type = "consommable"
+item_effect = "points de vie +50"
+stockable = true
+texture = SubResource("AtlasTexture_4b81i")

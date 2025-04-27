@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d2ge3rkk0un4c"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_thwnw"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_7j7lq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d2nd"]
+atlas = ExtResource("2_7j7lq")
+region = Rect2(320, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_thwnw")
+name = "Anneau d'armure en bronze"
+description = "Un anneau d'armure en bronze"
+item_type = "équipement"
+item_effect = "armure +3"
+stockable = false
+texture = SubResource("AtlasTexture_4d2nd")

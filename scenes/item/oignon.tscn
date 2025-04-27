@@ -1,0 +1,288 @@
+[gd_scene load_steps=16 format=3 uid="uid://e3l8kwibgtvw"]
+
+[ext_resource type="ArrayMesh" uid="uid://20du26ytlkr6" path="res://modeles3d/oignon.obj" id="1_fpfvd"]
+[ext_resource type="Script" path="res://scenes/item/oignon.gd" id="1_n53e0"]
+[ext_resource type="Texture2D" uid="uid://5s4xom17xuq3" path="res://images/textures/text_tige_oignon.png" id="2_u61sq"]
+[ext_resource type="Texture2D" uid="uid://bycayjf2iiduk" path="res://images/textures/text_oignon.png" id="3_judbt"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="5_1vx6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88r03"]
+albedo_texture = ExtResource("2_u61sq")
+metallic = 1.0
+roughness = 0.75
+uv1_scale = Vector3(1, -0.11, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yesmh"]
+albedo_texture = ExtResource("2_u61sq")
+uv1_scale = Vector3(1, 0.35, 1)
+uv1_offset = Vector3(0, -0.18, 0)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_de1pb"]
+albedo_texture = ExtResource("2_u61sq")
+uv1_scale = Vector3(1, -0.805, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ag5q1"]
+albedo_texture = ExtResource("3_judbt")
+metallic = 1.0
+roughness = 0.43
+uv1_scale = Vector3(1, 0.495, 1)
+uv1_offset = Vector3(0, -0.585, 0)
+texture_filter = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uvvxy"]
+radius = 0.06105
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ma0k5"]
+radius = 0.0769316
+
+[sub_resource type="Animation" id="Animation_2w8vy"]
+resource_name = "pick"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Oignon:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Oignon/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("audio_pick:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tdn76"]
+resource_name = "respawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Oignon:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Oignon/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ee53v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("interaction_area:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("interaction_area/interaction_form:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Oignon:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Oignon/body_collision2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyj36"]
+_data = {
+"RESET": SubResource("Animation_ee53v"),
+"pick": SubResource("Animation_2w8vy"),
+"respawn": SubResource("Animation_tdn76")
+}
+
+[node name="oignon" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("1_n53e0")
+
+[node name="oignon" type="MeshInstance3D" parent="."]
+layers = 8
+mesh = ExtResource("1_fpfvd")
+surface_material_override/0 = SubResource("StandardMaterial3D_88r03")
+surface_material_override/1 = SubResource("StandardMaterial3D_yesmh")
+surface_material_override/2 = SubResource("StandardMaterial3D_de1pb")
+surface_material_override/3 = SubResource("StandardMaterial3D_ag5q1")
+
+[node name="respawn_timer" type="Timer" parent="."]
+wait_time = 900.0
+one_shot = true
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00478968, -0.0213134, 0)
+shape = SubResource("SphereShape3D_uvvxy")
+
+[node name="Oignon" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Oignon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, -0.0311613, 0)
+shape = SubResource("SphereShape3D_ma0k5")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1vx6e")
+
+[node name="anim_oignon" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qyj36")
+}
+
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]

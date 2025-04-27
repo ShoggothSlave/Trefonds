@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bpqo4py1o622y"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_10onw"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_yshuq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iooe7"]
+atlas = ExtResource("2_yshuq")
+region = Rect2(0, 256, 64, 64)
+
+[resource]
+script = ExtResource("1_10onw")
+name = "Potion de vie"
+description = "Une potion de vie permanente"
+item_type = "consommable"
+item_effect = "points de vie max +5"
+stockable = true
+texture = SubResource("AtlasTexture_iooe7")

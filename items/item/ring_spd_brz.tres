@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bwqbjy7sqafjj"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_hgysi"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_ofotm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4mkq"]
+atlas = ExtResource("2_ofotm")
+region = Rect2(448, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_hgysi")
+name = "Anneau de vitesse en bronze"
+description = "Un anneau de vitesse en bronze"
+item_type = "équipement"
+item_effect = "vitesse +3"
+stockable = false
+texture = SubResource("AtlasTexture_s4mkq")

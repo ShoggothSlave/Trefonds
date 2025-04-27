@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bt2c5w3r4u0nq"
+path="res://.godot/imported/demi_voute.obj-5aba80200a4a9521c9b3ecf9bf688aaf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/demi_voute.obj-5aba80200a4a9521c9b3ecf9bf688aaf.mesh"]
+
+source_file="res://modeles3d/demi_voute.obj"
+dest_files=["res://.godot/imported/demi_voute.obj-5aba80200a4a9521c9b3ecf9bf688aaf.mesh", "res://.godot/imported/demi_voute.obj-5aba80200a4a9521c9b3ecf9bf688aaf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

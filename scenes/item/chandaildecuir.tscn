@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6jr1k4y1ri2w"]
+
+[ext_resource type="Script" path="res://scenes/item/chandaildecuir.gd" id="1_cnhl8"]
+[ext_resource type="Texture2D" uid="uid://bqsk67ckshgw6" path="res://images/items/leathervest.png" id="1_gu3rd"]
+[ext_resource type="AudioStream" uid="uid://d3l167i5nh0pt" path="res://sons/leather-stress-4-long-97254.wav" id="2_rflwc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjjy7"]
+size = Vector3(0.105225, 1, 1.14465)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0dosd"]
+size = Vector3(0.128662, 1.03137, 1.15967)
+
+[node name="chandaildecuir" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_cnhl8")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0)
+layers = 8
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_gu3rd")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(-1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0, 0.25, 0.0059239, 0.0119014, 0.0180817)
+shape = SubResource("BoxShape3D_tjjy7")
+
+[node name="Chandail de cuir" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Chandail de cuir"]
+transform = Transform3D(-1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0, 0.25, 0.00650522, 0.0137372, 0.0199585)
+shape = SubResource("BoxShape3D_0dosd")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rflwc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

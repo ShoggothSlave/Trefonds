@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dd7520bl4ja2k"
+path="res://.godot/imported/bioencordé.obj-50c82b41cceea7adebe603114e3ec712.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bioencordé.obj-50c82b41cceea7adebe603114e3ec712.mesh"]
+
+source_file="res://modeles3d/bioencordé.obj"
+dest_files=["res://.godot/imported/bioencordé.obj-50c82b41cceea7adebe603114e3ec712.mesh", "res://.godot/imported/bioencordé.obj-50c82b41cceea7adebe603114e3ec712.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

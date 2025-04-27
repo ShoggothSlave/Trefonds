@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3p1ipu5mhmdb"]
+
+[ext_resource type="PackedScene" uid="uid://23bed4gimma8" path="res://modeles3d/pentalon1.glb" id="1_qfgwe"]
+[ext_resource type="Script" path="res://scenes/item/pentalon_1.gd" id="2_c5asb"]
+[ext_resource type="Texture2D" uid="uid://bxypqpf7ok68" path="res://images/textures/leather2.png" id="2_h6b4r"]
+[ext_resource type="AudioStream" uid="uid://d3l167i5nh0pt" path="res://sons/leather-stress-4-long-97254.wav" id="4_5niug"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l24pi"]
+albedo_texture = ExtResource("2_h6b4r")
+metallic = 1.0
+metallic_specular = 0.0
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.66)
+uv1_offset = Vector3(0.42, 0.005, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_suj3r"]
+size = Vector3(0.0983887, 1.02026, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2wve"]
+size = Vector3(0.13855, 1.07666, 1.03345)
+
+[node name="pentalon1" groups=["prehensible"] instance=ExtResource("1_qfgwe")]
+script = ExtResource("2_c5asb")
+
+[node name="Cube" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_l24pi")
+
+[node name="interaction_area" type="Area3D" parent="." index="1" groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(-1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0, 0.25, -0.0128444, 0.0391231, 0)
+shape = SubResource("BoxShape3D_suj3r")
+
+[node name="Pentalon de cuir" type="StaticBody3D" parent="." index="2" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Pentalon de cuir" index="0"]
+transform = Transform3D(-1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0, 0.25, -0.0142925, 0.042439, -0.00112915)
+shape = SubResource("BoxShape3D_q2wve")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_5niug")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

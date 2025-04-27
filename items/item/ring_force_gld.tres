@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dc6aocgjece6m"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_c7kyd"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_313fe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf1u2"]
+atlas = ExtResource("2_313fe")
+region = Rect2(0, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_c7kyd")
+name = "Anneau de force en or"
+description = "Un anneau de force en or"
+item_type = "équipement"
+item_effect = "force +7"
+stockable = false
+texture = SubResource("AtlasTexture_kf1u2")

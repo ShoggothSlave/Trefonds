@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://4ja1bml6fsfs"]
+
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="1_n1cyr"]
+[ext_resource type="ArrayMesh" uid="uid://ekahr754d3ac" path="res://modeles3d/porte_grille.obj" id="2_drwl7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8spa"]
+albedo_texture = ExtResource("1_n1cyr")
+metallic = 0.5
+metallic_specular = 0.75
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_aadda"]
+points = PackedVector3Array(0.997022, -0.513393, 0.0148015, 0.00483173, -0.513393, -0.018265, 0.087579, -0.529965, -0.018265, 0.997022, 0.528165, -0.018265, 0.00483173, 0.528165, 0.0148015, 0.0214395, -0.529965, 0.0148015, 0.00483173, 0.528165, -0.018265, 0.997022, 0.528165, 0.0148015, 0.997022, -0.513393, -0.018265, 0.980415, -0.529965, 0.0148015, 0.00483173, -0.513393, 0.0148015, 0.980415, -0.529965, -0.00173175, 0.203348, -0.529965, -0.018265, 0.0214395, -0.529965, -0.00173175)
+
+[node name="grille" type="Node3D"]
+
+[node name="grille" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524031, -0.228347)
+layers = 4
+material_override = SubResource("StandardMaterial3D_j8spa")
+mesh = ExtResource("2_drwl7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="grille"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="grille/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_aadda")

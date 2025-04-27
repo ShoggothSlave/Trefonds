@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dylw0byj1mvvs"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_35qn7"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_e0ew6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7imun"]
+atlas = ExtResource("2_e0ew6")
+region = Rect2(512, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_35qn7")
+name = "Potion d'armure"
+description = "Une potion d'armure permanente"
+item_type = "consommable armure +5"
+item_effect = ""
+stockable = true
+texture = SubResource("AtlasTexture_7imun")

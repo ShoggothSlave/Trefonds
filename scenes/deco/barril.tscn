@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://gfh58skc51hm"]
+
+[ext_resource type="ArrayMesh" uid="uid://ysrlghxvomjp" path="res://modeles3d/baril1.obj" id="1_t8x7p"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_rbx8m"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="3_a38c8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rw30q"]
+albedo_texture = ExtResource("2_rbx8m")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.91
+uv1_scale = Vector3(0.5, 1, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k8vg"]
+albedo_texture = ExtResource("3_a38c8")
+metallic = 0.5
+roughness = 0.85
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cylix"]
+points = PackedVector3Array(1.16494, 0.902153, 0.0369659, -1.17918, -0.585534, -0.0979188, -1.17662, -0.584255, 0.126705, 0.983022, -1.4416, 0.217137, 0.0820458, -0.857328, -1.18195, -0.547509, 1.43891, 0.846132, -0.322398, 1.43834, -0.951794, 0.261646, -0.854043, 1.16137, -0.857976, -1.43176, 0.528517, 0.664906, 1.43559, 0.754419, -0.591033, -1.43505, -0.81519, 0.796879, 1.20724, -0.768121, -1, 1.3079, -0.413688, 0.883717, -1.29309, -0.632207, 0.97523, -0.491409, 0.706775, -0.901893, 0.491402, 0.796172, -0.676627, 0.534895, -0.988905, 0.261622, 0.853967, 1.16127, -0.232603, -1.30282, 1.07017, 0.351199, 0.853048, -1.13105, -1.08957, 1.17186, 0.217257, -0.458052, 0.494919, 1.11721, 1.16202, -0.53989, -0.277882, 0.937379, 1.44088, -0.368105, -1.08646, -0.853412, -0.457344, 0.796303, -0.491343, -0.901786, 0.617042, -1.42901, 0.795476, 0.307448, -1.44354, -0.955204, -0.811534, -0.937174, 0.839986, 0.839292, 0.846985, 0.839292, -0.998941, -1.44169, -0.0979369, -0.633566, -0.893615, -0.991138)
+
+[node name="Barril" type="Node3D"]
+
+[node name="Baril1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.186291, 0)
+layers = 4
+mesh = ExtResource("1_t8x7p")
+surface_material_override/0 = SubResource("StandardMaterial3D_rw30q")
+surface_material_override/1 = SubResource("StandardMaterial3D_8k8vg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Baril1"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Baril1/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cylix")

@@ -1,0 +1,12 @@
+# Blender 4.3.2 MTL File: 'drain.blend'
+# www.blender.org
+
+newmtl rouille
+Ns 36.446281
+Ka 0.545455 0.545455 0.545455
+Ks 0.095455 0.095455 0.095455
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd C:/Users/Admin/Downloads/Rust004_1K-JPG_Color.jpg

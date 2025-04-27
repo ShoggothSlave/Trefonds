@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2yu622cr0njo"]
+
+[ext_resource type="Script" path="res://bottescuir.gd" id="1_5tnpm"]
+[ext_resource type="Texture2D" uid="uid://vgucr7m6p6ve" path="res://images/items/bottescuir.png" id="2_vk3ym"]
+[ext_resource type="AudioStream" uid="uid://d3l167i5nh0pt" path="res://sons/leather-stress-4-long-97254.wav" id="3_tvqnh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hpbri"]
+radius = 0.0774666
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pay7o"]
+radius = 0.0864486
+
+[node name="bottescuir" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_5tnpm")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.0787437, 0)
+layers = 8
+billboard = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_vk3ym")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.0059239, 0.0673082, 0)
+shape = SubResource("SphereShape3D_hpbri")
+
+[node name="Bottes de cuir" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Bottes de cuir"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.00700876, 0.0659169, 0)
+shape = SubResource("SphereShape3D_pay7o")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tvqnh")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

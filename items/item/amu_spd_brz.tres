@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://db65huxdkrs3k"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_i5sur"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_c63e7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubc1o"]
+atlas = ExtResource("2_c63e7")
+region = Rect2(576, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_i5sur")
+name = "Amulette de vitesse I"
+description = "Une amulette de vitesse en bronze"
+item_type = "équipement"
+item_effect = "vitesse +5"
+stockable = false
+texture = SubResource("AtlasTexture_ubc1o")

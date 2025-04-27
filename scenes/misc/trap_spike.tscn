@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmq8plbst5ux"]
+
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="1_xkemd"]
+[ext_resource type="ArrayMesh" uid="uid://dn55i8tcpwnsh" path="res://modeles3d/spikes.obj" id="2_hvene"]
+[ext_resource type="Texture2D" uid="uid://bdt8lvedxilyw" path="res://images/textures/pitbrick.png" id="3_amrxv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_463m2"]
+albedo_texture = ExtResource("1_xkemd")
+metallic = 0.75
+metallic_specular = 0.75
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l27u"]
+albedo_texture = ExtResource("3_amrxv")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6st47"]
+
+[node name="trap_spike" type="Node3D"]
+
+[node name="Spikes" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.5, 0, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_463m2")
+mesh = ExtResource("2_hvene")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0.001, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_4l27u")
+mesh = SubResource("PlaneMesh_6st47")

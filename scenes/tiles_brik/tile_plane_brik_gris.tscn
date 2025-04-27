@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqpexnml0wmtp"]
+
+[ext_resource type="Texture2D" uid="uid://duucc65tpgutt" path="res://images/textures/brique grises.png" id="1_bkik7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4h8b"]
+albedo_texture = ExtResource("1_bkik7")
+uv1_offset = Vector3(0, 0.14, 0)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n4dg0"]
+
+[node name="tile_plane_brik_gris" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0.001, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_u4h8b")
+mesh = SubResource("PlaneMesh_n4dg0")

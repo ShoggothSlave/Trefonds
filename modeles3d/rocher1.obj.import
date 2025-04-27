@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxpthknlovx12"
+path="res://.godot/imported/rocher1.obj-5cf8382da0574bc0093826ff6c60eecf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocher1.obj-5cf8382da0574bc0093826ff6c60eecf.mesh"]
+
+source_file="res://modeles3d/rocher1.obj"
+dest_files=["res://.godot/imported/rocher1.obj-5cf8382da0574bc0093826ff6c60eecf.mesh", "res://.godot/imported/rocher1.obj-5cf8382da0574bc0093826ff6c60eecf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

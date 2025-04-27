@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw4lyjmnmijg8"]
+
+[ext_resource type="Script" path="res://scripts/plante_monotige.gd" id="1_jrmmo"]
+[ext_resource type="ArrayMesh" uid="uid://plnic4kuy14k" path="res://modeles3d/plantemonotige1.obj" id="1_vi7fr"]
+[ext_resource type="AudioStream" uid="uid://r55kali73ekm" path="res://sons/bushmovement-6986.wav" id="3_08duq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_htp0x"]
+height = 0.341076
+radius = 0.0653528
+
+[node name="plante_monotige" type="Node3D"]
+script = ExtResource("1_jrmmo")
+
+[node name="Plantemonotige1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_vi7fr")
+
+[node name="body_detection" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="body_passage" type="CollisionShape3D" parent="body_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.173448, 0)
+shape = SubResource("CylinderShape3D_htp0x")
+
+[node name="audio_foliage" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_08duq")
+area_mask = 3
+
+[connection signal="body_entered" from="body_detection" to="." method="_on_body_detection_body_entered"]

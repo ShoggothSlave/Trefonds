@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dd8ljb51qoym4"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_fvl8a"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_lvgw4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0o2x"]
+atlas = ExtResource("2_lvgw4")
+region = Rect2(448, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_fvl8a")
+name = "Bottes de cuir"
+description = "De solides bottes en cuir bouillie"
+item_type = "équipement"
+item_effect = "armure +2"
+stockable = false
+texture = SubResource("AtlasTexture_o0o2x")

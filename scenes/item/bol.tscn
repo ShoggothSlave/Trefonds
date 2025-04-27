@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cms6komakwnxx"]
+
+[ext_resource type="PackedScene" uid="uid://mndedg0g7qed" path="res://modeles3d/bol.glb" id="1_ccxbo"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_2kmwx"]
+[ext_resource type="Script" path="res://scenes/item/bol.gd" id="2_bup2r"]
+[ext_resource type="AudioStream" uid="uid://bnxoi6jqjteen" path="res://sons/log-split-88986.wav" id="4_uvbcd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ho6p"]
+albedo_texture = ExtResource("2_2kmwx")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.1)
+uv1_offset = Vector3(0, 0, 0.11)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k78qr"]
+height = 0.0644126
+radius = 0.101004
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5mfs0"]
+height = 0.0692237
+radius = 0.105294
+
+[node name="bol" instance=ExtResource("1_ccxbo")]
+script = ExtResource("2_bup2r")
+
+[node name="Sphère" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_6ho6p")
+
+[node name="interaction_area" type="Area3D" parent="." index="1" groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.37724e-05, 0.0404873, 0)
+shape = SubResource("CylinderShape3D_k78qr")
+
+[node name="Bol de bois" type="StaticBody3D" parent="." index="2" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Bol de bois" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000170385, 0.0426869, 0)
+shape = SubResource("CylinderShape3D_5mfs0")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_uvbcd")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

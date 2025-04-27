@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cxnd0xrighbn3"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_8otqk"]
+[ext_resource type="Texture2D" uid="uid://ds2tmguupeqji" path="res://items/items_spritesheet_1.png" id="2_yhowi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t78xj"]
+atlas = ExtResource("2_yhowi")
+region = Rect2(448, 192, 64, 64)
+
+[resource]
+script = ExtResource("1_8otqk")
+name = "Super potion"
+description = "Une bouteille remplie d'un liquide visqueux"
+item_type = "consommable"
+item_effect = "points de vie +100"
+stockable = true
+texture = SubResource("AtlasTexture_t78xj")

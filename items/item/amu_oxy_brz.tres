@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dg58kuowe43c6"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_fkln1"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_syou1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i8j2"]
+atlas = ExtResource("2_syou1")
+region = Rect2(384, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_fkln1")
+name = "Amulette de respiration I"
+description = "Une amulette de respiration en bronze"
+item_type = "équipement"
+item_effect = "respiraion +5"
+stockable = false
+texture = SubResource("AtlasTexture_2i8j2")

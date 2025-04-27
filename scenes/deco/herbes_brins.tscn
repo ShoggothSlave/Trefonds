@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixpw6utesvc1"]
+
+[ext_resource type="ArrayMesh" uid="uid://dl7k4hy104ts2" path="res://modeles3d/brinsDherbe.obj" id="1_m50fi"]
+
+[node name="herbes_brins" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="BrinsDherbe" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_m50fi")

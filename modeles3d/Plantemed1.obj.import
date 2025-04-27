@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7d8cotlkb2u6"
+path="res://.godot/imported/Plantemed1.obj-01da162e0967a1aff0db88a6469a90f4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Plantemed1.obj-01da162e0967a1aff0db88a6469a90f4.mesh"]
+
+source_file="res://modeles3d/Plantemed1.obj"
+dest_files=["res://.godot/imported/Plantemed1.obj-01da162e0967a1aff0db88a6469a90f4.mesh", "res://.godot/imported/Plantemed1.obj-01da162e0967a1aff0db88a6469a90f4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

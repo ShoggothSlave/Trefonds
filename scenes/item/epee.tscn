@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4wfhirs3r6k6"]
+
+[ext_resource type="Script" path="res://scenes/item/epee.gd" id="1_mq4o8"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="1_twvie"]
+[ext_resource type="ArrayMesh" uid="uid://degn8coclc634" path="res://modeles3d/epeerouillee.obj" id="2_8k5kj"]
+[ext_resource type="AudioStream" uid="uid://c2rhfg7ot4fdq" path="res://sons/WEAPSwrd_Epee (ID 0129)_LS.wav" id="4_wi2kn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3kub"]
+albedo_texture = ExtResource("1_twvie")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wfm1l"]
+radius = 0.291003
+height = 2.48575
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tpby5"]
+radius = 0.328133
+height = 2.47157
+
+[node name="epee" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.00503128, 0)
+script = ExtResource("1_mq4o8")
+
+[node name="Epeerouillee" type="MeshInstance3D" parent="."]
+layers = 8
+material_override = SubResource("StandardMaterial3D_n3kub")
+mesh = ExtResource("2_8k5kj")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.261786, 0.0296321, 0)
+shape = SubResource("CapsuleShape3D_wfm1l")
+
+[node name="Épée rouillée" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Épée rouillée"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.28807, 0.0463605, 0)
+shape = SubResource("CapsuleShape3D_tpby5")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wi2kn")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

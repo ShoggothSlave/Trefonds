@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2rhfg7ot4fdq"
+path="res://.godot/imported/WEAPSwrd_Epee (ID 0129)_LS.wav-f02fa7518dac31c43bce295a96d9c41c.sample"
+
+[deps]
+
+source_file="res://sons/WEAPSwrd_Epee (ID 0129)_LS.wav"
+dest_files=["res://.godot/imported/WEAPSwrd_Epee (ID 0129)_LS.wav-f02fa7518dac31c43bce295a96d9c41c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

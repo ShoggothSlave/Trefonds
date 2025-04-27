@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://ck3tivjtra6us"]
+
+[ext_resource type="PackedScene" uid="uid://c7yxty81up0tv" path="res://modeles3d/buche.glb" id="1_i7lm6"]
+[ext_resource type="Script" path="res://scenes/item/buche_prehensible.gd" id="2_vi6i4"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="2_vncbh"]
+[ext_resource type="Texture2D" uid="uid://d0ptpkfvr67p2" path="res://images/textures/planche.png" id="3_4gaxc"]
+[ext_resource type="Texture2D" uid="uid://2vitltt7nmnn" path="res://images/textures/text bout woodlog.png" id="4_j0kvi"]
+[ext_resource type="AudioStream" uid="uid://bnxoi6jqjteen" path="res://sons/log-split-88986.wav" id="6_tweb4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtw3"]
+albedo_texture = ExtResource("2_vncbh")
+metallic = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f064x"]
+albedo_texture = ExtResource("3_4gaxc")
+metallic_specular = 0.65
+roughness = 0.74
+uv1_scale = Vector3(0.495, 0.285, 1)
+uv1_offset = Vector3(-0.49, -0.65, -0.395)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut01s"]
+albedo_texture = ExtResource("4_j0kvi")
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_enxd0"]
+points = PackedVector3Array(-0.448198, -0.956307, -0.888897, 0.984001, 0.984001, 0.111, 0.984001, 0.430548, 0.111, -0.997627, 0.997627, 0.0241871, 0, 0.990476, -1, 0, -0.958844, 0.218325, 0.752463, -0.963303, -0.651811, -0.997627, -0.997627, 0.0241871, 0.98419, -0.98419, 0.110974, -0.752491, 0.963339, -0.651821, 0.876346, 0.967028, -0.471588, 0.180705, 0.963511, 0.221242, 0.389559, -0.958973, -0.920234, -0.908732, -0.969466, -0.411082, 0.448198, 0.956307, -0.888897, 0.980118, -0.980118, -0.197348, 0.0306808, -0.954771, -0.996981, -0.389498, 0.958823, -0.920267, -0.980118, 0.980118, -0.197348, -0.663541, -0.965357, -0.742867, 0.980157, 0.980157, -0.197221, 0, 0.958844, 0.218325, -0.180434, -0.962065, -0.982243, 0.629629, 0.95947, -0.770714, 0.180705, -0.963511, 0.221242, 0.180469, 0.962248, -0.98224, 0.908654, -0.969382, -0.411198, -0.908732, 0.969466, -0.411082, -0.629629, 0.959757, -0.770713, -0.980118, -0.980118, -0.197348, 0.629629, -0.95947, -0.770714, 0.180469, -0.962248, -0.98224)
+
+[node name="buche_prehensible" groups=["prehensible"] instance=ExtResource("1_i7lm6")]
+transform = Transform3D(-0.468143, -4.61165e-08, -0.175619, -0.175619, 1.32588e-08, 0.468143, -3.85213e-08, 0.5, -2.86119e-08, 0, 0.0544929, 0)
+script = ExtResource("2_vi6i4")
+
+[node name="Cylindre" parent="." index="0" groups=["prehensible"]]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_rgtw3")
+surface_material_override/1 = SubResource("StandardMaterial3D_f064x")
+surface_material_override/2 = SubResource("StandardMaterial3D_ut01s")
+
+[node name="Buche" type="StaticBody3D" parent="Cylindre" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 4.40867e-15, 3.55271e-15, 1, 1.77636e-15, 4.40867e-15, 1.42109e-14, 1, 0, 0, 0)
+collision_layer = 8
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylindre/Buche" index="0"]
+shape = SubResource("ConvexPolygonShape3D_enxd0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("6_tweb4")
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

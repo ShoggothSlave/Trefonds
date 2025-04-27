@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dk3vfrw2prfue"]
+
+[ext_resource type="Script" path="res://scenes/item/gourde.gd" id="1_2dre7"]
+[ext_resource type="ArrayMesh" uid="uid://dddo27j84650h" path="res://modeles3d/gourde.obj" id="1_mf73j"]
+[ext_resource type="Texture2D" uid="uid://chgv821o2lqe1" path="res://images/textures/beige_jute.png" id="2_npylg"]
+[ext_resource type="AudioStream" uid="uid://bnhkrlirkyhfq" path="res://sons/potion_take.wav" id="4_wimum"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6x05"]
+albedo_color = Color(0.133333, 0.152941, 0, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1ppp"]
+albedo_texture = ExtResource("2_npylg")
+metallic = 1.0
+metallic_specular = 0.0
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4hemr"]
+radius = 0.0783647
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ysrfe"]
+radius = 0.0882239
+
+[node name="gourde" type="Node3D" groups=["prehensible"]]
+script = ExtResource("1_2dre7")
+
+[node name="gourde" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.0415414, 0)
+layers = 8
+mesh = ExtResource("1_mf73j")
+surface_material_override/0 = SubResource("StandardMaterial3D_j6x05")
+surface_material_override/1 = SubResource("StandardMaterial3D_v1ppp")
+surface_material_override/2 = SubResource("StandardMaterial3D_v1ppp")
+surface_material_override/3 = SubResource("StandardMaterial3D_v1ppp")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00478968, 0.0793962, 0)
+shape = SubResource("SphereShape3D_4hemr")
+
+[node name="Gourde" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Gourde"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, 0.0830915, 0)
+shape = SubResource("SphereShape3D_ysrfe")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wimum")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

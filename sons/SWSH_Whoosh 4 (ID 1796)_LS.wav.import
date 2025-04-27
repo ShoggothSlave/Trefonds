@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://degdwrqwxb6iu"
+path="res://.godot/imported/SWSH_Whoosh 4 (ID 1796)_LS.wav-878e7849d16e79aa39c25b4cd496e8a8.sample"
+
+[deps]
+
+source_file="res://sons/SWSH_Whoosh 4 (ID 1796)_LS.wav"
+dest_files=["res://.godot/imported/SWSH_Whoosh 4 (ID 1796)_LS.wav-878e7849d16e79aa39c25b4cd496e8a8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

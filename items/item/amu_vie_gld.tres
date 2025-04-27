@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bsbmonuc1pjoe"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_yyf1g"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_22chl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7masb"]
+atlas = ExtResource("2_22chl")
+region = Rect2(256, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_yyf1g")
+name = "Amulette de vie III"
+description = "Une amulette de vie en or"
+item_type = "équipement"
+item_effect = "points de vie max +15"
+stockable = false
+texture = SubResource("AtlasTexture_7masb")

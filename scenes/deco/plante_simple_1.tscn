@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://32ja62bi0rf0"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwjednwpcuy03" path="res://modeles3d/plantesimple1.obj" id="1_5aw6g"]
+
+[node name="plante_simple_1" type="Node3D"]
+
+[node name="Plantesimple1" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_5aw6g")

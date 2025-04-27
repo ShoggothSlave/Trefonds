@@ -1,0 +1,381 @@
+[gd_scene load_steps=82 format=3 uid="uid://m7qabbdlhdhb"]
+
+[ext_resource type="PackedScene" uid="uid://cy3pd2dx07puw" path="res://scenes/system/gameplay.tscn" id="1_cbirm"]
+[ext_resource type="MeshLibrary" uid="uid://dd3jvmh6vu6o2" path="res://autres/brik_gris.tres" id="1_vpmi6"]
+[ext_resource type="PackedScene" uid="uid://drn7ddl4jt6oa" path="res://scenes/item/buisson_a_mirtilles.tscn" id="4_be8x6"]
+[ext_resource type="PackedScene" uid="uid://q1a5h3nt1ts2" path="res://scenes/deco/porte_simple.tscn" id="5_riucq"]
+[ext_resource type="PackedScene" uid="uid://bx5yc4mj2onwr" path="res://scenes/deco/rk_door.tscn" id="6_06xcl"]
+[ext_resource type="PackedScene" uid="uid://63niqx0ucvvq" path="res://scenes/item/parchemin.tscn" id="7_h8et0"]
+[ext_resource type="PackedScene" uid="uid://cw872ipu7028l" path="res://scenes/misc/caisse_ouvrable.tscn" id="8_7s5iq"]
+[ext_resource type="PackedScene" uid="uid://dd5p2m3dbg3i" path="res://scenes/misc/lit.tscn" id="9_8gupo"]
+[ext_resource type="PackedScene" uid="uid://dw1mxrcjo0fwe" path="res://scenes/item/buisson_a_baies_noires.tscn" id="10_lctxa"]
+[ext_resource type="PackedScene" uid="uid://ck3tivjtra6us" path="res://scenes/item/buche_prehensible.tscn" id="11_qphp5"]
+[ext_resource type="PackedScene" uid="uid://xihauyikoc20" path="res://scenes/item/champi_1.tscn" id="12_h07j5"]
+[ext_resource type="PackedScene" uid="uid://dqyajwf4dp3k2" path="res://scenes/item/champi_2.tscn" id="13_qid2p"]
+[ext_resource type="PackedScene" uid="uid://crv7npqc2w8uk" path="res://scenes/item/champi_v_1.tscn" id="14_mahbv"]
+[ext_resource type="PackedScene" uid="uid://dlda16yn6lins" path="res://scenes/item/champi_v_2.tscn" id="15_pnh2m"]
+[ext_resource type="PackedScene" uid="uid://bgj0pm3y7fo80" path="res://scenes/item/cuissot.tscn" id="16_tsjwk"]
+[ext_resource type="PackedScene" uid="uid://dttnscu1ckwh3" path="res://scenes/item/cuissot_cuit.tscn" id="17_8xymt"]
+[ext_resource type="PackedScene" uid="uid://c4wfhirs3r6k6" path="res://scenes/item/epee.tscn" id="18_p8s8k"]
+[ext_resource type="PackedScene" uid="uid://dtkm6ke3n2rx1" path="res://scenes/item/fighting_stick.tscn" id="19_fhjdo"]
+[ext_resource type="PackedScene" uid="uid://dk3vfrw2prfue" path="res://scenes/item/gourde.tscn" id="20_2h1gd"]
+[ext_resource type="PackedScene" uid="uid://bm4dch6mockx5" path="res://scenes/item/knife.tscn" id="21_o4rcr"]
+[ext_resource type="PackedScene" uid="uid://e3l8kwibgtvw" path="res://scenes/item/oignon.tscn" id="22_aaaha"]
+[ext_resource type="PackedScene" uid="uid://dhcttrm3b0khw" path="res://scenes/system/player.tscn" id="22_yv8qr"]
+[ext_resource type="PackedScene" uid="uid://b565ena6pqvc6" path="res://scenes/item/plante_med.tscn" id="23_ocegm"]
+[ext_resource type="PackedScene" uid="uid://codddrx5kvr0r" path="res://scenes/item/silex.tscn" id="24_6notv"]
+[ext_resource type="PackedScene" uid="uid://dm00th5s4xiiq" path="res://scenes/item/skullcasque.tscn" id="25_wc3ie"]
+[ext_resource type="PackedScene" uid="uid://d2yu622cr0njo" path="res://scenes/item/bottescuir.tscn" id="26_mk6jc"]
+[ext_resource type="PackedScene" uid="uid://c3p1ipu5mhmdb" path="res://scenes/item/pentalon_1.tscn" id="27_0x0tm"]
+[ext_resource type="PackedScene" uid="uid://b6jr1k4y1ri2w" path="res://scenes/item/chandaildecuir.tscn" id="28_hoeyl"]
+[ext_resource type="PackedScene" uid="uid://csooyf4hl8sew" path="res://scenes/item/assiette_bronze.tscn" id="29_rpelo"]
+[ext_resource type="PackedScene" uid="uid://cms6komakwnxx" path="res://scenes/item/bol.tscn" id="30_0xeo0"]
+[ext_resource type="PackedScene" uid="uid://b1ee06fc7gddu" path="res://scenes/item/bouteille.tscn" id="31_1ym8q"]
+[ext_resource type="PackedScene" uid="uid://y2e2jmo7ly6c" path="res://scenes/item/jarre.tscn" id="32_swww3"]
+[ext_resource type="PackedScene" uid="uid://57lt86osj6em" path="res://scenes/item/plancheadecouper.tscn" id="33_wv1cc"]
+[ext_resource type="PackedScene" uid="uid://byglfntbnqm7u" path="res://scenes/item/mortierpilon.tscn" id="34_ep8f1"]
+[ext_resource type="PackedScene" uid="uid://dhe8al8xupbj6" path="res://scenes/item/chaudron.tscn" id="35_sbd0n"]
+[ext_resource type="PackedScene" uid="uid://b2fn3eportvca" path="res://scenes/item/demi_potion_mineure.tscn" id="36_gp7kw"]
+[ext_resource type="PackedScene" uid="uid://dhw4tmmjyu4jy" path="res://scenes/item/demi_potion_consequente.tscn" id="37_vpgxi"]
+[ext_resource type="PackedScene" uid="uid://bkg7hbfshtyo1" path="res://scenes/item/demi_super_potion.tscn" id="38_15ant"]
+[ext_resource type="PackedScene" uid="uid://didd2j22qt4hc" path="res://scenes/item/potion_consequente.tscn" id="39_1nemm"]
+[ext_resource type="PackedScene" uid="uid://baj7clrv2u73v" path="res://scenes/item/potion_darmure.scn" id="40_kjlep"]
+[ext_resource type="PackedScene" uid="uid://dvh7vxw1rd5r" path="res://scenes/item/potion_de_force.tscn" id="41_1y3cq"]
+[ext_resource type="PackedScene" uid="uid://dtsls5ujq5dvn" path="res://scenes/item/potion_de_vie.tscn" id="42_h0txf"]
+[ext_resource type="PackedScene" uid="uid://c7xh8fw0g0u0l" path="res://scenes/item/potion_mineure.tscn" id="43_pemh6"]
+[ext_resource type="PackedScene" uid="uid://cb0p3yobx4ku1" path="res://scenes/item/super_potion.tscn" id="44_3tkhm"]
+[ext_resource type="PackedScene" uid="uid://cyvcc2dc1mokb" path="res://scenes/item/ring_armor_bronze.tscn" id="45_wjyg8"]
+[ext_resource type="PackedScene" uid="uid://b856i3p6kfufw" path="res://scenes/item/ring_armor_or.tscn" id="46_u8o8s"]
+[ext_resource type="PackedScene" uid="uid://c673s0ae4b2fa" path="res://scenes/item/ring_armor_silver.tscn" id="47_tfxj8"]
+[ext_resource type="PackedScene" uid="uid://dkdq2xkcg2vvw" path="res://scenes/item/ring_force_bronze.tscn" id="48_lqsy4"]
+[ext_resource type="PackedScene" uid="uid://d1u6fxe0165o2" path="res://scenes/item/ring_force_or.tscn" id="49_evq7i"]
+[ext_resource type="PackedScene" uid="uid://mo11fkstliyg" path="res://scenes/item/ring_force_silver.tscn" id="50_oyiyw"]
+[ext_resource type="PackedScene" uid="uid://4gvmthh8780g" path="res://scenes/item/ring_life_bronze.tscn" id="51_ucbfv"]
+[ext_resource type="PackedScene" uid="uid://b5sxleptocry6" path="res://scenes/item/ring_life_or.tscn" id="52_1icai"]
+[ext_resource type="PackedScene" uid="uid://dleve6ots8sqf" path="res://scenes/item/ring_life_silver.tscn" id="53_42336"]
+[ext_resource type="PackedScene" uid="uid://bpk5dwpugh1gf" path="res://scenes/item/ring_oxy_bronze.tscn" id="54_8rhwg"]
+[ext_resource type="PackedScene" uid="uid://bh5ye1mv11agj" path="res://scenes/item/ring_oxy_or.tscn" id="55_ra3ss"]
+[ext_resource type="PackedScene" uid="uid://b5opvxk6pjdr4" path="res://scenes/item/ring_oxy_silver.tscn" id="56_lymgb"]
+[ext_resource type="PackedScene" uid="uid://cdukt4kwh8lb5" path="res://scenes/item/ring_spd_bronze.tscn" id="57_8nor1"]
+[ext_resource type="PackedScene" uid="uid://knmkxfslr5gc" path="res://scenes/item/ring_spd_or.tscn" id="58_5wav1"]
+[ext_resource type="PackedScene" uid="uid://drihljp5cs372" path="res://scenes/item/ring_spd_silver.tscn" id="59_lep4k"]
+[ext_resource type="PackedScene" uid="uid://cktmthtwemasr" path="res://scenes/item/amulet_armor_brz.tscn" id="60_e1lpo"]
+[ext_resource type="PackedScene" uid="uid://cuq0t0uqtt46p" path="res://scenes/item/amulet_armor_gld.tscn" id="61_uyxot"]
+[ext_resource type="PackedScene" uid="uid://4griajvyx2ge" path="res://scenes/item/amulet_armor_slv.tscn" id="62_b8fyr"]
+[ext_resource type="PackedScene" uid="uid://b1bedgeouw5jn" path="res://scenes/item/amulet_for_brz.tscn" id="63_mcmbh"]
+[ext_resource type="PackedScene" uid="uid://bafruulb8v0g" path="res://scenes/item/amulet_for_gld.tscn" id="64_f0ifh"]
+[ext_resource type="PackedScene" uid="uid://6blkhgkdcuoq" path="res://scenes/item/amulet_for_slv.tscn" id="65_r81g2"]
+[ext_resource type="PackedScene" uid="uid://corwdmnpkc4y6" path="res://scenes/item/amulet_oxy_brz.tscn" id="66_k4tll"]
+[ext_resource type="PackedScene" uid="uid://cla5whnub1teg" path="res://scenes/item/amulet_oxy_gld.tscn" id="67_dr82n"]
+[ext_resource type="PackedScene" uid="uid://cwd4qjhm10imw" path="res://scenes/item/amulet_oxy_slv.tscn" id="68_jifw4"]
+[ext_resource type="PackedScene" uid="uid://dk4bgnnxmhj0u" path="res://scenes/item/amulet_spd_brz.tscn" id="69_7mff4"]
+[ext_resource type="PackedScene" uid="uid://baiqvr0hm8oas" path="res://scenes/item/amulet_spd_gld.tscn" id="70_0i765"]
+[ext_resource type="PackedScene" uid="uid://c74qku1onun60" path="res://scenes/item/amulet_spd_slv.tscn" id="71_yvfsk"]
+[ext_resource type="PackedScene" uid="uid://bulk0m1800bhb" path="res://scenes/item/amulet_vie_brz.tscn" id="72_pvvqx"]
+[ext_resource type="PackedScene" uid="uid://cxfvn6qqj6uhy" path="res://scenes/item/amulet_vie_gld.tscn" id="73_lyts8"]
+[ext_resource type="PackedScene" uid="uid://yngo56tlejf2" path="res://scenes/item/amulet_vie_slv.tscn" id="74_ugml7"]
+[ext_resource type="PackedScene" uid="uid://6b821ku7gqhy" path="res://scenes/item/ceinture_1.tscn" id="75_c2bc6"]
+[ext_resource type="PackedScene" uid="uid://dnhul56x6p4au" path="res://scenes/item/rondache.tscn" id="76_ymvf6"]
+[ext_resource type="PackedScene" uid="uid://bgmmevkqejn3s" path="res://scenes/tiles_brik/tiles_stairs_brik_gris.tscn" id="77_dq2yq"]
+[ext_resource type="PackedScene" uid="uid://ehjpcf4xbq8f" path="res://scenes/deco/water_volume_model.tscn" id="78_ttu53"]
+[ext_resource type="PackedScene" uid="uid://b7gefe6sd86kd" path="res://scenes/misc/metal_ladder_i.tscn" id="79_k501p"]
+[ext_resource type="PackedScene" uid="uid://b0ycigdvxwlwg" path="res://scenes/misc/metal_ladder_ii.tscn" id="80_ulylp"]
+[ext_resource type="PackedScene" uid="uid://c05ji4k0qq6le" path="res://scenes/misc/metal_ladder_v.tscn" id="81_cwq7p"]
+
+[node name="test" type="Node3D"]
+
+[node name="gameplay" parent="." instance=ExtResource("1_cbirm")]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_vpmi6")
+cell_size = Vector3(1, 1, 1)
+cell_octant_size = 4
+collision_layer = 4
+collision_mask = 19
+data = {
+"cells": PackedInt32Array(-1, 1, 1048576, -65536, 1, 1048576, -65536, 0, 1048576, -65536, 65535, 1048576, -65536, 65534, 1048576, -65536, 65533, 1048576, -65536, 65532, 1048576, -1, 65532, 1048576, -2, 65532, 1048576, -2, 65533, 1048576, -2, 65534, 1048576, -2, 65535, 1048576, -2, 0, 1048576, -2, 1, 1048576, -3, 1, 1048576, -3, 0, 1048576, -3, 65535, 1048576, -3, 65534, 1048576, -3, 65533, 1048576, -1, 0, 1048576, -1, 65535, 1048576, -1, 65534, 1048576, -3, 65532, 1048576, -65535, 65535, 1048576, -4, 65534, 1048576, -4, 0, 1048576, -1, 65533, 1048576, -65534, 65535, 1048576, -65535, 65534, 1048576, -65535, 65533, 1048576, -65535, 65532, 1048576, -65534, 65532, 1048576, -65534, 65533, 1048576, -65534, 65534, 1048576, -65534, 0, 1048576, -65534, 1, 1048576, -65535, 1, 1048576, -65535, 0, 1048576, -65534, 2, 1048576, -65535, 2, 1048576, -65536, 2, 1048576, -1, 2, 1048576, -2, 2, 1048576, -3, 2, 1048576, -4, 2, 1048576, -4, 1, 1048576, -4, 65535, 1048576, -4, 65533, 1048576, -4, 65532, 1048576, -65533, 2, 1048576, -65533, 1, 1048576, -65533, 0, 1048576, -65533, 65535, 1048576, -65533, 65534, 1048576, -65533, 65533, 1048576, -65533, 65532, 1048576, -4, 3, 1048576, -3, 3, 1048576, -2, 3, 1048576, -1, 3, 1048576, -65536, 3, 1048576, -65535, 3, 1048576, -65534, 3, 1048576, -65533, 3, 1048576, -65533, 4, 1048576, -65534, 4, 1048576, -65535, 4, 1048576, -65536, 4, 1048576, -1, 4, 1048576, -2, 4, 1048576, -3, 4, 1048576, -4, 4, 1048576, -65532, 4, 1048576, -65532, 3, 1048576, -65532, 2, 1048576, -65532, 1, 1048576, -65532, 0, 1048576, -65532, 65535, 1048576, -65532, 65534, 1048576, -65532, 65533, 1048576, -65532, 65532, 1048576, -65532, 65531, 1048576, -65533, 65531, 1048576, -65534, 65531, 1048576, -65535, 65531, 1048576, -65536, 65531, 1048576, -1, 65531, 1048576, -2, 65531, 1048576, -3, 65531, 1048576, -4, 65531, 1048576, -5, 65531, 1048576, -5, 65532, 1048576, -5, 65533, 1048576, -5, 65534, 1048576, -5, 1, 1048576, -5, 0, 1048576, -5, 65535, 1048576, -5, 2, 1048576, -5, 3, 1048576, -5, 4, 1048576, -131068, 0, 1048576, -131068, 65535, 1048576, -131067, 65534, 1048576, -131066, 65534, 1048576, -131067, 1, 1048576, -131066, 1, 1048576, -131065, 65535, 1048576, -131065, 0, 1048576, -196604, 65535, 1048576, -196604, 0, 1048576, -196604, 65534, 1048576, -196603, 65534, 1048576, -196601, 65535, 1048576, -196601, 0, 1048576, -196602, 1, 1048576, -196603, 1, 1048576, -262138, 0, 1048576, -262139, 0, 1048576, -262139, 65535, 1048576, -262138, 65535, 1048576, -196602, 65534, 1048576, -65531, 1, 1048576, -65530, 1, 1048576, -65529, 1, 1048576, -65529, 0, 1048576, -65529, 65535, 1048576, -65529, 65534, 1048576, -65530, 65534, 1048576, -65531, 65534, 1048576, -196603, 65535, 1048576, -196603, 0, 1048576, -196602, 0, 1048576, -196602, 65535, 1048576, -65531, 65533, 1048576, -65531, 65532, 1048576, -65531, 65531, 1048576, -65530, 65531, 1048576, -65529, 65531, 1048576, -65529, 65532, 1048576, -65529, 65533, 1048576, -65530, 65533, 1048576, -65530, 65532, 1048576, -65531, 2, 1048576, -65531, 3, 1048576, -65531, 4, 1048576, -65530, 4, 1048576, -65530, 3, 1048576, -65530, 2, 1048576, -65529, 2, 1048576, -65529, 3, 1048576, -65529, 4, 1048576, -65528, 4, 1048576, -65528, 3, 1048576, -65528, 2, 1048576, -65528, 1, 1048576, -65528, 0, 1048576, -65528, 65535, 1048576, -65528, 65534, 1048576, -65528, 65533, 1048576, -65528, 65532, 1048576, -65528, 65531, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="GridMap2" type="GridMap" parent="."]
+mesh_library = ExtResource("1_vpmi6")
+cell_size = Vector3(1, 1, 1)
+cell_octant_size = 4
+collision_layer = 4
+collision_mask = 19
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("22_yv8qr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0035564, -1)
+
+[node name="buisson_a_mirtilles" parent="." instance=ExtResource("4_be8x6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="porte_simple" parent="." instance=ExtResource("5_riucq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2.93527)
+
+[node name="parchemin" parent="." instance=ExtResource("7_h8et0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="rk_door" parent="." instance=ExtResource("6_06xcl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.06473)
+
+[node name="caisse_ouvrable" parent="." instance=ExtResource("8_7s5iq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, 2)
+
+[node name="lit" parent="." instance=ExtResource("9_8gupo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="buisson_a_baies_noires" parent="." instance=ExtResource("10_lctxa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="buche_prehensible" parent="." instance=ExtResource("11_qphp5")]
+transform = Transform3D(-0.468143, -4.61165e-08, -0.175619, -0.175619, 1.32588e-08, 0.468143, -3.85213e-08, 0.5, -2.86119e-08, 1, 0.0544929, -1)
+
+[node name="champi1" parent="." instance=ExtResource("12_h07j5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="champi2" parent="." instance=ExtResource("13_qid2p")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0, 1)
+
+[node name="champi_v_1" parent="." instance=ExtResource("14_mahbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="champi_v_2" parent="." instance=ExtResource("15_pnh2m")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3, 0, 1)
+
+[node name="cuissot_crue" parent="." instance=ExtResource("16_tsjwk")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -2, 0, 0)
+
+[node name="cuissot_cuit" parent="." instance=ExtResource("17_8xymt")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -2, 0, 1)
+
+[node name="epee" parent="." instance=ExtResource("18_p8s8k")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -1, 0.00503128, -1)
+
+[node name="fighting_stick" parent="." instance=ExtResource("19_fhjdo")]
+
+[node name="gourde" parent="." instance=ExtResource("20_2h1gd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="knife" parent="." instance=ExtResource("21_o4rcr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2, 0, 2)
+
+[node name="oignon" parent="." instance=ExtResource("22_aaaha")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3, 0, 3)
+
+[node name="plante_med" parent="." instance=ExtResource("23_ocegm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="silex" parent="." instance=ExtResource("24_6notv")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -2)
+
+[node name="skullcasque" parent="." instance=ExtResource("25_wc3ie")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3, 0.0959325, -2)
+
+[node name="bottescuir" parent="." instance=ExtResource("26_mk6jc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="pentalon1" parent="." instance=ExtResource("27_0x0tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+
+[node name="chandaildecuir" parent="." instance=ExtResource("28_hoeyl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+
+[node name="assiette_bronze" parent="." instance=ExtResource("29_rpelo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.00980777, 3)
+
+[node name="bol" parent="." instance=ExtResource("30_0xeo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
+[node name="bouteille" parent="." instance=ExtResource("31_1ym8q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="jarre" parent="." instance=ExtResource("32_swww3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0516673, 3)
+
+[node name="plancheadecouper" parent="." instance=ExtResource("33_wv1cc")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1, 0, 2)
+
+[node name="mortierpilon" parent="." instance=ExtResource("34_ep8f1")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 2, 0.00279201, 2)
+
+[node name="chaudron" parent="." instance=ExtResource("35_sbd0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+
+[node name="demi_potion_mineure" parent="." instance=ExtResource("36_gp7kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="demi_potion_mineure2" parent="." instance=ExtResource("36_gp7kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75449, 1.19209e-07, 0.257102)
+
+[node name="demi_potion_mineure3" parent="." instance=ExtResource("36_gp7kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16129, 1.19209e-07, 0.0898676)
+
+[node name="demi_potion_mineure4" parent="." instance=ExtResource("36_gp7kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45016, 1.19209e-07, -0.0616326)
+
+[node name="demi_potion_mineure5" parent="." instance=ExtResource("36_gp7kw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.67582, 2.38419e-07, -0.232844)
+
+[node name="demi_potion_consequente" parent="." instance=ExtResource("37_vpgxi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="demi_potion_consequente2" parent="." instance=ExtResource("37_vpgxi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40603, 0, 0.48138)
+
+[node name="demi_super_potion" parent="." instance=ExtResource("38_15ant")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="demi_super_potion2" parent="." instance=ExtResource("38_15ant")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22348, 0, 0.632446)
+
+[node name="potion_consequente" parent="." instance=ExtResource("39_1nemm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="potion_consequente2" parent="." instance=ExtResource("39_1nemm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32777, -1.19209e-07, -0.421517)
+
+[node name="potion_consequente3" parent="." instance=ExtResource("39_1nemm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05249, 0, -0.511205)
+
+[node name="Potion_darmure" parent="." instance=ExtResource("40_kjlep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="Potion_de_force" parent="." instance=ExtResource("41_1y3cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="Potion_de_vie" parent="." instance=ExtResource("42_h0txf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="potion_mineure" parent="." instance=ExtResource("43_pemh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="potion_mineure2" parent="." instance=ExtResource("43_pemh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19346, 0, -0.497134)
+
+[node name="potion_mineure3" parent="." instance=ExtResource("43_pemh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41714, 0, -0.308501)
+
+[node name="potion_mineure4" parent="." instance=ExtResource("43_pemh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52578, 1.19209e-07, -0.588192)
+
+[node name="super_potion" parent="." instance=ExtResource("44_3tkhm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="super_potion2" parent="." instance=ExtResource("44_3tkhm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.96281, 1.19209e-07, -1.22788)
+
+[node name="ring_armor_bronze" parent="." instance=ExtResource("45_wjyg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55126, 0.006474, 4.59816)
+
+[node name="ring_armor_or" parent="." instance=ExtResource("46_u8o8s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60002, 0.006474, 4.43691)
+
+[node name="ring_armor_silver" parent="." instance=ExtResource("47_tfxj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40399, 0.00647397, 4.45261)
+
+[node name="ring_force_bronze" parent="." instance=ExtResource("48_lqsy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72439, 0.00647397, 4.30249)
+
+[node name="ring_force_or" parent="." instance=ExtResource("49_evq7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56643, 0.006474, 4.79037)
+
+[node name="ring_force_silver" parent="." instance=ExtResource("50_oyiyw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7085, 0.006474, 4.60046)
+
+[node name="ring_life_bronze" parent="." instance=ExtResource("51_ucbfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35475, 0.006474, 4.58386)
+
+[node name="ring_life_or" parent="." instance=ExtResource("52_1icai")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41666, 0.006474, 4.73956)
+
+[node name="ring_life_silver" parent="." instance=ExtResource("53_42336")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72542, 0.006474, 4.77319)
+
+[node name="ring_oxy_bronze" parent="." instance=ExtResource("54_8rhwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83442, 0.00647397, 4.67003)
+
+[node name="ring_oxy_or" parent="." instance=ExtResource("55_ra3ss")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91105, 0.006474, 4.486)
+
+[node name="ring_oxy_silver" parent="." instance=ExtResource("56_lymgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8871, 0.006474, 4.33778)
+
+[node name="ring_spd_bronze" parent="." instance=ExtResource("57_8nor1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77837, 0.006474, 4.45413)
+
+[node name="ring_spd_or" parent="." instance=ExtResource("58_5wav1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60516, 0.00647397, 4.26429)
+
+[node name="ring_spd_silver" parent="." instance=ExtResource("59_lep4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4642, 0.006474, 4.31988)
+
+[node name="amulet_armor_brz" parent="." instance=ExtResource("60_e1lpo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70047, 0, 4.30154)
+
+[node name="amulet_armor_gld" parent="." instance=ExtResource("61_uyxot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03381, 5.96046e-08, 4.52247)
+
+[node name="amulet_armor_slv" parent="." instance=ExtResource("62_b8fyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2829, -5.96046e-08, 4.22042)
+
+[node name="amulet_for_brz" parent="." instance=ExtResource("63_mcmbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.774188, 5.96046e-08, 4.63956)
+
+[node name="amulet_for_gld" parent="." instance=ExtResource("64_f0ifh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32359, 0, 4.65793)
+
+[node name="amulet_for_slv" parent="." instance=ExtResource("65_r81g2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.996238, 5.96046e-08, 4.14011)
+
+[node name="amulet_oxy_brz" parent="." instance=ExtResource("66_k4tll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415839, 0, 4.65598)
+
+[node name="amulet_oxy_gld" parent="." instance=ExtResource("67_dr82n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247455, 5.96046e-08, 4.32741)
+
+[node name="amulet_oxy_slv" parent="." instance=ExtResource("68_jifw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.428784, 5.96046e-08, 4.05565)
+
+[node name="amulet_spd_brz" parent="." instance=ExtResource("69_7mff4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.734158, 0, 3.89172)
+
+[node name="amulet_spd_gld" parent="." instance=ExtResource("70_0i765")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22865, 5.96046e-08, 3.8782)
+
+[node name="amulet_spd_slv" parent="." instance=ExtResource("71_yvfsk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57937, 5.96046e-08, 4.04721)
+
+[node name="amulet_vie_brz" parent="." instance=ExtResource("72_pvvqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62377, 5.96046e-08, 4.41472)
+
+[node name="amulet_vie_gld" parent="." instance=ExtResource("73_lyts8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86474, 0, 4.10924)
+
+[node name="amulet_vie_slv" parent="." instance=ExtResource("74_ugml7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.87188, 0, 4.60421)
+
+[node name="ceinture1" parent="." instance=ExtResource("75_c2bc6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.47056, 0, 3.532)
+
+[node name="rondache" parent="." instance=ExtResource("76_ymvf6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.470616, -2.38419e-07, 4.4136)
+
+[node name="tiles_base_brik_gris" parent="." instance=ExtResource("77_dq2yq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -1, 0)
+
+[node name="tiles_base_brik_gris2" parent="." instance=ExtResource("77_dq2yq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -1)
+
+[node name="water_volume_model" parent="." instance=ExtResource("78_ttu53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.0806391, 0)
+
+[node name="metal_ladder_i" parent="." instance=ExtResource("79_k501p")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -1.56074)
+
+[node name="metal_ladder_i2" parent="." instance=ExtResource("80_ulylp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, -0.558909)
+
+[node name="metal_ladder_i3" parent="." instance=ExtResource("81_cwq7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)

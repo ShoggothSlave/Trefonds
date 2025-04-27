@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://nht15tlcjh7i"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_iy83a"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_ghnko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v15o"]
+atlas = ExtResource("2_ghnko")
+region = Rect2(512, 320, 64, 64)
+
+[resource]
+script = ExtResource("1_iy83a")
+name = "Anneau de vitesse en argent"
+description = "Un anneau de vitesse en argent"
+item_type = "équipement"
+item_effect = "vitesse +5"
+stockable = false
+texture = SubResource("AtlasTexture_5v15o")

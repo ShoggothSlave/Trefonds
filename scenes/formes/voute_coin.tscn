@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8qt6jw1phhvj"]
+
+[ext_resource type="PackedScene" uid="uid://me5yh3d4wgxt" path="res://modeles3d/demivouteiv.glb" id="1_3er36"]
+[ext_resource type="Texture2D" uid="uid://duucc65tpgutt" path="res://images/textures/brique grises.png" id="2_a36pp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2lug"]
+albedo_texture = ExtResource("2_a36pp")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="voute_coin" instance=ExtResource("1_3er36")]
+
+[node name="Cube" parent="." index="0"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_s2lug")

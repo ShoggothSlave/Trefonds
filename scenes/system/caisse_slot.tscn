@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf7buyxmkofxp"]
+
+[ext_resource type="Script" path="res://scenes/system/caisse_slot.gd" id="1_j6iuv"]
+[ext_resource type="Texture2D" uid="uid://cuycqbul4q7s4" path="res://images/autresimages/items_spritesheet_sloted.png" id="1_vndpi"]
+
+[node name="caisse_slot" type="Node2D"]
+position = Vector2(576, 288)
+script = ExtResource("1_j6iuv")
+
+[node name="slot1" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vndpi")
+hframes = 10
+vframes = 7
+frame = 62
+
+[node name="slot2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("1_vndpi")
+hframes = 10
+vframes = 7
+frame = 62
+
+[node name="slot3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 64)
+texture = ExtResource("1_vndpi")
+hframes = 10
+vframes = 7
+frame = 62
+
+[node name="slot4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(64, 64)
+texture = ExtResource("1_vndpi")
+hframes = 10
+vframes = 7
+frame = 62

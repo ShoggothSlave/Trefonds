@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://uwmg1a2rgtul"]
+
+[ext_resource type="PackedScene" uid="uid://7cu0f7c21460" path="res://modeles3d/baril_top.glb" id="1_401tk"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_r6x2k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1s07t"]
+albedo_texture = ExtResource("2_r6x2k")
+metallic = 0.75
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_up318"]
+points = PackedVector3Array(0.183936, -0.981899, -0.981899, 0.183936, 0.981899, 0.981899, 0.30553, 0.977939, 0.947306, -0.183979, 0.981894, -0.981894, -0.981893, -0.982084, 0.183997, 0.981892, -0.982127, 0.184005, 0.91629, 0.977574, -0.396924, -0.981893, 0.982084, 0.183997, -0.183979, -0.981894, 0.981894, -0.707103, -0.983887, -0.707096, -0.707103, 0.983887, 0.707096, -0.916305, 0.977543, -0.396912, 0.91629, 0.977574, 0.396924, 0.640148, -0.975554, 0.762032, 0.83189, -0.986191, -0.554684, 0.457196, 0.975572, -0.884088, -0.707103, -0.983887, 0.707096, -0.397075, 0.977443, 0.916209, -0.981893, -0.982084, -0.183997, -0.707103, 0.983887, -0.707096, -0.397078, -0.97745, -0.916216, 0.183936, -0.981899, 0.981899, 0.981892, 0.982127, -0.184005, 0.640148, 0.975554, 0.762032, 0.981892, -0.982127, -0.184005, 0.83189, -0.986191, 0.554684, 0.64017, -0.975587, -0.762058, 0.83189, 0.986191, -0.554684, -0.916305, 0.977543, 0.396912, 0.183936, 0.981899, -0.981899, -0.884034, -0.97572, 0.457297, -0.884034, -0.97572, -0.457297)
+
+[node name="baril_top" instance=ExtResource("1_401tk")]
+
+[node name="Cylindre_002" parent="." index="0"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_1s07t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylindre_002" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylindre_002/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_up318")

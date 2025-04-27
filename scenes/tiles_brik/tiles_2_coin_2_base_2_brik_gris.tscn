@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://di6x1ep0xkxmm"]
+
+[ext_resource type="Texture2D" uid="uid://blijwhj881s7y" path="res://images/textures/brique grise.png" id="2_v0m1b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lerws"]
+albedo_texture = ExtResource("2_v0m1b")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0dl2x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r72q1"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="tiles_coin_2_brik_gris" type="Node3D"]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.935, 0.065, 0.063)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.935, 0.065, 0.94)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")

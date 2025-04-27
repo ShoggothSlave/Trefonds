@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://6b821ku7gqhy"]
+
+[ext_resource type="PackedScene" uid="uid://dnpkxuwkbcimn" path="res://modeles3d/ceinture1.glb" id="1_kjntl"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="2_buiiy"]
+[ext_resource type="Script" path="res://scenes/item/ceinture_1.gd" id="2_rgg3c"]
+[ext_resource type="AudioStream" uid="uid://d3l167i5nh0pt" path="res://sons/leather-stress-4-long-97254.wav" id="4_1nlcn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoto1"]
+albedo_color = Color(0.177393, 0.115753, 0.0388179, 1)
+metallic = 1.0
+metallic_specular = 0.49
+roughness = 0.72
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34bbj"]
+albedo_texture = ExtResource("2_buiiy")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7d6xx"]
+height = 0.0263514
+radius = 0.270733
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nigto"]
+height = 0.0957872
+radius = 0.387152
+
+[node name="ceinture1" groups=["prehensible"] instance=ExtResource("1_kjntl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("2_rgg3c")
+
+[node name="Cylindre" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_uoto1")
+
+[node name="Tore" parent="." index="1"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_34bbj")
+
+[node name="Cylindre_001" parent="." index="2"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_uoto1")
+
+[node name="Cylindre_002" parent="." index="3"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_34bbj")
+
+[node name="interaction_area" type="Area3D" parent="." index="4" groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("CylinderShape3D_7d6xx")
+
+[node name="Ceinture de cuir simple" type="StaticBody3D" parent="." index="5" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Ceinture de cuir simple" index="0"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("CylinderShape3D_nigto")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("4_1nlcn")
+
+[node name="Timer" type="Timer" parent="." index="7"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b766lpj2jmnne"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_jo4nh"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_errau"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odyyj"]
+atlas = ExtResource("2_errau")
+region = Rect2(448, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_jo4nh")
+name = "Gourde d'eau"
+description = "Une gourde en cuir remplie d'eau"
+item_type = "consommable"
+item_effect = "soif -15"
+stockable = true
+texture = SubResource("AtlasTexture_odyyj")

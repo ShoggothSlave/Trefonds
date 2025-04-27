@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://btco1svx51mln"]
+
+[ext_resource type="Shader" path="res://shaders/inventaire_visuel_none.gdshader" id="1_fftok"]
+
+[resource]
+shader = ExtResource("1_fftok")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+shader_parameter/width = 0.006

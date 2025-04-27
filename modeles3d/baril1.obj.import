@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ysrlghxvomjp"
+path="res://.godot/imported/baril1.obj-e6e85f7a8b5d162df641cdd8622004d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/baril1.obj-e6e85f7a8b5d162df641cdd8622004d9.mesh"]
+
+source_file="res://modeles3d/baril1.obj"
+dest_files=["res://.godot/imported/baril1.obj-e6e85f7a8b5d162df641cdd8622004d9.mesh", "res://.godot/imported/baril1.obj-e6e85f7a8b5d162df641cdd8622004d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

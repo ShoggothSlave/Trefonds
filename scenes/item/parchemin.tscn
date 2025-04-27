@@ -1,0 +1,135 @@
+[gd_scene load_steps=8 format=3 uid="uid://63niqx0ucvvq"]
+
+[ext_resource type="Script" path="res://scenes/item/parchemin.gd" id="1_ojtua"]
+[ext_resource type="Texture2D" uid="uid://dhrpeyoca284w" path="res://images/autresimages/parchemin.png" id="3_he57y"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="4_w0n38"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="5_ck3n3"]
+[ext_resource type="ArrayMesh" uid="uid://rls1l26g1mut" path="res://modeles3d/parchemin.obj" id="5_h2g46"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tafil"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpgji"]
+albedo_color = Color(0.560355, 0.508063, 0.333527, 1)
+metallic_specular = 0.0
+
+[node name="parchemin" type="Node3D" groups=["lisible"]]
+script = ExtResource("1_ojtua")
+
+[node name="parchemin_detection" type="Area3D" parent="." groups=["lisible"]]
+collision_layer = 0
+
+[node name="detect_coll" type="CollisionShape3D" parent="parchemin_detection" groups=["lisible"]]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.0509384, 0)
+shape = SubResource("BoxShape3D_tafil")
+
+[node name="Parchemin" type="StaticBody3D" parent="." groups=["lisible"]]
+collision_layer = 8
+
+[node name="detect_coll2" type="CollisionShape3D" parent="Parchemin" groups=["lisible"]]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.0509384, 0)
+shape = SubResource("BoxShape3D_tafil")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("3_he57y")
+
+[node name="Control" type="Control" parent="CanvasLayer/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D/Control"]
+layout_mode = 0
+offset_left = -77.0
+offset_top = -90.0
+offset_right = 80.0
+offset_bottom = 92.0
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_w0n38")
+text = "
+Comme nombre de malheureux avant 
+vous, les clercs vous
+ont condamné pour 
+subversion à errer
+dans le donjon. 
+
+Les mystères
+entourant ce
+dernier sont
+nombreux, mais
+peut-être
+parviendrez-vous
+à en percer
+quelques-uns. 
+
+Les ragots racontent
+que ce sont les
+vestiges d'une
+ancienne civilisation
+et que sa
+descendance
+dégénérée y vit
+toujours, traquant
+et chassant les
+malchanceux qui 
+y sont envoyés. 
+
+Les clercs disent
+que ce sont des
+démons, ce qui ne
+les empêche
+pourtant pas de
+nourrir leur soif
+d'âmes et de
+brutalité. 
+
+Une légende
+soutient qu'il
+existe un passage
+pour revenir vers
+la surface, mais
+que pour y
+parvenir, il faut
+d'abord se rendre
+au plus profond
+du donjon. 
+Toutefois, jusqu'à
+ce jour, personne
+n'y est encore
+parvenue. 
+
+Peut-être n'est-ce
+qu'une croyance 
+véhiculée par les
+clercs pour soutenir 
+un espoir cruel
+chez les condamnés. 
+
+Toujours est-il que
+c'est ici que votre 
+nouvelle \"vie\"
+commence...
+
+Appuyez sur
+\"Retour\" pour
+Rouller le parchemin"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ck3n3")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Parchemin2" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.92141e-08, 9.1365e-09, 0.75, 0.53033, 0.53033, -6.95444e-08, -0.53033, 0.53033, 5.66234e-08, 0, 0.0178764, 0)
+layers = 8
+material_override = SubResource("StandardMaterial3D_wpgji")
+mesh = ExtResource("5_h2g46")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

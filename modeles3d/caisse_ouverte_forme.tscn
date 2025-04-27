@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d01wctgt6srh1"]
+
+[ext_resource type="PackedScene" uid="uid://dbvgdsk1dwta7" path="res://modeles3d/caisse_ouverte_forme.glb" id="1_8238j"]
+
+[node name="caisse_ouverte_forme" instance=ExtResource("1_8238j")]

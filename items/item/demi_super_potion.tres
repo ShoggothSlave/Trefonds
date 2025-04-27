@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ctmy5q1fawpcn"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_nttyp"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_dt42i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlf0u"]
+atlas = ExtResource("2_dt42i")
+region = Rect2(384, 128, 64, 64)
+
+[resource]
+script = ExtResource("1_nttyp")
+name = "Demi super potion"
+description = "Une bouteille de liquide visqueu remplie à moitié"
+item_type = "consommable"
+item_effect = "points de vie +75"
+stockable = true
+texture = SubResource("AtlasTexture_wlf0u")

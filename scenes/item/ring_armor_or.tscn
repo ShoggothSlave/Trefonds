@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://b856i3p6kfufw"]
+
+[ext_resource type="PackedScene" uid="uid://mo48nbk7gxoj" path="res://modeles3d/ring.glb" id="1_k5lb0"]
+[ext_resource type="Script" path="res://scenes/item/ring_armor_or.gd" id="2_prv8p"]
+[ext_resource type="AudioStream" uid="uid://bt54qyg4uwvnj" path="res://sons/ring-drop-263966.wav" id="3_spvhd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbawk"]
+albedo_color = Color(0.667322, 0.52743, 0.204142, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwy5i"]
+albedo_color = Color(0.967011, 0.476396, 0.0942879, 1)
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_41i6k"]
+height = 0.511461
+radius = 1.06319
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h6oqt"]
+height = 1.51859
+radius = 1.50804
+
+[node name="ring_armor_or" groups=["prehensible"] instance=ExtResource("1_k5lb0")]
+script = ExtResource("2_prv8p")
+
+[node name="Cylindre" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_jbawk")
+
+[node name="Icosphère" parent="." index="1"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_nwy5i")
+
+[node name="interaction_area" type="Area3D" parent="." index="2" groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_41i6k")
+
+[node name="Anneau d\'armure en or" type="StaticBody3D" parent="." index="3" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Anneau d\'armure en or" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("CylinderShape3D_h6oqt")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_spvhd")
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

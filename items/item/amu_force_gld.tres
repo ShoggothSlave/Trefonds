@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cyoq31a23tj62"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_fsrt0"]
+[ext_resource type="Texture2D" uid="uid://cnwrlvra3josq" path="res://items/items_spritesheet_1.png" id="2_uod7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nk44"]
+atlas = ExtResource("2_uod7y")
+region = Rect2(320, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_fsrt0")
+name = "Amulette de force III"
+description = "Une amulette de force en or"
+item_type = "équipement"
+item_effect = "force +15"
+stockable = false
+texture = SubResource("AtlasTexture_6nk44")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csg5f2vy05d60"
+path="res://.godot/imported/bureau1.obj-8daa680aab3d9f3fa9630047ec6226fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bureau1.obj-8daa680aab3d9f3fa9630047ec6226fe.mesh"]
+
+source_file="res://modeles3d/bureau1.obj"
+dest_files=["res://.godot/imported/bureau1.obj-8daa680aab3d9f3fa9630047ec6226fe.mesh", "res://.godot/imported/bureau1.obj-8daa680aab3d9f3fa9630047ec6226fe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

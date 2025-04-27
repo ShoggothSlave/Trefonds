@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtkm6ke3n2rx1"]
+
+[ext_resource type="Script" path="res://scenes/item/fighting_stick.gd" id="1_6hjwn"]
+[ext_resource type="ArrayMesh" uid="uid://blyosfah43fcy" path="res://modeles3d/fightingstick.obj" id="1_8wcjk"]
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="2_u5a5f"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="3_0cjsl"]
+[ext_resource type="Texture2D" uid="uid://2vitltt7nmnn" path="res://images/textures/text bout woodlog.png" id="4_58tfa"]
+[ext_resource type="AudioStream" uid="uid://bnxoi6jqjteen" path="res://sons/log-split-88986.wav" id="6_bi8ot"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3i5t"]
+albedo_texture = ExtResource("2_u5a5f")
+metallic = 0.75
+roughness = 0.75
+uv1_scale = Vector3(2, 2, 2)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4jyr"]
+albedo_texture = ExtResource("3_0cjsl")
+uv1_scale = Vector3(4, 4, 4)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnsqg"]
+albedo_texture = ExtResource("4_58tfa")
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ry31w"]
+radius = 0.0935578
+height = 1.0405
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xgbre"]
+radius = 0.106032
+height = 1.06171
+
+[node name="fighting_stick" type="Node3D" groups=["prehensible"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_6hjwn")
+
+[node name="Fightingstick" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+layers = 8
+mesh = ExtResource("1_8wcjk")
+surface_material_override/0 = SubResource("StandardMaterial3D_p3i5t")
+surface_material_override/1 = SubResource("StandardMaterial3D_n4jyr")
+surface_material_override/2 = SubResource("StandardMaterial3D_tnsqg")
+
+[node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000625223, 0.511812, 0)
+shape = SubResource("CapsuleShape3D_ry31w")
+
+[node name="Bâton de combat" type="StaticBody3D" parent="." groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Bâton de combat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00246635, 0.520885, 0)
+shape = SubResource("CapsuleShape3D_xgbre")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bi8ot")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

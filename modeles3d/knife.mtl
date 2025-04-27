@@ -1,0 +1,22 @@
+# Blender 4.3.2 MTL File: 'knife.blend'
+# www.blender.org
+
+newmtl Matériau
+Ns 159.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/Downloads/boisplain.png
+
+newmtl rust
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Users/Admin/Documents/Jeux/Game dev/Condemned/images/textures/Rust004_1K-JPG_Metalness (1).png

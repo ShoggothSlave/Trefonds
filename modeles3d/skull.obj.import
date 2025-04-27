@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnu6tkusl3lfq"
+path="res://.godot/imported/skull.obj-e448ac26f13574007d43f2b1c4dd426d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skull.obj-e448ac26f13574007d43f2b1c4dd426d.mesh"]
+
+source_file="res://modeles3d/skull.obj"
+dest_files=["res://.godot/imported/skull.obj-e448ac26f13574007d43f2b1c4dd426d.mesh", "res://.godot/imported/skull.obj-e448ac26f13574007d43f2b1c4dd426d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

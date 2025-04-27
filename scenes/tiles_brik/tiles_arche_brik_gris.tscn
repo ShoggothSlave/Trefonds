@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=3 uid="uid://xtgh1t6qg1ds"]
+
+[ext_resource type="Texture2D" uid="uid://blijwhj881s7y" path="res://images/textures/brique grise.png" id="2_smph8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lerws"]
+albedo_texture = ExtResource("2_smph8")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0dl2x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r72q1"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="tiles_arche_brik_gris" type="Node3D"]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45559e-08, -0.125, 0, 0.333, -5.46392e-09, 0, 0, 0, 0.125, 1.05346, 0.161312, -0.0647923)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45559e-08, -0.125, -1.38727e-17, 0.332021, -5.44786e-09, -0.009579, 0.0255185, -4.18711e-10, 0.124632, 1.05346, 0.490101, -0.0538172)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45559e-08, -0.125, -5.49882e-17, 0.28615, -4.69519e-09, -0.0639323, 0.170316, -2.79457e-09, 0.107414, 1.05375, 0.772064, 0.0397605)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45559e-08, -0.125, -2.22992e-16, 0.171702, -2.81732e-09, -0.107102, 0.28532, -4.68158e-09, 0.0644527, 1.05245, 0.969307, 0.235686)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D7"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D7/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.45559e-08, 0.125, -1.09278e-08, 0.333, -5.46392e-09, 0, -1.27252e-15, -1.09278e-08, -0.125, 1.0531, 0.161312, 1.06235)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D9"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D9/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2325e-08, 0.125, -1.08957e-08, 0.332021, -5.44786e-09, -0.009579, -0.0255185, -1.05091e-08, -0.124632, 1.05094, 0.490101, 1.05138)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D10"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D10/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.33563e-10, 0.125, -9.39039e-09, 0.28615, -4.69519e-09, -0.0639323, -0.170316, -8.13328e-09, -0.107414, 1.0528, 0.772064, 0.957801)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D11"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D11/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.03876e-08, 0.125, -5.63463e-09, 0.171702, -2.81732e-09, -0.107102, -0.28532, -6.24627e-09, -0.0644527, 1.0502, 0.969307, 0.761875)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D12"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D12/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.77636e-15, 0, -1.77636e-15, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_r72q1")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.45559e-08, -0.125, -3.25443e-16, 0.0012612, -2.06937e-11, -0.124999, 0.332998, -5.46388e-09, 0.000473417, 1.054, 1.04421, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_lerws")
+mesh = SubResource("BoxMesh_0dl2x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D8"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D8/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r72q1")

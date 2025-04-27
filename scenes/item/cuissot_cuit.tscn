@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dttnscu1ckwh3"]
+
+[ext_resource type="PackedScene" uid="uid://cuxw1a1bie22j" path="res://modeles3d/Cuissot.glb" id="1_a2id6"]
+[ext_resource type="Script" path="res://scenes/item/cuissot_cuit.gd" id="2_bxk8u"]
+[ext_resource type="Texture2D" uid="uid://c1j47fj61aidd" path="res://images/textures/cuissot_sanglier_cuit (1).png" id="2_njy68"]
+[ext_resource type="AudioStream" uid="uid://lvls2plc6abt" path="res://sons/pick-92276.wav" id="4_qs5pt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lm6it"]
+albedo_texture = ExtResource("2_njy68")
+metallic = 0.25
+metallic_specular = 0.0
+roughness = 0.63
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_offset = Vector3(0.47, 0.07, 0.485)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bhw1b"]
+radius = 1.35535
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_16nn4"]
+radius = 1.3781
+
+[node name="cuissot_cuit" instance=ExtResource("1_a2id6")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+script = ExtResource("2_bxk8u")
+
+[node name="Plan" parent="." index="0"]
+layers = 8
+material_override = SubResource("StandardMaterial3D_lm6it")
+
+[node name="interaction_area" type="Area3D" parent="." index="1" groups=["prehensible"]]
+collision_mask = 0
+
+[node name="interaction_form" type="CollisionShape3D" parent="interaction_area" index="0" groups=["prehensible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00478968, 0.103567, 0)
+shape = SubResource("SphereShape3D_bhw1b")
+
+[node name="Morceau de viande roti" type="StaticBody3D" parent="." index="2" groups=["prehensible"]]
+collision_layer = 8
+
+[node name="body_collision2" type="CollisionShape3D" parent="Morceau de viande roti" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133092, 0.0937191, 0)
+shape = SubResource("SphereShape3D_16nn4")
+
+[node name="audio_pick" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_qs5pt")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

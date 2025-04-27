@@ -1,0 +1,266 @@
+[gd_scene load_steps=26 format=3 uid="uid://q1a5h3nt1ts2"]
+
+[ext_resource type="Script" path="res://scripts/porte_simple.gd" id="1_kr21a"]
+[ext_resource type="Texture2D" uid="uid://duucc65tpgutt" path="res://images/textures/brique grises.png" id="1_n2wkg"]
+[ext_resource type="Texture2D" uid="uid://blijwhj881s7y" path="res://images/textures/brique grise.png" id="2_ukaqf"]
+[ext_resource type="ArrayMesh" uid="uid://mp3w2jge326p" path="res://modeles3d/porte1.obj" id="3_5br2l"]
+[ext_resource type="AudioStream" uid="uid://1jnsmac7j6cr" path="res://sons/sound-effect-creaking-door-01-271987.wav" id="3_8xrff"]
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="4_83umt"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="5_5dc5q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvvqo"]
+albedo_texture = ExtResource("1_n2wkg")
+uv1_scale = Vector3(0.25, 1, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_8hpey"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dvaco"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4boah"]
+albedo_texture = ExtResource("1_n2wkg")
+uv1_scale = Vector3(2, 0.4, 1)
+uv1_offset = Vector3(0.125, 0, 0)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg0aw"]
+albedo_texture = ExtResource("2_ukaqf")
+uv1_scale = Vector3(8, 1, 1)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3qfdc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pw8b0"]
+size = Vector3(0.49115, 0.712891, 0.0291138)
+
+[sub_resource type="Animation" id="Animation_up71k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("penture:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p7817"]
+resource_name = "close"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("penture:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 1.83333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("audio_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xhajs"]
+resource_name = "open"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("penture:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 1.83333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("audio_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcx5e"]
+_data = {
+"RESET": SubResource("Animation_up71k"),
+"close": SubResource("Animation_p7817"),
+"open": SubResource("Animation_xhajs")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxhoi"]
+albedo_texture = ExtResource("4_83umt")
+metallic = 0.73
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 1)
+uv1_offset = Vector3(0, -0.755, 0)
+uv1_triplanar = true
+texture_filter = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5nia"]
+albedo_texture = ExtResource("4_83umt")
+metallic = 0.61
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.25, 1)
+uv1_offset = Vector3(0, -1.55, 0)
+uv1_triplanar = true
+texture_filter = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_majoy"]
+albedo_texture = ExtResource("4_83umt")
+metallic = 0.3
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.3, 1)
+uv1_offset = Vector3(0, 0, 0.745)
+uv1_triplanar = true
+texture_filter = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8mxb"]
+albedo_texture = ExtResource("4_83umt")
+metallic = 0.51
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.4, 1)
+uv1_offset = Vector3(0, 0, 0.245)
+uv1_triplanar = true
+texture_filter = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk1jf"]
+albedo_texture = ExtResource("5_5dc5q")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqfo1"]
+albedo_texture = ExtResource("5_5dc5q")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iwx0m"]
+points = PackedVector3Array(-0.0787286, 0.557375, 0.349157, 0.0355392, 1.47143, 0.509343, 0.0812714, 0.671632, 0.463532, 0.0355392, 1.47143, -0.519229, 0.0355392, 0.00871456, -0.519229, -0.033012, 1.47143, -0.519229, -0.033012, 0.00871456, 0.509343, -0.033012, 0.00871456, -0.519229, -0.033012, 1.47143, 0.509343, 0.0355392, 0.00871456, 0.509343, 0.0812714, 0.557375, 0.349157, -0.0787286, 0.671632, 0.463532, 0.0812714, 0.580141, 0.486387, -0.0787286, 0.580141, 0.486387, 0.0812714, 0.694398, 0.372012, -0.0787286, 0.694398, 0.372012, -0.0787286, 0.534467, 0.440577, 0.0812714, 0.534467, 0.417822, 0.0812714, 0.671632, 0.349157, -0.0787286, 0.671632, 0.349157, -0.0787286, 0.534467, 0.372012, 0.0812714, 0.694398, 0.440577, -0.0787286, 0.694398, 0.440577, 0.0812714, 0.625815, 0.486387, 0.0812714, 0.534467, 0.394968, 0.0812714, 0.557375, 0.463532)
+
+[node name="porte_simple" type="Node3D" groups=["ouvrable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.935265)
+script = ExtResource("1_kr21a")
+
+[node name="cadre_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.125, 0.125, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_uvvqo")
+mesh = SubResource("BoxMesh_8hpey")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cadre_1"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cadre_1/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_dvaco")
+
+[node name="cadre_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.125, 0.875, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_uvvqo")
+mesh = SubResource("BoxMesh_8hpey")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cadre_2"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cadre_2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_dvaco")
+
+[node name="cadre_3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 0.125, 0.5, 0.9, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_4boah")
+mesh = SubResource("BoxMesh_8hpey")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cadre_3"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cadre_3/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_dvaco")
+
+[node name="cadre_4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0, 0.063, 0.25266, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_gg0aw")
+mesh = SubResource("PlaneMesh_3qfdc")
+
+[node name="cadre_5" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.18557e-08, -0.5, 5.50763e-09, -0.5, -2.18557e-08, 0, 1.91069e-15, -4.37114e-08, -0.063, 0.74876, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_gg0aw")
+mesh = SubResource("PlaneMesh_3qfdc")
+
+[node name="door_detection" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="door_collision" type="CollisionShape3D" parent="door_detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.500397, 0.401367, -0.00100708)
+shape = SubResource("BoxShape3D_pw8b0")
+disabled = true
+
+[node name="audio_door" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70642, 0.406415, 0)
+stream = ExtResource("3_8xrff")
+
+[node name="anim_door" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qcx5e")
+}
+
+[node name="penture" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.734722, 0.39017, 0)
+
+[node name="porte" type="MeshInstance3D" parent="penture" groups=["ouvrable"]]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -0.234722, -0.358826, -0.000376999)
+layers = 1024
+mesh = ExtResource("3_5br2l")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gxhoi")
+surface_material_override/1 = SubResource("StandardMaterial3D_e5nia")
+surface_material_override/2 = SubResource("StandardMaterial3D_majoy")
+surface_material_override/3 = SubResource("StandardMaterial3D_l8mxb")
+surface_material_override/4 = SubResource("StandardMaterial3D_lk1jf")
+surface_material_override/5 = SubResource("StandardMaterial3D_uqfo1")
+
+[node name="porte" type="StaticBody3D" parent="penture/porte" groups=["ouvrable"]]
+collision_layer = 1024
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="penture/porte/porte"]
+shape = SubResource("ConvexPolygonShape3D_iwx0m")
+
+[node name="close_timer" type="Timer" parent="."]
+wait_time = 300.0
+
+[connection signal="timeout" from="close_timer" to="." method="_on_close_timer_timeout"]

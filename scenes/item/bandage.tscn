@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ktt7vs5du8xo"]
+
+[ext_resource type="Texture2D" uid="uid://mt2l6ptmno8b" path="res://images/textures/vieuxTissus.png" id="1_lsl5m"]
+[ext_resource type="ArrayMesh" uid="uid://bojrskg6xlkk2" path="res://modeles3d/bandages.obj" id="2_5it0r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vj50d"]
+albedo_texture = ExtResource("1_lsl5m")
+uv1_scale = Vector3(1.5, 1.5, 1.5)
+texture_filter = 0
+
+[node name="bandage" type="Node3D"]
+
+[node name="Bandages" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+layers = 8
+material_override = SubResource("StandardMaterial3D_vj50d")
+mesh = ExtResource("2_5it0r")

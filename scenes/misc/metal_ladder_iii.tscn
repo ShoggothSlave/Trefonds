@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://l0n3jpj5umt7"]
+
+[ext_resource type="Script" path="res://scenes/misc/metal_ladder_i.gd" id="1_i47sq"]
+[ext_resource type="ArrayMesh" uid="uid://skinbnxrv6d8" path="res://modeles3d/rustyladder.obj" id="2_n6k15"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vs7o5"]
+points = PackedVector3Array(-0.0638978, 0.23843, -0.163874, 0.02, 0.980085, 0.156463, 0.02, 0.980085, -0.156151, 0.02, 0.0199148, 0.156463, -0.0638978, 0.86316, 0.164187, 0.02, 0.0199148, -0.156151, -0.0248407, -0.00380757, 0.164187, -0.0638978, 0.86316, -0.163874, -0.0638978, 0.23843, 0.164187, -0.0248407, 1.00381, -0.163874, -0.0248407, -0.00380757, -0.163874, -0.0248407, 1.00381, 0.164187)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dnkxl"]
+size = Vector3(0.319763, 2.99335, 0.062439)
+
+[node name="metal_ladder_i" type="Node3D"]
+script = ExtResource("1_i47sq")
+
+[node name="Rustyladder" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0, 0.057654)
+layers = 4
+mesh = ExtResource("2_n6k15")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rustyladder"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rustyladder/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vs7o5")
+
+[node name="Rustyladder2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 1, 0.057654)
+layers = 4
+mesh = ExtResource("2_n6k15")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rustyladder2"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rustyladder2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vs7o5")
+
+[node name="Rustyladder3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 2, 0.057654)
+layers = 4
+mesh = ExtResource("2_n6k15")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Rustyladder3"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rustyladder3/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vs7o5")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503, 1.50027, 0.095)
+shape = SubResource("BoxShape3D_dnkxl")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

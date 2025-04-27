@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d25fbpp5b5bto"]
+
+[ext_resource type="ArrayMesh" uid="uid://d3epcl5cyd4fb" path="res://modeles3d/plantemonotige2.obj" id="1_8fx3u"]
+
+[node name="plante_pendante" type="Node3D"]
+
+[node name="Plantemonotige2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.025, 2.18557e-09, 0, -2.18557e-09, -0.025, 0, 0, 0, 0.025, 0, 0, 0)
+layers = 4
+mesh = ExtResource("1_8fx3u")
