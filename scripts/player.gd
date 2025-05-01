@@ -26,6 +26,8 @@ const crouch_translate = 0.325
 const crouch_jump_add = crouch_translate * 0.74
 var is_crouched := false
 
+var notification_sprite = Sprite2D.new()
+
 func _ready():
 	get_tree().call_group("monstres", "set_player", self)
 	$"../audio_ambient".play()
@@ -408,3 +410,30 @@ func _on_anim_in_gas_animation_finished(_anim_name: StringName) -> void:
 	if Manager.ingas == false and Manager.inwater == false:
 		$"../anim_in_gas".play("not_in_gas")
 		Manager.oxy = Manager.maxoxy
+
+
+
+
+
+
+
+func show_notification_crate_image(image_path):
+	get_parent().get_node("Notification_Control").show()
+	
+	var text_rect: TextureRect = get_parent().get_node("Notification_Control/notification_image")
+	
+	var inventory_visual = get_parent().get_node("inventaire_visuel")
+	var inv_sprite : Sprite2D = inventory_visual.get_node(image_path)
+	
+	#var notification_sprite = Sprite2D.new()
+	notification_sprite.texture = inv_sprite.texture
+	notification_sprite.hframes = inv_sprite.hframes
+	notification_sprite.vframes = inv_sprite.vframes
+	notification_sprite.scale = inv_sprite.scale *2
+	notification_sprite.frame = 1
+	
+	text_rect.add_child(notification_sprite)
+	notification_sprite.position = Vector2.ZERO + (text_rect.size/2)
+	
+func hide_notification_crate_image():
+	get_parent().get_node("Notification_Control").hide()
