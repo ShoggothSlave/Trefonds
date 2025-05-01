@@ -2905,6 +2905,43 @@ offset_top = 0.320004
 offset_right = -0.416
 offset_bottom = -0.00799942
 
+[node name="Notification_Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Notification_Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.109568
+anchor_right = 0.9375
+anchor_bottom = 0.890432
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="notification_image" type="TextureRect" parent="Notification_Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [connection signal="timeout" from="canvas_hud/cooldown_timer" to="player" method="_on_cooldown_timer_timeout"]
 [connection signal="timeout" from="timer_faim" to="player" method="_on_timer_faim_timeout"]
 [connection signal="timeout" from="timer_soif" to="player" method="_on_timer_soif_timeout"]
