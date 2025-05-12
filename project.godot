@@ -51,6 +51,8 @@ fermable=""
 nonouvrable=""
 vide=""
 fouillable=""
+player=""
+allumable=""
 
 [input]
 

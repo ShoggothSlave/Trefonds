@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var test = true
+
 var dead = false
 var speed
 var walk_speed = 1
@@ -103,9 +105,12 @@ func _physics_process(_delta):
 			Manager.Vie_Joueur -= fall_damage
 			blessure()
 			air_time = 0
+			fall_damage = 0.0
 			$"../fall_label".text = ""
 		air_time = 0
 		$"../fall_label".text = ""
+		
+		
 
 	if Manager.laddering == false:
 		if Manager.inwater == false:
@@ -119,6 +124,8 @@ func _physics_process(_delta):
 					else:
 						velocity.y -= gravity * _delta * fall_damage
 
+	$"../fall_label".text = str(falling, " ", air_time, " ", fall_damage)
+	
 	# Add the gravity.
 	if not is_on_floor() and Manager.laddering == false:
 		self.velocity.y -= gravity * _delta
@@ -173,7 +180,7 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func _process(_delta) -> void:
-	if Manager.dead == true:
+	if false and (Manager.dead == true):
 		$"../canvas_hud/control_fight".visible = false
 		$"../canvas_hud/control_fight/texture_hud".hide()
 		$"../sprite_game_over".show()
@@ -412,25 +419,34 @@ func _on_anim_in_gas_animation_finished(_anim_name: StringName) -> void:
 		Manager.oxy = Manager.maxoxy
 
 
-
-
-
-
-
-func show_notification_crate_image(image_path):
+func show_notification_crate_image(image_path:String):
 	get_parent().get_node("Notification_Control").show()
 	
 	var text_rect: TextureRect = get_parent().get_node("Notification_Control/notification_image")
 	
-	var inventory_visual = get_parent().get_node("inventaire_visuel")
-	var inv_sprite : Sprite2D = inventory_visual.get_node(image_path)
+	var inv_sprite : Sprite2D = get_parent().get_node(image_path)
 	
 	#var notification_sprite = Sprite2D.new()
 	notification_sprite.texture = inv_sprite.texture
 	notification_sprite.hframes = inv_sprite.hframes
 	notification_sprite.vframes = inv_sprite.vframes
 	notification_sprite.scale = inv_sprite.scale *2
-	notification_sprite.frame = 1
+	
+	# look for potions and use different frame numbers, otherwise use 1
+	if "po_demi_min" in image_path:
+		notification_sprite.frame = 1
+	elif "po_min" in image_path:
+		notification_sprite.frame = 2
+	elif "po_demi_con" in image_path:
+		notification_sprite.frame = 3
+	elif "po_con" in image_path:
+		notification_sprite.frame = 4
+	elif "po_demi_sup" in image_path:
+		notification_sprite.frame = 5
+	elif "po_sup" in image_path:
+		notification_sprite.frame = 6
+	else:
+		notification_sprite.frame = 1
 	
 	text_rect.add_child(notification_sprite)
 	notification_sprite.position = Vector2.ZERO + (text_rect.size/2)

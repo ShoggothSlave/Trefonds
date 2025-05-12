@@ -1,8 +1,8 @@
-[gd_scene load_steps=128 format=3 uid="uid://dhcttrm3b0khw"]
+[gd_scene load_steps=133 format=3 uid="uid://dhcttrm3b0khw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_a5gpx"]
 [ext_resource type="Script" path="res://scripts/player_raycast.gd" id="2_3tigm"]
-[ext_resource type="Texture2D" uid="uid://ch12xx7neiql3" path="res://images/personnage/SpritesheetCursor .png" id="3_4nwum"]
+[ext_resource type="Texture2D" uid="uid://cot8isg2q8lod" path="res://images/personnage/SpritesheetCursor.png" id="3_ck8nj"]
 [ext_resource type="Script" path="res://scripts/lanterne.gd" id="3_wc587"]
 [ext_resource type="Script" path="res://scripts/canvas_hud.gd" id="4_o6tfk"]
 [ext_resource type="Texture2D" uid="uid://cpe6qksx2nfex" path="res://images/autresimages/JaugeFrame (1).png" id="6_e4etg"]
@@ -16,11 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://dyy0o8gpefifm" path="res://images/personnage/sprite epee.png" id="14_s4i8g"]
 [ext_resource type="Texture2D" uid="uid://b8k8d58u0hqq6" path="res://images/personnage/stick (1).png" id="15_oo4d1"]
 [ext_resource type="Texture2D" uid="uid://dpvlnekilhfio" path="res://images/personnage/rondache.png" id="16_vxhxm"]
+[ext_resource type="Texture2D" uid="uid://bfyp8q7vgphag" path="res://images/personnage/element_warning_life.png" id="26_ecmfp"]
 [ext_resource type="Texture2D" uid="uid://b16pw2xkdtpsd" path="res://images/autresimages/equip_casque_cuir.png" id="26_pwft0"]
 [ext_resource type="Texture2D" uid="uid://bbeckaduvsxfx" path="res://images/autresimages/SpritesheetDefiler.png" id="27_appcr"]
 [ext_resource type="Script" path="res://scenes/system/sprite_hat.gd" id="27_st7q1"]
+[ext_resource type="Texture2D" uid="uid://iujv382ei5un" path="res://images/personnage/element_warning_soif.png" id="27_tx3xf"]
 [ext_resource type="Texture2D" uid="uid://dhif5cw08oh2m" path="res://images/autresimages/equip_amulet.png" id="28_k5k05"]
+[ext_resource type="Texture2D" uid="uid://yxc3rsqehsho" path="res://images/personnage/element_warning_oxy.png" id="28_tu2av"]
 [ext_resource type="Texture2D" uid="uid://vpfu7i1m2i2o" path="res://images/autresimages/equip_ring.png" id="29_b0gog"]
+[ext_resource type="Texture2D" uid="uid://b4n67m3m5qayf" path="res://images/personnage/element_warning_faim.png" id="29_pf6kc"]
 [ext_resource type="Texture2D" uid="uid://c7xitt20bq5t5" path="res://images/autresimages/equip_weapon.png" id="30_a07w2"]
 [ext_resource type="Script" path="res://scenes/system/sprite_amulet.gd" id="30_lum3k"]
 [ext_resource type="Texture2D" uid="uid://cen5rlrqfdj5n" path="res://images/autresimages/equip_shield.png" id="31_6du6p"]
@@ -128,6 +132,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [13]
+}
+
+[sub_resource type="Animation" id="Animation_s23h7"]
+resource_name = "allumer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("interact_label/sprite_cursor:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
 }
 
 [sub_resource type="Animation" id="Animation_dxv4i"]
@@ -347,6 +366,7 @@ _data = {
 "RESET": SubResource("Animation_3e3dt"),
 "action": SubResource("Animation_fbo3p"),
 "ajouter": SubResource("Animation_bi6qv"),
+"allumer": SubResource("Animation_s23h7"),
 "attak": SubResource("Animation_dxv4i"),
 "cuisine": SubResource("Animation_x2487"),
 "demolis": SubResource("Animation_71a66"),
@@ -1018,7 +1038,7 @@ _data = {
 [node name="player" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0035564, 0)
 
-[node name="player" type="CharacterBody3D" parent="."]
+[node name="player" type="CharacterBody3D" parent="." groups=["player"]]
 collision_mask = 65534
 floor_max_angle = 1.13446
 platform_wall_layers = 4
@@ -1102,7 +1122,7 @@ vertical_alignment = 1
 z_index = 1
 texture_filter = 1
 position = Vector2(69, 87)
-texture = ExtResource("3_4nwum")
+texture = ExtResource("3_ck8nj")
 hframes = 4
 vframes = 5
 frame = 1
@@ -1361,6 +1381,38 @@ texture = ExtResource("36_htxtn")
 hframes = 2
 vframes = 2
 
+[node name="warning_life" type="Sprite2D" parent="canvas_hud"]
+modulate = Color(1, 1, 1, 0.588235)
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3, 3)
+texture = ExtResource("26_ecmfp")
+hframes = 2
+
+[node name="warning_soif" type="Sprite2D" parent="canvas_hud"]
+modulate = Color(1, 1, 1, 0.588235)
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3, 3)
+texture = ExtResource("27_tx3xf")
+hframes = 2
+
+[node name="warning_oxy" type="Sprite2D" parent="canvas_hud"]
+modulate = Color(1, 1, 1, 0.588235)
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3, 3)
+texture = ExtResource("28_tu2av")
+hframes = 2
+
+[node name="warning_faim" type="Sprite2D" parent="canvas_hud"]
+modulate = Color(1, 1, 1, 0.588235)
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(3, 3)
+texture = ExtResource("29_pf6kc")
+hframes = 2
+
 [node name="timer_faim" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
@@ -1374,6 +1426,7 @@ wait_time = 7.0
 autostart = true
 
 [node name="attributs_label" type="Label" parent="."]
+visible = false
 z_index = 25
 y_sort_enabled = true
 offset_left = 503.0
@@ -2913,19 +2966,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="Notification_Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0625
-anchor_top = 0.109568
-anchor_right = 0.9375
-anchor_bottom = 0.890432
+anchor_left = 0.064
+anchor_top = 0.111
+anchor_right = 0.929
+anchor_bottom = 0.889
+offset_left = 0.271996
+offset_top = 0.071991
+offset_right = -0.208008
+offset_bottom = -0.0720215
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="notification_image" type="TextureRect" parent="Notification_Control"]
 layout_mode = 1
@@ -2934,13 +2988,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -150.0
-offset_right = 150.0
-offset_bottom = 150.0
+offset_left = -171.0
+offset_top = -160.0
+offset_right = 153.0
+offset_bottom = 155.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 
 [connection signal="timeout" from="canvas_hud/cooldown_timer" to="player" method="_on_cooldown_timer_timeout"]
 [connection signal="timeout" from="timer_faim" to="player" method="_on_timer_faim_timeout"]

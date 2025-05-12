@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d36t3ix6otry7"]
+
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="1_f2wyl"]
+[ext_resource type="ArrayMesh" uid="uid://11gidlft66tm" path="res://modeles3d/candle_holder.obj" id="2_dbph0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftcyk"]
+albedo_texture = ExtResource("1_f2wyl")
+metallic = 0.75
+uv1_offset = Vector3(-0.015, -0.035, 0.04)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2vvk6"]
+points = PackedVector3Array(0.0104592, 0.000695858, 0.034374, -0.00785591, 0.00403226, -0.0502857, -0.00785591, 0.00561046, -0.0502857, -0.0487007, 0.00561046, 0.0157118, 0.0188522, 0.0558857, 0.00942119, 0.0487106, 0.00403226, -0.015702, -0.00943103, 0.0558857, -0.0188522, -0.00943103, 0.0558857, 0.0188522, 0.015702, 0.00561046, 0.0487106, -0.0455604, 0.00403226, -0.0235677, 0.0141367, 0.0558857, -0.0157118, 0.0455604, 0.00561046, 0.0235677, -0.0235579, 0.00561046, 0.0455702, 0.0235677, 0.00403226, -0.0455604, -0.0204175, 0.0558857, -0.0031404, 0.0104587, 0.000697146, -0.0343724, -0.034374, 0.000695858, 0.0104592, -0.0329889, 0.00561046, -0.0392796, 0.00942119, 0.0558857, 0.0188522, 0.0329988, 0.00561046, 0.0392796, 0.0392796, 0.00561046, -0.0329889, 0.0343735, 0.000696283, 0.0104497, -0.00785591, 0.00561046, 0.0502857, -0.0392796, 0.00403226, 0.0329988, -0.0188522, 0.0558857, 0.00942119, 0.0031404, 0.0558857, -0.0204273, -0.0502857, 0.00561046, -0.00785591, 0.0502857, 0.00561046, 0.00784607, 0.0204273, 0.0558857, -0.00313055, -0.0268732, 0.000715132, -0.0238977, -0.0188522, 0.0558857, -0.00942119, 0.015702, 0.00561046, -0.0487106)
+
+[node name="porte_chandelle" type="Node3D"]
+
+[node name="CandleHolder" type="MeshInstance3D" parent="."]
+layers = 4
+material_override = SubResource("StandardMaterial3D_ftcyk")
+mesh = ExtResource("2_dbph0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CandleHolder"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CandleHolder/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2vvk6")

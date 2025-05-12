@@ -81,6 +81,11 @@ func _physics_process(_delta):
 		elif hit.is_in_group("vide"):
 			$controler/texture_rect/anim_cursor.play("idle")
 			$controler/texture_rect/interact_label.text = hit.name + " Vide"
+		elif hit.is_in_group("allumable"):
+			$controler/texture_rect/anim_cursor.play("allumer")
+			$controler/texture_rect/interact_label.text = "Allumer " + hit.name
+			if hit.get_parent().get_parent().get_parent().has_method("_allumer") and Input.is_action_just_pressed("interaction"):
+				hit.get_parent().get_parent().get_parent()._allumer()
 
 	else:
 		$controler/texture_rect/anim_cursor.play("idle")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://7llc8lwylk6g"]
+
+[ext_resource type="Texture2D" uid="uid://cu7bwx4tgbcxe" path="res://images/textures/terre.png" id="1_vi58i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6k8m"]
+albedo_texture = ExtResource("1_vi58i")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcebg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_el2i4"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="dirt_cube" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 4
+material_override = SubResource("StandardMaterial3D_q6k8m")
+mesh = SubResource("BoxMesh_pcebg")
+surface_material_override/0 = SubResource("StandardMaterial3D_q6k8m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_el2i4")

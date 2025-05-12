@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cidkwlgvge22u"
+path="res://.godot/imported/plafonnier.obj-bab1c2ebfe0a6b26342ccbfa2999073f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plafonnier.obj-bab1c2ebfe0a6b26342ccbfa2999073f.mesh"]
+
+source_file="res://modeles3d/plafonnier.obj"
+dest_files=["res://.godot/imported/plafonnier.obj-bab1c2ebfe0a6b26342ccbfa2999073f.mesh", "res://.godot/imported/plafonnier.obj-bab1c2ebfe0a6b26342ccbfa2999073f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

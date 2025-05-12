@@ -5,7 +5,6 @@ var opened = false
 func _unlock():
 	if Manager.rustykey == true:
 		Manager.RKdoor = true
-		Manager.rustykey = false
 		$audio_unlock.play()
 		self.remove_from_group("deverrouillable")
 		$penture/porte.remove_from_group("deverrouillable")

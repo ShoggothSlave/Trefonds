@@ -1,0 +1,500 @@
+[gd_scene load_steps=34 format=3 uid="uid://bjcu1kv4rtsfg"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd7520bl4ja2k" path="res://modeles3d/bioencordé.obj" id="1_5eae4"]
+[ext_resource type="Script" path="res://scenes/misc/piegebio.gd" id="1_yc8ys"]
+[ext_resource type="Texture2D" uid="uid://2vitltt7nmnn" path="res://images/textures/text bout woodlog.png" id="2_soahh"]
+[ext_resource type="Texture2D" uid="uid://npou4e2jq4np" path="res://images/textures/écorce.png" id="3_k3myw"]
+[ext_resource type="Texture2D" uid="uid://baht8y26giqu4" path="res://images/textures/textcordage.png" id="4_agi00"]
+[ext_resource type="ArrayMesh" uid="uid://vyrob366qt0a" path="res://modeles3d/cordepourbio.obj" id="5_yu2qr"]
+[ext_resource type="AudioStream" uid="uid://c6h35vs5was0a" path="res://sons/wood-creak-single-v3-14657.wav" id="6_q5iqm"]
+[ext_resource type="AudioStream" uid="uid://b6groocejod1" path="res://sons/wood-smash-5-170421.wav" id="7_envt0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tstff"]
+albedo_texture = ExtResource("2_soahh")
+uv1_scale = Vector3(4, 4, 4)
+uv1_offset = Vector3(0.495, 0.515, 0)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlop8"]
+albedo_texture = ExtResource("3_k3myw")
+uv1_scale = Vector3(4, 4, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xch3"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hnmk"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qaphx"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_veg3a"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k17lc"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77a5y"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuuy3"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc22a"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb0gu"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmxvy"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xreda"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_81fu2"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h4vg"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mi1h"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gxnso"]
+points = PackedVector3Array(-0.0841896, -0.129596, -0.788299, 0.15978, 0.0411642, 0.773199, 0.135377, 0.114374, 0.724288, -0.157399, -0.0807896, 0.748743, -0.0597865, 0.138777, -0.788299, 0.135377, -0.105193, -0.64187, 0.0621674, -0.153999, 0.724288, -0.108593, 0.16318, 0.651073, 0.110974, 0.16318, -0.5442, -0.157399, 0.0411642, -0.666173, 0.135377, 0.0655674, -0.788299, 0.0377642, -0.153999, -0.788299, -0.0841896, -0.153999, 0.724288, -0.157399, 0.0655674, 0.748743, 0.15978, -0.0563865, 0.748743, 0.110974, 0.16318, 0.651073, 0.15978, 0.0411642, -0.666173, -0.132996, -0.105193, -0.64187, -0.132996, 0.114374, -0.617415, 0.15978, -0.0563865, -0.666173, -0.157399, -0.0563865, -0.666173, -0.0597865, -0.153999, -0.617415, 0.0865706, -0.153999, -0.593112, 0.135377, -0.105193, 0.724288, -0.0597865, 0.138777, 0.748743, -0.132996, 0.0655674, -0.788299, 0.0865706, 0.138777, -0.788299, -0.157399, -0.0319833, 0.773199, 0.135377, -0.0807896, -0.788299, 0.0865706, -0.129596, 0.748743, -0.132996, -0.0807896, -0.788299, 0.135377, 0.114374, -0.617415)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mqxbw"]
+height = 0.595415
+radius = 0.136094
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hibbo"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yd7ub"]
+albedo_texture = ExtResource("4_agi00")
+uv1_scale = Vector3(16, 16, 16)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="Animation" id="Animation_dx4up"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bioencordé:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.25, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cordepourbio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.865016, 1.98105, -0.00143397)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cordepourbio:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.51454, 1.5708, 6.99883e-07)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cordepourbio2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.28836, 1.99894, -0.00143397)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cordepourbio2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.54535, 1.5708, 1.71738e-06)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bioencordé/killzone/CollisionHitShape:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Area3D/CollisionShape3D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_05yb0"]
+resource_name = "declenchement"
+length = 1.15
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bioencordé:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.425, 0.5, 0.6, 0.7, 0.825, 0.975, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.25, 0), Vector3(0, 1.05, 0), Vector3(0.125, 0.85, 0), Vector3(0.25, 0.65, 0), Vector3(0.5, 0.45, 0), Vector3(0.74, 0.25, 0), Vector3(0.75, 0.25, 0), Vector3(1, 0.3, 0), Vector3(0.75, 0.25, 0), Vector3(0.5, 0.25, 0), Vector3(0.25, 0.25, 0), Vector3(0.5, 0.25, 0), Vector3(0.75, 0.25, 0), Vector3(0.8, 0.25, 0), Vector3(0.75, 0.25, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cordepourbio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.425, 0.5, 0.6, 0.7, 0.825, 0.975, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.865016, 1.98105, -0.00143397), Vector3(-0.934109, 1.74188, -0.00143397), Vector3(-0.919446, 1.47066, -0.00143397), Vector3(-0.885569, 1.17935, -0.00143397), Vector3(-0.770729, 0.616771, -0.00143397), Vector3(-0.460646, 0.141046, -0.00143397), Vector3(-0.443709, 0.0971673, -0.00143397), Vector3(-0.138618, 0.0546964, -0.00143397), Vector3(-0.453737, 0.137018, -0.00143397), Vector3(-0.763905, 0.397079, -0.00143397), Vector3(-0.981207, 0.531183, -0.00143397), Vector3(-0.76314, 0.2663, -0.00143397), Vector3(-0.467317, 0.136881, -0.00143397), Vector3(-0.380493, 0.0730916, -0.00143397), Vector3(-0.476435, 0.164447, -0.00143397)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cordepourbio:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.425, 0.5, 0.6, 0.7, 0.825, 0.975, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.51454, 1.5708, 6.99883e-07), Vector3(1.35879, 1.5708, 2.28252e-07), Vector3(1.17071, 1.5708, 1.50045e-07), Vector3(0.964485, 1.5708, 1.34337e-07), Vector3(0.364947, 1.5708, 1.04069e-07), Vector3(-0.0831318, 1.5708, 8.50987e-08), Vector3(-0.155877, 1.5708, 8.17539e-08), Vector3(-0.327373, 1.5708, 7.35133e-08), Vector3(-0.07444, 1.5708, 8.44823e-08), Vector3(0.285866, 1.5708, 1.00545e-07), Vector3(0.53838, 1.5708, 1.13265e-07), Vector3(0.154163, 1.5708, 9.6684e-08), Vector3(-0.0526583, 1.5708, 8.76955e-08), Vector3(-0.178671, 1.5708, 8.2113e-08), Vector3(-0.0373518, 1.5708, 8.8274e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cordepourbio2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.425, 0.5, 0.6, 0.7, 0.825, 0.975, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.28836, 1.99894, -0.00143397), Vector3(0.222862, 1.75053, -0.00143397), Vector3(0.214408, 1.47477, -0.00143397), Vector3(0.261858, 1.15845, -0.00143397), Vector3(0.375132, 0.657566, -0.00143397), Vector3(0.62671, 0.210224, -0.00143397), Vector3(0.660825, 0.152956, -0.00143397), Vector3(0.944239, 0.103548, -0.00143397), Vector3(0.625073, 0.191453, -0.00143397), Vector3(0.361262, 0.443863, -0.00143397), Vector3(0.139343, 0.586531, -0.00143397), Vector3(0.368106, 0.323368, -0.00143397), Vector3(0.640624, 0.202308, -0.00143397), Vector3(0.719715, 0.114115, -0.00143397), Vector3(0.634567, 0.194578, -0.00143397)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cordepourbio2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.425, 0.5, 0.6, 0.7, 0.825, 0.975, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.54535, 1.5708, 1.71738e-06), Vector3(1.36083, 1.5708, 2.09786e-07), Vector3(1.16138, 1.5708, 1.28695e-07), Vector3(0.947574, 1.5708, 1.12804e-07), Vector3(0.446158, 1.5708, 8.95134e-08), Vector3(0.0504394, 1.5708, 7.26424e-08), Vector3(-0.0331792, 1.5708, 6.89896e-08), Vector3(-0.224764, 1.5708, 6.04515e-08), Vector3(0.010995, 1.5708, 7.06623e-08), Vector3(0.406871, 1.5708, 8.90165e-08), Vector3(0.644183, 1.5708, 1.01868e-07), Vector3(0.235863, 1.5708, 8.40176e-08), Vector3(0.0294954, 1.5708, 7.50569e-08), Vector3(-0.121301, 1.5708, 6.84417e-08), Vector3(0.0228631, 1.5708, 7.47231e-08)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer3D2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Bioencordé/killzone/CollisionHitShape:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Area3D/CollisionShape3D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_0akw3"]
+resource_name = "rearmement"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bioencordé:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.75, 0.25, 0), Vector3(0, 1.25, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cordepourbio:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.476435, 0.164447, -0.00143397), Vector3(-0.865, 1.981, -0.001)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cordepourbio:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.0373518, 1.5708, 8.8274e-08), Vector3(1.51495, 1.5708, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cordepourbio2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.634567, 0.194578, -0.00143397), Vector3(0.288, 1.999, -0.001)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cordepourbio2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0228631, 1.5708, 7.47231e-08), Vector3(1.54462, 1.5708, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bioencordé/killzone/CollisionHitShape:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.233333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Area3D/CollisionShape3D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.233333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5uofw"]
+_data = {
+"RESET": SubResource("Animation_dx4up"),
+"declenchement": SubResource("Animation_05yb0"),
+"rearmement": SubResource("Animation_0akw3")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfylv"]
+
+[node name="piegebio" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+script = ExtResource("1_yc8ys")
+
+[node name="Bioencordé" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.25, 0)
+layers = 4
+mesh = ExtResource("1_5eae4")
+surface_material_override/0 = SubResource("StandardMaterial3D_tstff")
+surface_material_override/1 = SubResource("StandardMaterial3D_nlop8")
+surface_material_override/2 = SubResource("StandardMaterial3D_3xch3")
+surface_material_override/3 = SubResource("StandardMaterial3D_7hnmk")
+surface_material_override/4 = SubResource("StandardMaterial3D_qaphx")
+surface_material_override/5 = SubResource("StandardMaterial3D_veg3a")
+surface_material_override/6 = SubResource("StandardMaterial3D_k17lc")
+surface_material_override/7 = SubResource("StandardMaterial3D_77a5y")
+surface_material_override/8 = SubResource("StandardMaterial3D_nuuy3")
+surface_material_override/9 = SubResource("StandardMaterial3D_yc22a")
+surface_material_override/10 = SubResource("StandardMaterial3D_sb0gu")
+surface_material_override/11 = SubResource("StandardMaterial3D_pmxvy")
+surface_material_override/12 = SubResource("StandardMaterial3D_xreda")
+surface_material_override/13 = SubResource("StandardMaterial3D_81fu2")
+surface_material_override/14 = SubResource("StandardMaterial3D_4h4vg")
+surface_material_override/15 = SubResource("StandardMaterial3D_5mi1h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bioencordé"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bioencordé/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_gxnso")
+
+[node name="killzone" type="Area3D" parent="Bioencordé"]
+collision_layer = 0
+
+[node name="CollisionHitShape" type="CollisionShape3D" parent="Bioencordé/killzone"]
+transform = Transform3D(0.8, 0, 0, 0, -3.49691e-08, -0.8, 0, 0.8, -3.49691e-08, -2.50712e-08, 0, -0.573561)
+shape = SubResource("CylinderShape3D_mqxbw")
+
+[node name="Cordepourbio" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.92121e-06, 1.49763, 0.0562267, 3.93521e-08, 0.0843402, -0.998418, -1, -4.37158e-06, -2.0354e-07, -0.865016, 1.98105, -0.00143397)
+layers = 4
+material_override = SubResource("StandardMaterial3D_hibbo")
+mesh = ExtResource("5_yu2qr")
+
+[node name="Cordepourbio2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.90317e-06, 1.49951, 0.0254436, 4.36964e-08, 0.0381653, -0.999676, -1, -2.85215e-06, -9.21056e-08, 0.28836, 1.99894, -0.00143397)
+layers = 4
+material_override = SubResource("StandardMaterial3D_yd7ub")
+mesh = ExtResource("5_yu2qr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5uofw")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_q5iqm")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_envt0")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43572, 0, 0)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_yfylv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+
+[connection signal="body_entered" from="Bioencordé/killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -109,6 +109,7 @@ stream = ExtResource("3_55fd7")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_vwuv4")
+max_distance = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../CSGBox3D")

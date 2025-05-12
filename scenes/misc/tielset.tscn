@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://co50q4s8luurq"]
+
+[ext_resource type="PackedScene" uid="uid://7llc8lwylk6g" path="res://scenes/tiles_brik/dirt_cube.tscn" id="1_s4kik"]
+[ext_resource type="PackedScene" uid="uid://wvj4l8isgwxn" path="res://scenes/tiles_brik/cube_brik_gris.tscn" id="2_4ngm7"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="dirt_cube" parent="." instance=ExtResource("1_s4kik")]
+
+[node name="cube_brik_gris" parent="." instance=ExtResource("2_4ngm7")]

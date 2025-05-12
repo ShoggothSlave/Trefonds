@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://blunwtjjs4f0n"]
+
+[ext_resource type="Texture2D" uid="uid://oi12lgvk3yhs" path="res://images/textures/bibli.png" id="1_jmm0q"]
+[ext_resource type="Texture2D" uid="uid://cpi8aivradthn" path="res://images/textures/4planche.png" id="2_6scui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjx2m"]
+albedo_texture = ExtResource("1_jmm0q")
+uv1_scale = Vector3(3, 2, 1)
+texture_filter = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_0txrm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3488a"]
+albedo_texture = ExtResource("2_6scui")
+uv1_scale = Vector3(3, 2, 1)
+texture_filter = 1
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wxmkp"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="bibliothèque" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0215958)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.8, 0, 0, 0, 0.25, 0.5, 0.403744, 0.128909)
+layers = 4
+material_override = SubResource("StandardMaterial3D_vjx2m")
+mesh = SubResource("BoxMesh_0txrm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.62, 0, 0, 0, 0.81, 0, 0, 0, 0.26, 0.5, 0.403744, 0.119792)
+layers = 4
+material_override = SubResource("StandardMaterial3D_3488a")
+mesh = SubResource("BoxMesh_0txrm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_wxmkp")

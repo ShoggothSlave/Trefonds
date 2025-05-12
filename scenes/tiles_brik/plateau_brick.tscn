@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfcvuo0sr30q3"]
+
+[ext_resource type="Texture2D" uid="uid://duucc65tpgutt" path="res://images/textures/brique grises.png" id="1_yij2q"]
+[ext_resource type="PackedScene" uid="uid://bn1uf8nn54udq" path="res://scenes/tiles_brik/tiles_rangee_double_brik_gris.tscn" id="2_yapcg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfgkr"]
+albedo_texture = ExtResource("1_yij2q")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5umyw"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3re1f"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Plateau_brick" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.1, 0, 0, 0, 1, 0.5, -0.05, 0.5)
+layers = 4
+material_override = SubResource("StandardMaterial3D_rfgkr")
+mesh = SubResource("BoxMesh_5umyw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_3re1f")
+
+[node name="tiles_base_brik_gris" parent="." instance=ExtResource("2_yapcg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, -0.110956, 0)

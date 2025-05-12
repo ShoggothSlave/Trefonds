@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://cfcluyp286bqb"]
+
+[ext_resource type="Script" path="res://scenes/deco/chandelle_eteinte.gd" id="1_bvvyk"]
+[ext_resource type="ArrayMesh" uid="uid://dr5vp1hpb30yg" path="res://modeles3d/candle.obj" id="1_w224k"]
+[ext_resource type="Texture2D" uid="uid://bsmsy8rnicc61" path="res://images/textures/vieuxtissustrans.png" id="2_s3x8x"]
+[ext_resource type="PackedScene" uid="uid://cu33cwlog6e40" path="res://scenes/deco/candle_fire.tscn" id="4_tfxj7"]
+[ext_resource type="AudioStream" uid="uid://dwb5rj5ayxxo2" path="res://sons/flint-strike-38491.wav" id="5_ac05x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30hki"]
+transparency = 1
+albedo_texture = ExtResource("2_s3x8x")
+uv1_scale = Vector3(3, 2, 1)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhoan"]
+albedo_color = Color(0.631832, 0.560271, 0.354473, 1)
+metallic_specular = 1.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uxof3"]
+points = PackedVector3Array(0.0123588, 0.0385472, 0.00162498, -0.0108922, -0.0508944, -0.00552778, -0.00731439, -0.029411, -0.0108944, -0.0108922, 0.0510652, 0.00520555, 0.00520328, -0.0508944, 0.0105722, 0.0105699, -0.0508944, -0.00552778, 0.00520328, 0.0510652, -0.0108944, 0.00520328, 0.0510652, 0.0105722, -0.0055255, -0.0508944, 0.0105722, -0.0108922, 0.0492609, -0.00552778, 0.00520328, -0.0508944, -0.0108944, 0.00341439, 0.0635944, -0.0019472, 0.00878106, -0.0508944, 0.00878193, -0.0055255, 0.0492609, 0.0105722, -0.0108922, -0.0508944, 0.00520555, -0.0055255, 0.0456971, -0.0108944, 0.0105699, 0.0510652, -0.00552778, 0.00878106, 0.0510652, 0.00878193, -0.00194772, 0.0635944, 0.00162498, 0.0105699, -0.0508944, 0.00520555, -0.0055255, -0.0508944, -0.0108944, -0.00194772, 0.0635944, -0.0019472, 0.0123588, 0.0385472, -0.0019472, 0.0105699, 0.0510652, 0.00520555, 0.00341439, 0.0635944, 0.00162498, -0.0108922, 0.0510652, -0.00373539, -0.00731439, -0.016893, -0.0108944)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4i2ma"]
+points = PackedVector3Array(0.0123588, 0.0385472, 0.00162498, -0.0108922, -0.0508944, -0.00552778, -0.00731439, -0.029411, -0.0108944, -0.0108922, 0.0510652, 0.00520555, 0.00520328, -0.0508944, 0.0105722, 0.0105699, -0.0508944, -0.00552778, 0.00520328, 0.0510652, -0.0108944, 0.00520328, 0.0510652, 0.0105722, -0.0055255, -0.0508944, 0.0105722, -0.0108922, 0.0492609, -0.00552778, 0.00520328, -0.0508944, -0.0108944, 0.00341439, 0.0635944, -0.0019472, 0.00878106, -0.0508944, 0.00878193, -0.0055255, 0.0492609, 0.0105722, -0.0108922, -0.0508944, 0.00520555, -0.0055255, 0.0456971, -0.0108944, 0.0105699, 0.0510652, -0.00552778, 0.00878106, 0.0510652, 0.00878193, -0.00194772, 0.0635944, 0.00162498, 0.0105699, -0.0508944, 0.00520555, -0.0055255, -0.0508944, -0.0108944, -0.00194772, 0.0635944, -0.0019472, 0.0123588, 0.0385472, -0.0019472, 0.0105699, 0.0510652, 0.00520555, 0.00341439, 0.0635944, 0.00162498, -0.0108922, 0.0510652, -0.00373539, -0.00731439, -0.016893, -0.0108944)
+
+[node name="chandelle_eteinte" type="Node3D" groups=["allumable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0496625, 0)
+script = ExtResource("1_bvvyk")
+
+[node name="Candle" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_w224k")
+surface_material_override/0 = SubResource("StandardMaterial3D_30hki")
+surface_material_override/1 = SubResource("StandardMaterial3D_rhoan")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Candle"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Candle/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_uxof3")
+
+[node name="Chandelle" type="Node3D" parent="."]
+
+[node name="Chandelle" type="Node3D" parent="Chandelle" groups=["allumable"]]
+
+[node name="Chandelle" type="StaticBody3D" parent="Chandelle/Chandelle" groups=["allumable"]]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.027686, 0)
+collision_layer = 4
+collision_mask = 19
+
+[node name="chandelle" type="CollisionShape3D" parent="Chandelle/Chandelle/Chandelle"]
+shape = SubResource("ConvexPolygonShape3D_4i2ma")
+
+[node name="fired_candle" parent="." instance=ExtResource("4_tfxj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0686461, 0)
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 900.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ac05x")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
