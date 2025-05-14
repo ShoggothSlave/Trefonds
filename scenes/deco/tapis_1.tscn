@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://qywj2l5p7puq"]
+
+[ext_resource type="Texture2D" uid="uid://c6crm45uxq6gf" path="res://images/deco/tapis1.png" id="1_1m0vi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pptqg"]
+albedo_texture = ExtResource("1_1m0vi")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0jv7a"]
+
+[node name="tapis1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.01, 0, 0, 0, 0.5, 0, 0.0071335, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_pptqg")
+mesh = SubResource("BoxMesh_0jv7a")

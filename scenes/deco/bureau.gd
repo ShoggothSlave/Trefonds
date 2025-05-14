@@ -31,22 +31,10 @@ var key_I_pressed_count = 0
 func _ready() -> void:
 	fill_crate() 
 
-func _ouvrir():
-	self.remove_from_group("ouvrable")
-	$Caisse/Caisse.remove_from_group("ouvrable")
-	$Caisse/Caisse/Caisse.remove_from_group("ouvrable")
-	$anim_caisse.play("ouverture")
-	$Timer.start()
-
-func _on_timer_timeout() -> void:
-	self.add_to_group("fouillable")
-	$Caisse/Caisse.add_to_group("fouillable")
-	$Caisse/Caisse/Caisse.add_to_group("fouillable")
-
 func _fouiller():
 	self.remove_from_group("fouillable")
-	$Caisse/Caisse.remove_from_group("fouillable")
-	$Caisse/Caisse/Caisse.remove_from_group("fouillable")
+	$Bureau/Bureau.remove_from_group("fouillable")
+	$Bureau/Bureau/Bureau.remove_from_group("fouillable")
 	inspect.start()
 	pb.show()
 	inspect.wait_time = pb.value 
@@ -54,8 +42,8 @@ func _fouiller():
 func _on_inspect_timer_timeout() -> void:
 	$inspect_progress.hide()
 	self.add_to_group("vide")
-	$Caisse/Caisse.add_to_group("vide")
-	$Caisse/Caisse/Caisse.add_to_group("vide")
+	$Bureau/Bureau.add_to_group("vide")
+	$Bureau/Bureau/Bureau.add_to_group("vide")
 
 	collect_first_item()
 

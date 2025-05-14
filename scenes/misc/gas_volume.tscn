@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0nylvnxes5im"]
+
+[ext_resource type="Script" path="res://scenes/misc/gas_volue.gd" id="1_3w724"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj25a"]
+transparency = 1
+albedo_color = Color(0.529412, 0.584314, 0.25098, 0.901961)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umbn5"]
+size = Vector3(1, 0.866089, 1)
+
+[node name="GasVolume" type="CSGBox3D"]
+transform = Transform3D(20, 0, 0, 0, 4, 0, 0, 0, 10, 0.5, 2, 0.5)
+layers = 4096
+material_override = SubResource("StandardMaterial3D_wj25a")
+script = ExtResource("1_3w724")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0669556, 0)
+shape = SubResource("BoxShape3D_umbn5")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

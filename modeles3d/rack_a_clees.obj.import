@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jdj2hmmsigw8"
+path="res://.godot/imported/rack_a_clees.obj-5c8dd8603a688a0d98044c0b4244b5c4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rack_a_clees.obj-5c8dd8603a688a0d98044c0b4244b5c4.mesh"]
+
+source_file="res://modeles3d/rack_a_clees.obj"
+dest_files=["res://.godot/imported/rack_a_clees.obj-5c8dd8603a688a0d98044c0b4244b5c4.mesh", "res://.godot/imported/rack_a_clees.obj-5c8dd8603a688a0d98044c0b4244b5c4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

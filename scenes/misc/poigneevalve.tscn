@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpmtdlve0k7gu"]
+
+[ext_resource type="PackedScene" uid="uid://day1vi8sisf38" path="res://modeles 3d/poigneevalve.glb" id="1_plnqi"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="2_k05vw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfqi2"]
+albedo_texture = ExtResource("2_k05vw")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uxs5"]
+albedo_texture = ExtResource("2_k05vw")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="poigneevalve" instance=ExtResource("1_plnqi")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="Cylindre_028" parent="." index="0"]
+transform = Transform3D(0.01, 0, 0, 0, 0.05, 0, 0, 0, 0.01, 0, 0.65, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_dfqi2")
+
+[node name="Cylindre_002" parent="." index="1"]
+transform = Transform3D(0.102525, 0, 0, 0, -0.00698939, 0, 0, 0, 0.102525, 0, 0.687, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_6uxs5")

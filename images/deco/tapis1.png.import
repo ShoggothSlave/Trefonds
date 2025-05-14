@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6g3xoeihxaoq"
-path.s3tc="res://.godot/imported/tableaulandscape1.png-d5ed50ed3b58cccec901aed14afcc4b0.s3tc.ctex"
+uid="uid://c6crm45uxq6gf"
+path.s3tc="res://.godot/imported/tapis1.png-564ce391370b046b35d13fabf5795071.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/deco/tableaulandscape1.png"
-dest_files=["res://.godot/imported/tableaulandscape1.png-d5ed50ed3b58cccec901aed14afcc4b0.s3tc.ctex"]
+source_file="res://images/deco/tapis1.png"
+dest_files=["res://.godot/imported/tapis1.png-564ce391370b046b35d13fabf5795071.s3tc.ctex"]
 
 [params]
 
@@ -22,7 +22,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

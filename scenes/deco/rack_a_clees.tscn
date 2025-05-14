@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxcl0fcl6j50y"]
+
+[ext_resource type="ArrayMesh" uid="uid://jdj2hmmsigw8" path="res://modeles3d/rack_a_clees.obj" id="1_xpjab"]
+[ext_resource type="Texture2D" uid="uid://bpvvx4mqxypvl" path="res://images/textures/boisplain 2.png" id="2_g3iit"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="3_xceyi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6q3xl"]
+albedo_texture = ExtResource("2_g3iit")
+metallic = 0.5
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8f83"]
+albedo_texture = ExtResource("3_xceyi")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wy6ty"]
+points = PackedVector3Array(0.0227389, 0.403452, -0.0610342, -0.00233062, 0.296865, -0.44345, -0.00233062, 0.303136, -0.449735, 0.0415497, 0.347029, -0.374438, 0.0227389, 0.296865, -0.0484651, -0.00233062, 0.403452, -0.44345, -0.00233062, 0.384631, -0.0484651, -0.00233062, 0.296865, -0.0484651, 0.0227389, 0.403452, -0.44345, 0.0227389, 0.296865, -0.44345, 0.0415497, 0.359549, -0.130007, -0.00233062, 0.403452, -0.0610342, 0.0415497, 0.359549, -0.374438, 0.0415497, 0.347029, -0.130007, 0.0227389, 0.384631, -0.0484651, 0.0227389, 0.390911, -0.449735, 0.0227389, 0.303136, -0.449735, -0.00233062, 0.390911, -0.449735, 0.0227389, 0.397182, -0.0547496, -0.00233062, 0.397182, -0.0547496)
+
+[node name="rack_a_clees" type="Node3D"]
+
+[node name="RackAClees" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.219464)
+layers = 4
+mesh = ExtResource("1_xpjab")
+surface_material_override/0 = SubResource("StandardMaterial3D_6q3xl")
+surface_material_override/1 = SubResource("StandardMaterial3D_n8f83")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RackAClees"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RackAClees/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_wy6ty")

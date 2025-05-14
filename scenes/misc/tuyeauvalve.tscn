@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=3 uid="uid://btk3pbdur574m"]
+
+[ext_resource type="PackedScene" uid="uid://ci8yatce5muk0" path="res://modeles3d/tuyeauvalve.glb" id="1_kj5xo"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="2_3rhgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu1tl"]
+albedo_texture = ExtResource("2_3rhgj")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xi88h"]
+points = PackedVector3Array(-0.952911, 2.93083, -0.36318, 4.92959, 4.95509, 0.279878, 4.91635, 4.75835, 0.644686, 0.552832, -1.04782, -0.952047, 0.266428, -1.04782, 1.05632, 5.04782, 3.6383, -1.04782, -0.00225985, 4.18302, 0.908447, 0.275999, 4.35443, -0.896545, 5.04782, 3.44717, 0.960341, -0.955086, -0.929586, 0.279878, 1.03157, -1.04782, 0.386522, 5.04782, 2.96903, -0.378228, -0.167347, -0.860795, -0.983531, 0.149841, 4.86186, 0.279775, 4.92245, 4.76407, -0.637718, -0.734905, 3.55462, 0.639217, 5.04782, 3.73417, 1.05632, -0.153483, 3.61802, -0.977175, 1.06916, 4.95293, -0.363182, -0.764071, -0.922452, -0.637718, -0.49261, 4.49203, -0.271328, -0.146607, 3.52372, 0.982523, -0.564247, -0.904226, 0.8244, 0.361696, -1.04782, -1.04782, 1.03157, -1.04782, -0.378228, 5.04782, 2.96903, 0.386522, 0.731956, 4.43343, 0.900874, -0.969558, 3.49058, 0.188707, -0.53812, 3.63604, -0.807696, 4.86259, 4.43833, -0.894172, 0.799246, 4.847, 0.552624, -0.478032, 4.38649, 0.460519)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uobx2"]
+albedo_texture = ExtResource("2_3rhgj")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdyuq"]
+albedo_texture = ExtResource("2_3rhgj")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="tuyeauvalve" instance=ExtResource("1_kj5xo")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Cylindre_001" parent="." index="0"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_mu1tl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylindre_001" index="0"]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylindre_001/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_xi88h")
+
+[node name="Cylindre" parent="." index="1"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_uobx2")
+
+[node name="Cylindre_002" parent="." index="2"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_003" parent="." index="3"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_004" parent="." index="4"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_005" parent="." index="5"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_006" parent="." index="6"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_007" parent="." index="7"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_008" parent="." index="8"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_009" parent="." index="9"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_010" parent="." index="10"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_011" parent="." index="11"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_012" parent="." index="12"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_013" parent="." index="13"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_014" parent="." index="14"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_015" parent="." index="15"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_016" parent="." index="16"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_017" parent="." index="17"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_018" parent="." index="18"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Sphère" parent="." index="19"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_019" parent="." index="20"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_020" parent="." index="21"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_021" parent="." index="22"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_022" parent="." index="23"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_023" parent="." index="24"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_024" parent="." index="25"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_025" parent="." index="26"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_026" parent="." index="27"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")
+
+[node name="Cylindre_027" parent="." index="28"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_rdyuq")

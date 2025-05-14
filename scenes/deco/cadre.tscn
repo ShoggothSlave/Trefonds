@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcbi1yej2hb7d"]
+
+[ext_resource type="Texture2D" uid="uid://y3ru22g45net" path="res://images/textures/planche2.png" id="1_r606a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6enk"]
+albedo_texture = ExtResource("1_r606a")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_p5xia"]
+
+[node name="Cadre" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -6.55671e-09, -8.74228e-10, -8.74228e-08, -0.075, 0, -8.74228e-08, 5.73206e-16, -0.01, 0, 0.2, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_w6enk")
+mesh = SubResource("BoxMesh_p5xia")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.3167e-08, 0.075, 0, -0.53, -3.27835e-09, 0, 0, 0, 0.01, 0.460335, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_w6enk")
+mesh = SubResource("BoxMesh_p5xia")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.3167e-08, 0.075, 0, -0.53, -3.27835e-09, 0, 0, 0, 0.01, -0.46, 0.5, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_w6enk")
+mesh = SubResource("BoxMesh_p5xia")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -6.55671e-09, -8.74228e-10, -8.74228e-08, -0.075, 0, -8.74228e-08, 5.73206e-16, -0.01, 0, 0.8, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_w6enk")
+mesh = SubResource("BoxMesh_p5xia")

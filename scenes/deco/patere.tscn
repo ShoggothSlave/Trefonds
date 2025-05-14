@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0bgq7kuqiiay"]
+
+[ext_resource type="Texture2D" uid="uid://bpvvx4mqxypvl" path="res://images/textures/boisplain 2.png" id="1_mgh5f"]
+[ext_resource type="ArrayMesh" uid="uid://cgm0ub2mdplhx" path="res://modeles3d/patere.obj" id="2_o0mjh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7opt"]
+albedo_texture = ExtResource("1_mgh5f")
+metallic = 0.5
+metallic_specular = 0.0
+roughness = 0.75
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_23gwb"]
+points = PackedVector3Array(0.0417455, 1.46351, 0.0187037, -0.211512, -0.0100119, -0.0272583, -0.211512, -0.0100119, 0.0187037, 0.202917, -0.0100119, -0.0272583, -0.0272583, 1.07205, -0.211512, 0.0187037, -0.0100119, 0.202917, -0.18847, 1.27903, 0.0187037, 0.0187037, 1.27903, 0.202917, 0.202917, 1.27903, 0.0187037, 0.0187037, -0.0100119, -0.211512, 0.0187037, 1.27903, -0.18847, -0.0272583, 1.27903, 0.202917, 0.202917, 1.27903, -0.0272583, -0.211512, 1.07205, -0.0272583, 0.202917, -0.0100119, 0.0187037, -0.0272583, -0.0100119, 0.202917, -0.0272583, -0.0100119, -0.211512, 0.0187037, 1.07205, -0.211512, -0.211512, 1.07205, 0.0187037, -0.0272583, 1.27903, -0.18847, -0.0272583, 1.46351, -0.0272583, -0.0272583, 1.46351, 0.0417455, -0.18847, 1.27903, -0.0272583, 0.0417455, 1.46351, -0.0272583, 0.0187037, 1.46351, 0.0417455, -0.0503002, 1.44029, -0.0272583, -0.0272583, 1.44029, -0.0503002, -0.0503002, 1.44029, 0.0187037, 0.0187037, 1.44029, -0.0503002)
+
+[node name="patere" type="Node3D"]
+
+[node name="Patere" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_n7opt")
+mesh = ExtResource("2_o0mjh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Patere"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Patere/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_23gwb")

@@ -22,6 +22,7 @@ size = Vector3(0.0983887, 1.02026, 1)
 size = Vector3(0.13855, 1.07666, 1.03345)
 
 [node name="pentalon1" groups=["prehensible"] instance=ExtResource("1_qfgwe")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("2_c5asb")
 
 [node name="Cube" parent="." index="0"]

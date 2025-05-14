@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://m7qabbdlhdhb"]
+[gd_scene load_steps=90 format=3 uid="uid://m7qabbdlhdhb"]
 
 [ext_resource type="PackedScene" uid="uid://cy3pd2dx07puw" path="res://scenes/system/gameplay.tscn" id="1_cbirm"]
 [ext_resource type="MeshLibrary" uid="uid://dd3jvmh6vu6o2" path="res://autres/brik_gris.tres" id="1_vpmi6"]
@@ -83,6 +83,12 @@
 [ext_resource type="PackedScene" uid="uid://c05ji4k0qq6le" path="res://scenes/misc/metal_ladder_v.tscn" id="81_cwq7p"]
 [ext_resource type="PackedScene" uid="uid://cfcluyp286bqb" path="res://scenes/deco/chandelle_eteinte.tscn" id="82_nsn58"]
 [ext_resource type="PackedScene" uid="uid://c8dg7qa8lcm1n" path="res://scenes/deco/plafonnier.tscn" id="83_23wmv"]
+[ext_resource type="PackedScene" uid="uid://rjwsds1k7c2l" path="res://scenes/deco/sk_door.tscn" id="84_v0ild"]
+[ext_resource type="PackedScene" uid="uid://1sesh8xv0e3q" path="res://scenes/deco/bk_door.tscn" id="85_1he4s"]
+[ext_resource type="PackedScene" uid="uid://cf0x6kpvgeitc" path="res://scenes/item/bronze_key.tscn" id="86_4bbva"]
+[ext_resource type="PackedScene" uid="uid://du60xrr1r3ffe" path="res://scenes/item/rusty_key.tscn" id="87_wthwg"]
+[ext_resource type="PackedScene" uid="uid://dqxvsrq6gg7ps" path="res://scenes/item/silver_key.tscn" id="88_dhweg"]
+[ext_resource type="PackedScene" uid="uid://chtd85u7vamhy" path="res://scenes/deco/bureau.tscn" id="89_qfs6s"]
 
 [node name="test" type="Node3D"]
 
@@ -390,3 +396,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0496625, 0)
 
 [node name="plafonnier" parent="." instance=ExtResource("83_23wmv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 1)
+
+[node name="sk_door" parent="." instance=ExtResource("84_v0ild")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3.93527)
+
+[node name="bk_door" parent="." instance=ExtResource("85_1he4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.93527)
+
+[node name="bronze_key" parent="." instance=ExtResource("86_4bbva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.315251, 0, -1.59785)
+
+[node name="rusty_key" parent="." instance=ExtResource("87_wthwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522654, 0, -1.58723)
+
+[node name="silver_key" parent="." instance=ExtResource("88_dhweg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.758057, -1.19209e-07, -1.57031)
+
+[node name="bureau" parent="." instance=ExtResource("89_qfs6s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.321142, 0, -3.4451)

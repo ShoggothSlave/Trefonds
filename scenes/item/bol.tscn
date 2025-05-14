@@ -23,6 +23,7 @@ height = 0.0692237
 radius = 0.105294
 
 [node name="bol" instance=ExtResource("1_ccxbo")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("2_bup2r")
 
 [node name="Sphère" parent="." index="0"]

@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-var test = true
 
 var dead = false
 var speed
