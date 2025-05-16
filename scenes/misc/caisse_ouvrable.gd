@@ -3,24 +3,24 @@ extends Node3D
 @onready var inspect = $inspect_timer
 @onready var pb = $inspect_progress
 
-var crate_items : Array = [ 
-	{"name": "Belladone", "path": "res://scenes/item/buisson_a_baies_noires.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_baies_noires"},
-	{"name": "Bandage", "path": "res://scenes/item/bandage.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_bandage"},
-	{"name": "Coprinus", "path": "res://scenes/item/champi_2.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_2"},
-	{"name": "Agaric", "path": "res://scenes/item/champi_v_1.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_v_i"},
-	{"name": "Amanite Phalloïde", "path": "res://scenes/item/champi_v_2.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_v_ii"},
-	{"name": "Cuissot Cuit", "path": "res://scenes/item/cuissot_cuit.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_friedmeat"},
-	{"name": "Demi Potion Mineure", "path": "res://scenes/item/demi_potion_mineure.tscn", "image_node_path" : "attributs_label/po_demi_min"},
-	{"name": "Demi Potion Conséquente", "path": "res://scenes/item/demi_potion_consequente.tscn", "image_node_path" : "attributs_label/po_demi_con"},
-	{"name": "Demi Super_potion", "path": "res://scenes/item/demi_super_potion.tscn", "image_node_path" : "attributs_label/po_demi_sup"},
-	{"name": "Gourde", "path": "res://scenes/item/gourde.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_gourde"},
-	{"name": "Myrtille", "path": "res://scenes/item/buisson_a_mirtilles.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_myrtilles"},
-	{"name": "Oignon", "path": "res://scenes/item/oignon.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_oignon"},
-	{"name": "Araceae", "path": "res://scenes/item/plante_med.tscn", "image_node_path" : "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_plante_med"},
-	{"name": "Potion Mineure", "path": "res://scenes/item/potion_mineure.tscn", "image_node_path" : "attributs_label/po_min"},
-	{"name": "Potion Conséquente", "path": "res://scenes/item/potion_consequente.tscn", "image_node_path" : "attributs_label/po_con"},
-	{"name": "Super_Potion", "path": "res://scenes/item/super_potion.tscn", "image_node_path" : "attributs_label/po_sup"},
-	]
+var crate_items : Array = [
+	{"name": "Belladone", "path": "res://scenes/item/buisson_a_baies_noires.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_baies_noires", "var_key": "belladone", "max_key": "belladone_max"},
+	{"name": "Bandage", "path": "res://scenes/item/bandage.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_bandage", "var_key": "bandage", "max_key": "bandage_max"},
+	{"name": "Coprinus", "path": "res://scenes/item/champi_2.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_2", "var_key": "champ2", "max_key": "champ2_max"},
+	{"name": "Agaric", "path": "res://scenes/item/champi_v_1.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_v_i", "var_key": "champv1", "max_key": "champv1_max"},
+	{"name": "Amanite Phalloïde", "path": "res://scenes/item/champi_v_2.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_champi_v_ii", "var_key": "champv2", "max_key": "champv2_max"},
+	{"name": "Cuissot Cuit", "path": "res://scenes/item/cuissot_cuit.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_friedmeat", "var_key": "fried_meat", "max_key": "fried_meat_max"},
+	{"name": "Demi Potion Mineure", "path": "res://scenes/item/demi_potion_mineure.tscn", "image_node_path": "attributs_label/po_demi_min", "var_key": "po_demi_min", "max_key": "po_demi_min_max"},
+	{"name": "Demi Potion Conséquente", "path": "res://scenes/item/demi_potion_consequente.tscn", "image_node_path": "attributs_label/po_demi_con", "var_key": "po_demi_con", "max_key": "po_demi_con_max"},
+	{"name": "Demi Super_Potion", "path": "res://scenes/item/demi_super_potion.tscn", "image_node_path": "attributs_label/po_demi_sup", "var_key": "po_demi_sup", "max_key": "po_demi_sup_max"},
+	{"name": "Gourde", "path": "res://scenes/item/gourde.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_gourde", "var_key": "gourde", "max_key": "gourde_max"},
+	{"name": "Myrtille", "path": "res://scenes/item/buisson_a_mirtilles.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_myrtilles", "var_key": "mirtilles", "max_key": "mirtilles_max"},
+	{"name": "Oignon", "path": "res://scenes/item/oignon.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_oignon", "var_key": "oignon", "max_key": "oignon_max"},
+	{"name": "Araceae", "path": "res://scenes/item/plante_med.tscn", "image_node_path": "inventaire_visuel/Control/canva_inventaire/texture_inventaire/sprite_plante_med", "var_key": "plantmed", "max_key": "plantmed_max"},
+	{"name": "Potion Mineure", "path": "res://scenes/item/potion_mineure.tscn", "image_node_path": "attributs_label/po_min", "var_key": "po_min", "max_key": "po_min_max"},
+	{"name": "Potion Conséquente", "path": "res://scenes/item/potion_consequente.tscn", "image_node_path": "attributs_label/po_con", "var_key": "po_con", "max_key": "po_con_max"},
+	{"name": "Super_Potion", "path": "res://scenes/item/super_potion.tscn", "image_node_path": "attributs_label/po_sup", "var_key": "po_sup", "max_key": "po_sup_max"}
+]
 
 var current_items : Array = []
 var current_item_const : int = 0
@@ -28,8 +28,6 @@ var collecting_more = false
 var notification_opened = false
 var key_I_pressed_count = 0
 
-func _ready() -> void:
-	fill_crate() 
 
 func _ouvrir():
 	self.remove_from_group("ouvrable")
@@ -60,18 +58,32 @@ func _on_inspect_timer_timeout() -> void:
 	collect_first_item()
 
 func fill_crate():
-	# Pick 1 to 3 random items (no duplicates)
 	var num_items = randi_range(1, 3)
-
-	# Make a copy of the available items so we can remove picked ones
 	var available_items = crate_items.duplicate()
 
 	for i in range(num_items):
-		if available_items.is_empty():
-			break  # No more items to pick
+		var item_data
+		var found = false
+		while not available_items.is_empty() and not found:
+			item_data = available_items.pick_random()
+			available_items.erase(item_data)
 
-		var item_data = available_items.pick_random()
-		available_items.erase(item_data)  # Remove picked item to avoid duplicates
+			var var_name = item_data.get("var_key", null)
+			var max_name = item_data.get("max_key", null)
+
+			# i left this true so i can see when errors happen
+			if true or var_name and max_name and (var_name in InventoryManager) and (max_name in InventoryManager):
+				var current = InventoryManager.get(var_name)
+				var max_val = InventoryManager.get(max_name)
+
+				if current >= max_val:
+					continue  # Skip item if max reached
+
+			# Passed check
+			found = true
+
+		if not found:
+			break
 
 		var scene = load(item_data["path"])
 		if scene:
@@ -81,6 +93,7 @@ func fill_crate():
 
 	current_item_const = current_items.size()
 
+
 func send_player_notifiction_image():
 	# call a function from the player while passing agurements for image node path
 	var players = get_tree().get_nodes_in_group("player")
@@ -89,6 +102,12 @@ func send_player_notifiction_image():
 
 func collect_first_item():
 	#Collects the first item from the crate and prepares a continous funtion to collect the rest on key input "E"
+	fill_crate() # Very important to have this here instead of _ready
+
+	if current_items.is_empty():
+		#print("No items to collect from crate.")
+		return
+
 	var item = current_items[0].object
 
 	send_player_notifiction_image()
