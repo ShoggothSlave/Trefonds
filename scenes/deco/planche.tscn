@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dksthndorw8de"]
+
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="1_gbkp7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnvd8"]
+albedo_texture = ExtResource("1_gbkp7")
+metallic = 0.5
+roughness = 0.75
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_joh5x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7jhki"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="planche" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.02, 0, 0, 0, 1, 0, 0.0118493, 0)
+layers = 4
+material_override = SubResource("StandardMaterial3D_vnvd8")
+mesh = SubResource("BoxMesh_joh5x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_7jhki")

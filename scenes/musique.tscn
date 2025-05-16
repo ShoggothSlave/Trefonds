@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dab4752pv8u86"]
+
+[ext_resource type="Script" path="res://scripts/musique.gd" id="1_2a5ku"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_prqrf"]
+loop = false
+
+[node name="musique" type="Node3D"]
+script = ExtResource("1_2a5ku")
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_prqrf")

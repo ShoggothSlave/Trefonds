@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://12s52msh5jce"
+path="res://.godot/imported/Une pluie de larmes dans l'âme, piano2.wav-f3d2ce1c1fb5b71709cc5f97fc98d505.sample"
+
+[deps]
+
+source_file="res://sons/jingles/Une pluie de larmes dans l'âme, piano2.wav"
+dest_files=["res://.godot/imported/Une pluie de larmes dans l'âme, piano2.wav-f3d2ce1c1fb5b71709cc5f97fc98d505.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

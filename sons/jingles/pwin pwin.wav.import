@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5kynboh0d6no"
+path="res://.godot/imported/pwin pwin.wav-284d77b886688824ef72ff9dc76e1b86.sample"
+
+[deps]
+
+source_file="res://sons/jingles/pwin pwin.wav"
+dest_files=["res://.godot/imported/pwin pwin.wav-284d77b886688824ef72ff9dc76e1b86.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

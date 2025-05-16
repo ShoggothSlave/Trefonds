@@ -8,9 +8,11 @@ func _input(_event: InputEvent) -> void:
 		if invent.visible == false:
 			animinv.play("ouvrir_inv")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			Manager.hide_hud = true
 		elif invent.visible == true:
 			animinv.play("fermer_inv")
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			Manager.hide_hud = false
 
 func _process(_delta: float) -> void:
 	$Control/canva_inventaire/texture_inventaire/sprite_friedmeat.frame = int(InventoryManager.fried_meat)

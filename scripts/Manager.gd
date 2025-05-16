@@ -19,6 +19,8 @@ const maxfaim = 100.0
 var laddering = false
 var coolingdown = false
 
+var hide_hud = false
+
 #armes possédées
 var fist = true
 var knife = false

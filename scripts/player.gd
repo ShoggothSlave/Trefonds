@@ -108,8 +108,6 @@ func _physics_process(_delta):
 			$"../fall_label".text = ""
 		air_time = 0
 		$"../fall_label".text = ""
-		
-		
 
 	if Manager.laddering == false:
 		if Manager.inwater == false:

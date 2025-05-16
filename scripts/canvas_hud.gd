@@ -52,3 +52,8 @@ func _process(_delta: float) -> void:
 		$warning_faim.frame = 1
 	else:
 		$warning_faim.frame = 0
+
+	if Manager.hide_hud == true:
+		self.hide()
+	elif Manager.hide_hud == false:
+		self.show()

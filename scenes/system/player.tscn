@@ -1277,6 +1277,7 @@ texture = ExtResource("16_vxhxm")
 
 [node name="access_po1" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
 visible = false
+z_index = 1
 texture_filter = 1
 position = Vector2(914, 593)
 texture = ExtResource("36_e24dy")
@@ -1293,6 +1294,7 @@ vertical_alignment = 2
 
 [node name="access_po2" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
 visible = false
+z_index = 1
 texture_filter = 1
 position = Vector2(1002, 593)
 texture = ExtResource("36_e24dy")
@@ -1308,6 +1310,7 @@ vertical_alignment = 2
 
 [node name="access_po3" type="Sprite2D" parent="canvas_hud/control_fight/texture_hud"]
 visible = false
+z_index = 1
 texture_filter = 1
 position = Vector2(1091, 593)
 texture = ExtResource("36_e24dy")
@@ -1326,8 +1329,8 @@ stream = ExtResource("54_e1hug")
 
 [node name="sprite_fist" type="Sprite2D" parent="canvas_hud/control_fight"]
 texture_filter = 1
-position = Vector2(-1, -240)
-scale = Vector2(7, 7)
+position = Vector2(-1, -357)
+scale = Vector2(10, 10)
 texture = ExtResource("12_kox7i")
 hframes = 4
 
@@ -1337,8 +1340,8 @@ pitch_scale = 1.25
 
 [node name="sprite_knife" type="Sprite2D" parent="canvas_hud/control_fight"]
 texture_filter = 1
-position = Vector2(-1, -99)
-scale = Vector2(7, 7)
+position = Vector2(-1, -160)
+scale = Vector2(10, 10)
 texture = ExtResource("33_ne863")
 hframes = 3
 vframes = 2
@@ -1350,8 +1353,8 @@ pitch_scale = 1.5
 
 [node name="sprite_sword" type="Sprite2D" parent="canvas_hud/control_fight"]
 texture_filter = 1
-position = Vector2(5, -153)
-scale = Vector2(3, 3)
+position = Vector2(86, -276)
+scale = Vector2(5, 5)
 texture = ExtResource("34_j6qed")
 hframes = 3
 vframes = 3
@@ -1362,8 +1365,8 @@ stream = ExtResource("32_k4o2a")
 
 [node name="sprite_stick" type="Sprite2D" parent="canvas_hud/control_fight"]
 texture_filter = 1
-position = Vector2(2, -121)
-scale = Vector2(5, 5)
+position = Vector2(-10, -283)
+scale = Vector2(10, 10)
 texture = ExtResource("35_d2o5o")
 hframes = 3
 vframes = 3

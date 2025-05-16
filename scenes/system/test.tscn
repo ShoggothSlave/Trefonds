@@ -1,5 +1,6 @@
-[gd_scene load_steps=90 format=3 uid="uid://m7qabbdlhdhb"]
+[gd_scene load_steps=91 format=3 uid="uid://m7qabbdlhdhb"]
 
+[ext_resource type="PackedScene" uid="uid://dab4752pv8u86" path="res://scenes/musique.tscn" id="1_6pftk"]
 [ext_resource type="PackedScene" uid="uid://cy3pd2dx07puw" path="res://scenes/system/gameplay.tscn" id="1_cbirm"]
 [ext_resource type="MeshLibrary" uid="uid://dd3jvmh6vu6o2" path="res://autres/brik_gris.tres" id="1_vpmi6"]
 [ext_resource type="PackedScene" uid="uid://drn7ddl4jt6oa" path="res://scenes/item/buisson_a_mirtilles.tscn" id="4_be8x6"]
@@ -91,6 +92,8 @@
 [ext_resource type="PackedScene" uid="uid://chtd85u7vamhy" path="res://scenes/deco/bureau.tscn" id="89_qfs6s"]
 
 [node name="test" type="Node3D"]
+
+[node name="musique" parent="." instance=ExtResource("1_6pftk")]
 
 [node name="gameplay" parent="." instance=ExtResource("1_cbirm")]
 

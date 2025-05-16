@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=3 uid="uid://b1gq6xcb6abtr"]
+[gd_scene load_steps=142 format=3 uid="uid://b1gq6xcb6abtr"]
 
 [ext_resource type="MeshLibrary" uid="uid://dd3jvmh6vu6o2" path="res://autres/brik_gris.tres" id="2_h6xd3"]
 [ext_resource type="PackedScene" uid="uid://lcyxlcx6pqpj" path="res://scenes/tiles_brik/tiles_brik_gris.tscn" id="3_kngtf"]
@@ -130,6 +130,7 @@
 [ext_resource type="PackedScene" uid="uid://6b821ku7gqhy" path="res://scenes/item/ceinture_1.tscn" id="128_nbka5"]
 [ext_resource type="AudioStream" uid="uid://iioy1s44f6mh" path="res://sons/water-on-rocks-calm-manitoulin-49557.wav" id="129_hvmtf"]
 [ext_resource type="PackedScene" uid="uid://p731aa5jogcr" path="res://scenes/tiles_brik/plateau_brick_sans_bordure.tscn" id="130_3xqba"]
+[ext_resource type="PackedScene" uid="uid://dksthndorw8de" path="res://scenes/deco/planche.tscn" id="131_e5yu4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvhaq"]
 albedo_color = Color(0.305801, 0.686153, 1, 1)
@@ -4439,3 +4440,120 @@ light_color = Color(0.932531, 0.955806, 0.699921, 1)
 light_energy = 10.0
 shadow_enabled = true
 omni_range = 20.0
+
+[node name="4x8" parent="." instance=ExtResource("79_urrhw")]
+transform = Transform3D(0.866636, 0.0985939, -0.489103, 0, 0.980282, 0.197606, 0.498942, -0.171252, 0.849547, -7.11572, -18.2767, 16.1551)
+
+[node name="planche" parent="." instance=ExtResource("131_e5yu4")]
+transform = Transform3D(0.794171, 0.191214, 0.576827, -0.0343271, 0.961806, -0.27157, -0.606724, 0.195872, 0.770403, -7.43765, -18.1165, 15.3352)
+
+[node name="brique7" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.988562, 0, 0.150812, 0.0100317, 0.997785, -0.0657569, -0.150478, 0.0665177, 0.986373, -7.01612, -18.2035, 15.5743)
+
+[node name="brique8" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.372113, 0, 0.928187, -0.205307, 0.975231, 0.0823081, -0.905197, -0.221191, 0.362896, -7.96713, -18.2523, 16.3954)
+
+[node name="brique9" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.914812, 0.0555654, 0.400039, -0.17701, 0.945455, 0.273464, -0.363023, -0.320979, 0.874749, -7.18241, -18.0986, 16.9866)
+
+[node name="brique10" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.094455, -0.142491, 0.985279, -0.139452, 0.978052, 0.154814, -0.985714, -0.152022, 0.0725113, -6.24315, -18.1522, 16.8933)
+
+[node name="logger2" parent="." instance=ExtResource("42_fc5h0")]
+transform = Transform3D(0.998246, 0.00266802, 0.0591417, 0, 0.998984, -0.0450666, -0.0592018, 0.0449875, 0.997232, -6.56483, -18.2682, 15.9972)
+
+[node name="4x9" parent="." instance=ExtResource("79_urrhw")]
+transform = Transform3D(-4.32313e-08, -0.147809, -0.989016, -6.46095e-09, 0.989016, -0.147809, 1, 0, -4.37114e-08, -5.5222, -15.3233, 16.693)
+
+[node name="4x10" parent="." instance=ExtResource("79_urrhw")]
+transform = Transform3D(0.128276, -0.201807, -0.970989, 0.176167, 0.968143, -0.177942, 0.975966, -0.14823, 0.159742, -5.5222, -15.3233, 16.2171)
+
+[node name="4x11" parent="." instance=ExtResource("79_urrhw")]
+transform = Transform3D(-4.31795e-08, 0.155521, -0.987833, 6.79803e-09, 0.987833, 0.155521, 1, 0, -4.37114e-08, -7.61018, -15.4466, 16.693)
+
+[node name="4x12" parent="." instance=ExtResource("79_urrhw")]
+transform = Transform3D(0.0168496, 0.00283205, -0.999854, -0.165753, 0.986167, 7.24531e-09, 0.986023, 0.165729, 0.0170859, -7.61018, -15.3874, 16.2171)
+
+[node name="tiles_base_brik_gris318" parent="." instance=ExtResource("11_ynu3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81928, -15.1492, 15.9932)
+
+[node name="tiles_base_brik_gris319" parent="." instance=ExtResource("11_ynu3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.80463, -15.1492, 15.9932)
+
+[node name="brique11" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.14028, -15.1471, 17)
+
+[node name="brique12" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99649, -15.1261, 16.8669)
+
+[node name="brique13" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.973845, 0.227212, 0, -0.227212, 0.973845, 0, 0, 0, 1, -8.02517, -15.1261, 16.6114)
+
+[node name="brique14" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.993783, 0.11133, 0, -0.11133, 0.993783, 0, 0, 0, 1, -8.02517, -15.1261, 16.3533)
+
+[node name="brique34" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.709066, 0.705142, 0, -0.705142, 0.709066, 0, 0, 0, 1, -7.76049, -15.1334, 16.3533)
+
+[node name="brique16" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18126, -15.1261, 16.7381)
+
+[node name="brique32" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.995789, 0.0916754, 0, -0.0916754, 0.995789, 0, 0, 0, 1, -7.64992, -15.1261, 16.8636)
+
+[node name="brique33" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.957672, 0.287862, 0, -0.287862, 0.957672, 0, 0, 0, 1, -7.85633, -15.1261, 16.7381)
+
+[node name="brique17" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.999041, 0.0437938, 0, -0.0437938, 0.999041, 0, 0, 0, 1, -8.18126, -15.114, 16.483)
+
+[node name="brique31" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.884459, 0.466618, 0, -0.466618, 0.884459, 0, 0, 0, 1, -7.87317, -15.114, 16.483)
+
+[node name="brique18" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18126, -15.1261, 16.2361)
+
+[node name="brique29" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.966214, 0.25774, 0, -0.25774, 0.966214, 0, 0, 0, 1, -7.86361, -15.1261, 16.2361)
+
+[node name="brique15" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99649, -15.1261, 16.1174)
+
+[node name="brique28" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(0.980368, 0.197178, 0, -0.197178, 0.980368, 0, 0, 0, 1, -7.67862, -15.1261, 16.1174)
+
+[node name="brique19" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.996507, -0.0835039, -8.71174e-08, -0.0835039, 0.996507, -7.30014e-09, 8.74228e-08, 0, -1, -5.99295, -15.1261, 16.0027)
+
+[node name="brique30" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.824472, -0.565903, -7.20776e-08, -0.565903, 0.824472, -4.94728e-08, 8.74228e-08, 0, -1, -6.27113, -15.142, 16.0027)
+
+[node name="brique20" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.991799, -0.127809, -8.67058e-08, -0.127809, 0.991799, -1.11734e-08, 8.74228e-08, 0, -1, -5.97291, -15.1261, 16.2582)
+
+[node name="brique21" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.965309, -0.261111, -8.439e-08, -0.261111, 0.965309, -2.28271e-08, 8.74228e-08, 0, -1, -5.97291, -15.1261, 16.5163)
+
+[node name="brique22" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.80818, -15.1261, 16.1338)
+
+[node name="brique27" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.902593, -0.430495, -7.89072e-08, -0.430495, 0.902593, -3.76351e-08, 8.74228e-08, 0, -1, -6.10702, -15.1261, 16.1338)
+
+[node name="brique23" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.996566, -0.0828082, -8.71225e-08, -0.0828082, 0.996566, -7.23932e-09, 8.74228e-08, 0, -1, -5.80818, -15.1036, 16.3753)
+
+[node name="brique24" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.80818, -15.1261, 16.6335)
+
+[node name="brique26" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-0.977083, -0.21286, -8.54193e-08, -0.21286, 0.977083, -1.86088e-08, 8.74228e-08, 0, -1, -6.14963, -15.1261, 16.6335)
+
+[node name="brique25" parent="." instance=ExtResource("69_phxmq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.99295, -15.1261, 16.7522)
+
+[node name="Plateau_brick13" parent="." instance=ExtResource("130_3xqba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.52911, -15.5692, 16)
+
+[node name="Plateau_brick14" parent="." instance=ExtResource("130_3xqba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26343, -15.5692, 16)
