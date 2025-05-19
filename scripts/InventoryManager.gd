@@ -104,7 +104,7 @@ var am_spd_brz = false
 var am_spd_slv = false
 var am_spd_gld = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 # negative number limit
 	if raw_meat < 0:
 		raw_meat = 0

@@ -1,0 +1,205 @@
+[gd_scene load_steps=17 format=3 uid="uid://cjb173y301fpq"]
+
+[ext_resource type="PackedScene" uid="uid://b05771k1p4xt0" path="res://modeles3d/bureau_tiroir.glb" id="1_73idr"]
+[ext_resource type="Script" path="res://scenes/formes/bureau_tiroir.gd" id="2_0cucc"]
+[ext_resource type="Texture2D" uid="uid://bpvvx4mqxypvl" path="res://images/textures/boisplain 2.png" id="3_b2ae1"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="4_cqwlj"]
+[ext_resource type="AudioStream" uid="uid://c33yp0sjcu0o1" path="res://sons/sliding-object-in-draw-95689.wav" id="5_jlpsg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfia4"]
+albedo_texture = ExtResource("3_b2ae1")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gcm7w"]
+points = PackedVector3Array(-0.999988, -1, -1, 0.999951, 1, 1, 0.999951, 1, -1, -0.999988, 1, 1, 0.999951, -1, 1, -0.999988, 1, -1, 0.999951, -1, -1, -0.999988, -1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow85l"]
+albedo_texture = ExtResource("3_b2ae1")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4t8y5"]
+points = PackedVector3Array(1.90153, -0.921429, -0.921238, 1.12661, 0.985552, 0.985552, 1.12661, 0.985552, -0.971108, -0.981375, -1, -1, 2.38748, -0.881219, 0.947959, -0.957047, 1, 1, -0.957047, -0.985556, 1, 2.36395, 0.883166, -0.920089, -0.957047, 1, -0.985556, 2.36395, 0.883166, 0.934725, 2.38748, -0.881219, -0.93332, 1.28204, -0.972691, 0.987135, 1.28204, -0.972691, -0.972691, 1.74505, 0.934378, -0.971474, 1.74786, -0.922472, -0.974153, 1.3337, 0.935974, 0.987604, 1.3337, -0.92153, 0.987604)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dv5rt"]
+albedo_texture = ExtResource("4_cqwlj")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4fjxh"]
+points = PackedVector3Array(0.233291, -0.0919806, -1.0859, 1.12672, 0.0411814, 0.161203, 1.08392, 0.1027, 0.188287, 0.209346, -0.167822, 1.07107, 0.242356, 0.142485, 0.997726, 0.242362, 0.142483, -0.997713, 0.70924, -0.167822, -0.85699, 0.70924, -0.167822, 0.85699, 0.955362, 0.132554, -0.465759, 1.0822, -0.116554, -0.0936322, 0.209346, -0.167822, -1.07107, 0.832157, 0.133613, 0.657084, 0.574295, 0.0764761, -0.970514, 1.00236, 0.00915527, -0.556397, 0.507074, 0.0765964, 1.00529, 1.00011, -0.0233737, 0.552374, 0.2272, 0.0787717, 1.10033, 1.00387, -0.141086, 0.238123, 1.12673, 0.0411821, -0.161206, 0.2272, 0.0787717, -1.10033, 0.806606, 0.0751156, 0.790141, 1.02496, -0.086582, -0.44469, 1.05878, -0.0870153, 0.351248, 1.04778, 0.132264, -0.185801, 0.806606, 0.0751155, -0.790141, 0.438364, -0.0577702, -1.0461, 0.438364, -0.0577701, 1.0461, 0.643566, 0.136456, -0.829944, 1.03288, 0.0741327, 0.455258, 0.708094, 0.00949322, 0.902009, 1.1287, -0.0557379, -0.0969998, 0.708094, 0.00949301, -0.901998)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sy8qh"]
+size = Vector3(0.145782, 0.0793533, 0.19696)
+
+[sub_resource type="Animation" id="Animation_s3pny"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.091, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jrrvr"]
+resource_name = "fermer"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.148, -0.091, 0), Vector3(0, -0.091, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mmxu2"]
+resource_name = "ouvrir"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.091, 0), Vector3(0.148, -0.091, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c8yxx"]
+_data = {
+"RESET": SubResource("Animation_s3pny"),
+"fermer": SubResource("Animation_jrrvr"),
+"ouvrir": SubResource("Animation_mmxu2")
+}
+
+[node name="bureau_tiroir2" groups=["ouvrable"] instance=ExtResource("1_73idr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.091, 0)
+script = ExtResource("2_0cucc")
+
+[node name="Cube_006" parent="." index="0"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_bfia4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_006" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_006/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_gcm7w")
+
+[node name="Cube_010" parent="." index="1"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_ow85l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_010" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_010/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_4t8y5")
+
+[node name="Tore_001" parent="." index="2"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_dv5rt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tore_001" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tore_001/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_4fjxh")
+
+[node name="Tiroir" type="Node3D" parent="." index="3"]
+
+[node name="Tiroir" type="Node3D" parent="Tiroir" index="0" groups=["ouvrable"]]
+
+[node name="Tiroir" type="StaticBody3D" parent="Tiroir/Tiroir" index="0" groups=["ouvrable"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tiroir/Tiroir/Tiroir" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0978851, 0.241047, -0.221771)
+shape = SubResource("BoxShape3D_sy8qh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_c8yxx")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = ExtResource("5_jlpsg")
+
+[node name="Timer" type="Timer" parent="." index="6"]
+wait_time = 1.5
+one_shot = true
+
+[node name="inspect_timer" type="Timer" parent="." index="7"]
+wait_time = 3.0
+one_shot = true
+
+[node name="inspect_progress" type="ProgressBar" parent="." index="8"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.319
+anchor_top = 0.394
+anchor_right = 0.678
+anchor_bottom = 0.437
+offset_left = 0.511993
+offset_top = -0.312012
+offset_right = -0.0560303
+offset_bottom = -0.175995
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 3.0
+value = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="inspect_timer" to="." method="_on_inspect_timer_timeout"]

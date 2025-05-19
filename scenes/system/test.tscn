@@ -416,4 +416,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522654, 0, -1.58723)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.758057, -1.19209e-07, -1.57031)
 
 [node name="bureau" parent="." instance=ExtResource("89_qfs6s")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.321142, 0, -3.4451)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -4)

@@ -3600,10 +3600,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -15, 17.0657)
 transform = Transform3D(-2.18358e-08, 0.0213214, -0.499545, -0.5, 9.55343e-16, 2.18557e-08, 9.3199e-10, 0.499545, 0.0213214, 5.15125, 0.13306, 0.200321)
 
 [node name="bureau" parent="." instance=ExtResource("84_l687c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5828, -3, 13.6249)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.66101, -3, 13.4315)
 
 [node name="porte_chandelle" parent="." instance=ExtResource("85_ady2t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.66542, -2.71875, 13.253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.77941, -2.68885, 13.1734)
 
 [node name="chandelle_eteinte" parent="porte_chandelle" instance=ExtResource("86_e78h8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00100994, 0.0566778, -0.000314713)
@@ -4135,10 +4135,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -19, 16.9364)
 transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 30.4704, -18.6055, 13.998)
 
 [node name="gourde" parent="." instance=ExtResource("96_hya7n")]
-transform = Transform3D(0.901122, 0, 0.433565, 0, 1, 0, -0.433565, 0, 0.901122, -7.6497, -2.71875, 13.7165)
+transform = Transform3D(0.901122, 0, 0.433565, 0, 1, 0, -0.433565, 0, 0.901122, -7.76369, -2.68885, 13.7225)
 
 [node name="ring_armor_bronze" parent="." instance=ExtResource("97_2k4ki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.46343, -2.71875, 13.7404)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53593, -2.68764, 13.1295)
 
 [node name="silex" parent="." instance=ExtResource("98_cnbm4")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.72608, -2.99674, 9.39967)
@@ -4171,13 +4171,13 @@ transform = Transform3D(2.05057, 0, 0, 0, 1, 0, 0, 0, 0.64674, -6.53448, -2.0206
 transform = Transform3D(0.370669, 0, -0.0751737, 0, 0.2, 0, 0.150347, 0, 0.185335, -6.23259, -3, 9.18598)
 
 [node name="bol" parent="." instance=ExtResource("99_l5ht3")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.50714, -2.71875, 13.5592)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.55627, -2.68885, 13.5436)
 
 [node name="cuissot_cuit" parent="." instance=ExtResource("100_1r114")]
-transform = Transform3D(0.00996925, -0.046724, 0.0147473, 0.0477678, 0.00592011, -0.0135346, 0.0109017, 0.0167875, 0.0458185, -7.53192, -2.66445, 13.5281)
+transform = Transform3D(0.00996925, -0.046724, 0.0147473, 0.0477678, 0.00592011, -0.0135346, 0.0109017, 0.0167875, 0.0458185, -7.58105, -2.63455, 13.5125)
 
 [node name="demi_potion_mineure" parent="." instance=ExtResource("101_bqh3l")]
-transform = Transform3D(0.819052, -0.573719, -2.50781e-08, 0, -4.37114e-08, 1, -0.573719, -0.819052, -3.58019e-08, -7.63738, -2.70745, 13.4302)
+transform = Transform3D(0.819052, -0.573719, -2.50781e-08, 0, -4.37114e-08, 1, -0.573719, -0.819052, -3.58019e-08, -7.75137, -2.67755, 13.3506)
 
 [node name="oignon2" parent="." instance=ExtResource("34_sao8n")]
 transform = Transform3D(0.25, 0, 0, 0, 0.214501, -0.128412, 0, 0.128412, 0.214501, -6.3318, -2.75898, 9.06209)
@@ -4186,7 +4186,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.214501, -0.128412, 0, 0.128412, 0.21450
 transform = Transform3D(0.166683, 0, 0.986011, 0.440941, 0.894435, -0.07454, -0.881923, 0.447197, 0.149087, -6.5631, -2.52912, 8.97735)
 
 [node name="chaise" parent="." instance=ExtResource("103_7noma")]
-transform = Transform3D(0.29409, 0, 0.955778, 0, 1, 0, -0.955778, 0, 0.29409, -7.32201, -3, 13.5729)
+transform = Transform3D(0.29409, 0, 0.955778, 0, 1, 0, -0.955778, 0, 0.29409, -7.32201, -3, 13.6371)
 
 [node name="degoutte" parent="." instance=ExtResource("104_wwdv2")]
 transform = Transform3D(1, 0, 0, 0, 0.77276, 0, 0, 0, 1, -0.513238, 0.00449181, 1.98476)
