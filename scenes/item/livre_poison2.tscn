@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://dm0f5dh73fc73"]
+
+[ext_resource type="Script" path="res://scenes/item/livre_poison_2.gd" id="1_46smd"]
+[ext_resource type="ArrayMesh" uid="uid://bme20a4tdlil1" path="res://modeles3d/grand_livre.obj" id="1_uu3wc"]
+[ext_resource type="Texture2D" uid="uid://3x4l7iu856p2" path="res://images/textures/livre_poison.png" id="2_4d33g"]
+[ext_resource type="Texture2D" uid="uid://blusbexv246py" path="res://images/textures/livre_poison_C.png" id="3_cbs86"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="4_02nk2"]
+[ext_resource type="Texture2D" uid="uid://qmsjy3t8hngk" path="res://images/textures/livre_interieur.png" id="5_3niug"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="6_2hsgh"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="7_u4s0p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2vc1"]
+albedo_texture = ExtResource("2_4d33g")
+metallic = 0.5
+uv1_scale = Vector3(4.9, 4.9, 4.9)
+uv1_offset = Vector3(0.5, 0, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxf5d"]
+albedo_texture = ExtResource("3_cbs86")
+metallic = 0.5
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elamq"]
+albedo_texture = ExtResource("4_02nk2")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pywxd"]
+points = PackedVector3Array(0.0996471, 0.00984439, 0.0948559, -0.105041, -0.012539, -0.0938413, -0.105041, -0.012539, 0.09653, 0.105041, -0.012539, -0.0938413, -0.101506, 0.0100476, -0.0905818, 0.105041, -0.012539, 0.09653, 0.101506, 0.0100476, -0.0905818, -0.0996471, 0.00984439, 0.0948559)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8i0e5"]
+size = Vector3(0.206924, 0.0231934, 0.191154)
+
+[node name="livre_poison2" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0106347, 0)
+script = ExtResource("1_46smd")
+
+[node name="GrandLivre" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_uu3wc")
+surface_material_override/0 = SubResource("StandardMaterial3D_d2vc1")
+surface_material_override/1 = SubResource("StandardMaterial3D_yxf5d")
+surface_material_override/2 = SubResource("StandardMaterial3D_elamq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GrandLivre"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrandLivre/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_pywxd")
+
+[node name="Livre de recette de poison modéré" type="StaticBody3D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Livre de recette de poison modéré"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000221252, -0.000366205, 0.00368118)
+shape = SubResource("BoxShape3D_8i0e5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("5_3niug")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_2hsgh")
+text = "Recette de poison modéré
+
+ingrédients:
+- 3 Amanites
+- 1 Gourde d'eau
+
+Préparation:
+- Trancher les amanites sur une planche
+"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_2hsgh")
+text = "- Mélanger les ingrédients
+dans une bouteille.
+Effets:
+- Points de vie -30
+- Soif -10
+- Poison II
+(Retour pour refermer
+le livre)"
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_u4s0p")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

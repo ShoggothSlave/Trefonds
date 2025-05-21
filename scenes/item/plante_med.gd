@@ -10,6 +10,8 @@ func _prendre():
 		$Area3D/CollisionShape3D.remove_from_group("prehensible")
 		$Araceae.remove_from_group("prehensible")
 		$Araceae/body_collision2.remove_from_group("prehensible")
+		if QuetesManager.quest_araceae == true:
+			QuetesManager.araceae += 1
 
 func _on_respawn_timer_timeout() -> void:
 	$AnimationPlayer.play("respawn_plant")

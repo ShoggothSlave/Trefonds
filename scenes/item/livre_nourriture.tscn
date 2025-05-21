@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7lav2oc1s48k"]
+
+[ext_resource type="ArrayMesh" uid="uid://bme20a4tdlil1" path="res://modeles3d/grand_livre.obj" id="1_psabq"]
+[ext_resource type="Texture2D" uid="uid://deo8xgbb8y4vl" path="res://images/textures/livre_bouffe.png" id="2_jockt"]
+[ext_resource type="Texture2D" uid="uid://csqr2cwxsu1s" path="res://images/textures/livre_bouffe_C.png" id="3_upoa3"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="4_0tbtk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2vc1"]
+albedo_texture = ExtResource("2_jockt")
+metallic = 0.5
+uv1_scale = Vector3(4.9, 4.9, 4.9)
+uv1_offset = Vector3(0.5, 0, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxf5d"]
+albedo_texture = ExtResource("3_upoa3")
+metallic = 0.5
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elamq"]
+albedo_texture = ExtResource("4_0tbtk")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pywxd"]
+points = PackedVector3Array(0.0996471, 0.00984439, 0.0948559, -0.105041, -0.012539, -0.0938413, -0.105041, -0.012539, 0.09653, 0.105041, -0.012539, -0.0938413, -0.101506, 0.0100476, -0.0905818, 0.105041, -0.012539, 0.09653, 0.101506, 0.0100476, -0.0905818, -0.0996471, 0.00984439, 0.0948559)
+
+[node name="livre_nourriture" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0106347, 0)
+
+[node name="GrandLivre" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_psabq")
+surface_material_override/0 = SubResource("StandardMaterial3D_d2vc1")
+surface_material_override/1 = SubResource("StandardMaterial3D_yxf5d")
+surface_material_override/2 = SubResource("StandardMaterial3D_elamq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GrandLivre"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrandLivre/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_pywxd")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkopw4vqd41p7"]
+
+[ext_resource type="PackedScene" uid="uid://cc80fuoxwqkl3" path="res://modeles3d/coupe.glb" id="1_wjwn1"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="2_0v3pq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pound"]
+albedo_texture = ExtResource("2_0v3pq")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6oil0"]
+points = PackedVector3Array(0.18323, 0.422921, 0.916722, -0.181315, 0.143694, -0.967771, -0.183961, 0.333498, -0.981896, -0.981896, 0.333498, 0.183961, 0.698989, -0.97858, 0.486112, -0.794278, -0.982349, 0.305271, 0.981896, 0.333498, -0.183961, 0.305442, -0.982301, -0.794226, -0.698989, -0.97858, -0.486112, -0.305442, -0.982301, 0.794226, -0.700337, 0.481449, -0.517574, -0.640078, 0.329811, 0.762134, 0.485939, 0.479497, -0.728718, 0.794278, -0.982349, -0.305271, 0.728758, 0.479537, 0.485775, 0.640191, 0.329741, -0.762041, -0.700336, 0.481449, 0.517573, 0.391108, 0.141669, 0.90247, -0.762134, 0.329811, -0.640078, -0.305442, -0.982301, -0.794226, 0.916305, 0.330916, 0.396912, 0.213141, -0.980138, 0.822223, -0.183961, 0.333498, 0.981896, -0.967773, 0.143694, -0.181315, 0.822277, -0.980186, 0.212964, 0.183961, 0.333498, -0.981896, 0.7071, 0.334683, 0.7071, -0.822277, -0.980186, -0.212964, -0.698989, -0.97858, 0.486112, -0.884155, 0.329789, 0.457071, 0.698989, -0.97858, -0.486112, 0.884034, 0.329834, -0.457298)
+
+[node name="coupe" instance=ExtResource("1_wjwn1")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="Cylindre" parent="." index="0"]
+layers = 4
+material_override = SubResource("StandardMaterial3D_pound")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylindre" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylindre/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_6oil0")

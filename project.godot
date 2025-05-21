@@ -21,6 +21,7 @@ config/icon="res://images/autresimages/icon.svg"
 Manager="*res://scripts/Manager.gd"
 InventoryManager="*res://scripts/InventoryManager.gd"
 Musique="*res://scripts/musique.gd"
+QuetesManager="*res://scenes/system/Quetes_Manager.gd"
 
 [display]
 

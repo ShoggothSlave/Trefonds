@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7gmaghhjmbcy"]
+
+[ext_resource type="ArrayMesh" uid="uid://crckm8xvnytt8" path="res://modeles3d/grimoir.obj" id="1_7qgiq"]
+[ext_resource type="Script" path="res://scenes/item/grimoir_xp.gd" id="1_o8lgm"]
+[ext_resource type="Texture2D" uid="uid://bj0sqmfwaw21n" path="res://images/textures/livre_xp_C.png" id="2_a2b55"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="2_tpj1o"]
+[ext_resource type="Texture2D" uid="uid://conuqrmlmpbws" path="res://images/textures/livre_xp.png" id="3_htk60"]
+[ext_resource type="Texture2D" uid="uid://qmsjy3t8hngk" path="res://images/textures/livre_interieur.png" id="6_qyyy3"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="7_xsx5l"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="8_pimod"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0k2v"]
+albedo_texture = ExtResource("2_a2b55")
+metallic = 0.5
+uv1_scale = Vector3(2, 2, 2)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkjp7"]
+albedo_texture = ExtResource("3_htk60")
+metallic = 0.5
+uv1_scale = Vector3(5, 5, 5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qteoh"]
+albedo_texture = ExtResource("2_tpj1o")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hqmnn"]
+points = PackedVector3Array(0.101455, 0.0202814, 0.0965222, -0.0950518, -0.0226, -0.0846323, -0.0950518, -0.0226, 0.0876347, -0.0978015, 0.0226, 0.0900831, 0.0978015, 0.0226, -0.0871671, 0.0950518, -0.0226, -0.0846323, -0.0978015, 0.0226, -0.0871671, 0.101181, -0.0208703, 0.0962699, -0.101181, -0.0208703, 0.0962699, -0.101455, 0.0202814, 0.0965222, 0.0978015, 0.0226, 0.0900831, 0.0950518, -0.0226, 0.0876347)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8apkp"]
+size = Vector3(0.217041, 0.0466919, 0.191895)
+
+[node name="grimoir_xp" type="Node3D" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0217809, 0)
+script = ExtResource("1_o8lgm")
+
+[node name="Grimoir1" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_7qgiq")
+surface_material_override/0 = SubResource("StandardMaterial3D_y0k2v")
+surface_material_override/1 = SubResource("StandardMaterial3D_mkjp7")
+surface_material_override/2 = SubResource("StandardMaterial3D_qteoh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grimoir1"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grimoir1/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_hqmnn")
+
+[node name="Grimoir" type="StaticBody3D" parent="." groups=["lisible"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grimoir" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00134277, -3.05176e-05, 0.00366211)
+shape = SubResource("BoxShape3D_8apkp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("6_qyyy3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_xsx5l")
+text = "
+Grimoir I
+
+
+Que les anciens me 
+transmettent leur 
+expérience..."
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_xsx5l")
+text = "
+
+expérience +100
+
+
+
+
+(Retour pour refermer
+le livre)"
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pimod")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

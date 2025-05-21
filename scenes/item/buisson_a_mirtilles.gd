@@ -19,3 +19,5 @@ func _prendre():
 		$interaction_area.remove_from_group("prehensible")
 		$interaction_area/interaction_form.remove_from_group("prehensible")
 		$Mirtilles.remove_from_group("prehensible")
+		if QuetesManager.quest_myrtilles == true:
+			QuetesManager.myrtilles += 1

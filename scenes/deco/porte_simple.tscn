@@ -262,5 +262,6 @@ shape = SubResource("ConvexPolygonShape3D_iwx0m")
 
 [node name="close_timer" type="Timer" parent="."]
 wait_time = 300.0
+one_shot = true
 
 [connection signal="timeout" from="close_timer" to="." method="_on_close_timer_timeout"]

@@ -298,6 +298,7 @@ shape = SubResource("ConvexPolygonShape3D_iwx0m")
 
 [node name="close_timer" type="Timer" parent="."]
 wait_time = 300.0
+one_shot = true
 
 [node name="audio_unlock" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("8_jhv7g")

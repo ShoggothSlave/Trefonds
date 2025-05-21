@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bme20a4tdlil1"
+path="res://.godot/imported/grand_livre.obj-fec3c23e241836af63273a610d620e8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grand_livre.obj-fec3c23e241836af63273a610d620e8e.mesh"]
+
+source_file="res://modeles3d/grand_livre.obj"
+dest_files=["res://.godot/imported/grand_livre.obj-fec3c23e241836af63273a610d620e8e.mesh", "res://.godot/imported/grand_livre.obj-fec3c23e241836af63273a610d620e8e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -30,3 +30,4 @@ func _fermer():
 func _on_close_timer_timeout() -> void:
 	$anim_door.play("close")
 	opened = false
+	

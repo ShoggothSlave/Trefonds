@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm1pqeyx7ufsq"]
+
+[ext_resource type="ArrayMesh" uid="uid://dqkkba4knioan" path="res://modeles3d/roman.obj" id="1_yk8vk"]
+[ext_resource type="Texture2D" uid="uid://cs35buw414kee" path="res://images/textures/livre_quete_C.png" id="2_nonme"]
+[ext_resource type="Texture2D" uid="uid://cqgj4ugrhx5sc" path="res://images/textures/livre_quete.png" id="3_46due"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="4_qpjen"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5iba8"]
+albedo_texture = ExtResource("2_nonme")
+metallic = 0.5
+uv1_scale = Vector3(1.95, 1.95, 1.95)
+uv1_offset = Vector3(0.545, 0.01, 0)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y2v2i"]
+albedo_texture = ExtResource("3_46due")
+metallic = 0.5
+uv1_scale = Vector3(6.5, 7, 8.5)
+uv1_offset = Vector3(0.5, 0.14, 0.485)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdp05"]
+albedo_texture = ExtResource("4_qpjen")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mx7mf"]
+points = PackedVector3Array(0.073337, 0.000943199, 0.0545651, -0.0708923, -0.0146, -0.0468462, -0.0708923, -0.0146, 0.0484061, -0.0736546, 0.0147611, -0.0487884, 0.0708923, -0.0146, -0.0468462, 0.0736546, 0.0147611, -0.0487884, -0.0718529, 0.0143951, 0.0490213, 0.0708923, -0.0146, 0.0484061, 0.0718529, 0.0143951, 0.0490213, -0.0733159, -0.00134287, 0.0545503, 0.0723288, -0.0126311, 0.0515862, -0.072679, 0.0122913, 0.0518214, -0.0723288, -0.0126311, 0.0515862, 0.072679, 0.0122913, 0.0518214, 0.0733159, -0.00134287, 0.0545503, -0.073337, 0.000943199, 0.0545651)
+
+[node name="roman_quete" type="Node3D"]
+
+[node name="Roman" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_yk8vk")
+surface_material_override/0 = SubResource("StandardMaterial3D_5iba8")
+surface_material_override/1 = SubResource("StandardMaterial3D_y2v2i")
+surface_material_override/2 = SubResource("StandardMaterial3D_wdp05")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Roman"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Roman/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_mx7mf")

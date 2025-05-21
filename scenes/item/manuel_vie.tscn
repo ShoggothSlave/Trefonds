@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=3 uid="uid://c0uq65jchalgu"]
+
+[ext_resource type="ArrayMesh" uid="uid://bqvtbywte05gl" path="res://modeles3d/manuel.obj" id="1_7duev"]
+[ext_resource type="Script" path="res://scenes/item/manuel_vie.gd" id="1_n3jbf"]
+[ext_resource type="Texture2D" uid="uid://cjxw2foj60uql" path="res://images/textures/livre_vie.png" id="2_ju804"]
+[ext_resource type="Texture2D" uid="uid://cmrkw78kl03vf" path="res://images/textures/livre_vie_C.png" id="3_bgt2d"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="4_bofp5"]
+[ext_resource type="Texture2D" uid="uid://qmsjy3t8hngk" path="res://images/textures/livre_interieur.png" id="6_3me28"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="7_02y2q"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="8_bvkhe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mqo0"]
+albedo_texture = ExtResource("2_ju804")
+metallic = 0.5
+uv1_scale = Vector3(5.2, 5.2, 5.2)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ktru"]
+albedo_texture = ExtResource("3_bgt2d")
+metallic = 0.5
+uv1_scale = Vector3(2, 2, 2)
+uv1_offset = Vector3(0.5, 0, 0)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hukgc"]
+albedo_texture = ExtResource("4_bofp5")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l2c42"]
+points = PackedVector3Array(-0.0954921, -0.0151, -0.0850381, -0.0954921, -0.0151, 0.0880267, -0.105041, 0.0193667, -0.0938413, 0.0954915, -0.0151, -0.0850381, 0.105041, 0.0193667, -0.0938413, -0.105041, 0.0193667, 0.09653, 0.100602, -0.0128337, 0.0957371, 0.105041, 0.0193667, 0.09653, -0.100603, -0.0128337, 0.0957371, 0.0954915, -0.0151, 0.0880267)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1mc3e"]
+size = Vector3(0.214172, 0.0321999, 0.194641)
+
+[node name="manuel_vie" type="Node3D" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0141298, 0)
+script = ExtResource("1_n3jbf")
+
+[node name="Manuel" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_7duev")
+surface_material_override/0 = SubResource("StandardMaterial3D_2mqo0")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ktru")
+surface_material_override/2 = SubResource("StandardMaterial3D_hukgc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Manuel"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Manuel/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_l2c42")
+
+[node name="Manuel de vie" type="StaticBody3D" parent="." groups=["lisible"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Manuel de vie" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05176e-05, 0.000757217, 0.00466919)
+shape = SubResource("BoxShape3D_1mc3e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("6_3me28")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_02y2q")
+text = "
+Manuel de vie I
+
+
+Que les profondeurs me
+donnent le feu de la vie..."
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_02y2q")
+text = "
+
+Vie +5
+
+
+
+
+(Retour pour refermer
+le livre)"
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_bvkhe")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

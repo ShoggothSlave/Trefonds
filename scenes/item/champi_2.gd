@@ -18,3 +18,5 @@ func _prendre():
 		$interaction_area/interaction_form.remove_from_group("prehensible")
 		$Coprinus.remove_from_group("prehensible")
 		$Coprinus/body_collision2.remove_from_group("prehensible")
+		if QuetesManager.quest_coprinus == true:
+			QuetesManager.coprinus += 1

@@ -1,0 +1,113 @@
+[gd_scene load_steps=14 format=3 uid="uid://q48iep0mhcyw"]
+
+[ext_resource type="Script" path="res://scenes/item/manuel_force.gd" id="1_mp6sc"]
+[ext_resource type="ArrayMesh" uid="uid://bqvtbywte05gl" path="res://modeles3d/manuel.obj" id="1_qp3nb"]
+[ext_resource type="Texture2D" uid="uid://5x728ltuf18w" path="res://images/textures/livre_force.png" id="2_gmywc"]
+[ext_resource type="Texture2D" uid="uid://besr6olwubto1" path="res://images/textures/livre_force_C.png" id="3_oo0fh"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="4_upnpi"]
+[ext_resource type="Texture2D" uid="uid://qmsjy3t8hngk" path="res://images/textures/livre_interieur.png" id="6_bfwjj"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="7_v2bwl"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="8_1lqpr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mqo0"]
+albedo_texture = ExtResource("2_gmywc")
+metallic = 0.5
+uv1_scale = Vector3(5.2, 5.2, 5.2)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ktru"]
+albedo_texture = ExtResource("3_oo0fh")
+metallic = 0.5
+uv1_scale = Vector3(4, 4, 4)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hukgc"]
+albedo_texture = ExtResource("4_upnpi")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l2c42"]
+points = PackedVector3Array(-0.0954921, -0.0151, -0.0850381, -0.0954921, -0.0151, 0.0880267, -0.105041, 0.0193667, -0.0938413, 0.0954915, -0.0151, -0.0850381, 0.105041, 0.0193667, -0.0938413, -0.105041, 0.0193667, 0.09653, 0.100602, -0.0128337, 0.0957371, 0.105041, 0.0193667, 0.09653, -0.100603, -0.0128337, 0.0957371, 0.0954915, -0.0151, 0.0880267)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lhd1k"]
+size = Vector3(0.207306, 0.0376129, 0.196899)
+
+[node name="manuel_force" type="Node3D" groups=["lisible"]]
+script = ExtResource("1_mp6sc")
+
+[node name="Manuel" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_qp3nb")
+surface_material_override/0 = SubResource("StandardMaterial3D_2mqo0")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ktru")
+surface_material_override/2 = SubResource("StandardMaterial3D_hukgc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Manuel"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Manuel/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_l2c42")
+
+[node name="Manuel de force" type="StaticBody3D" parent="." groups=["lisible"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Manuel de force" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00239563, 0.00179291, 0.00177002)
+shape = SubResource("BoxShape3D_lhd1k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("6_bfwjj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_v2bwl")
+text = "
+Manuel de force I
+
+
+Que les paléolithoïdes
+m'octroie leur force..."
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_v2bwl")
+text = "
+
+Force +5
+
+
+
+
+(Retour pour refermer
+le livre)"
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1lqpr")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

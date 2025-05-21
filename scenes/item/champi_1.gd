@@ -18,3 +18,5 @@ func _prendre():
 		$interaction_area/interaction_form.remove_from_group("prehensible")
 		$"Bolet Blafard".remove_from_group("prehensible")
 		$"Bolet Blafard/body_collision2".remove_from_group("prehensible")
+		if QuetesManager.quest_bolet == true:
+			QuetesManager.bolet += 1

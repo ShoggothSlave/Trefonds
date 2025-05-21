@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=3 uid="uid://b1gq6xcb6abtr"]
+[gd_scene load_steps=148 format=3 uid="uid://b1gq6xcb6abtr"]
 
 [ext_resource type="MeshLibrary" uid="uid://dd3jvmh6vu6o2" path="res://autres/brik_gris.tres" id="2_h6xd3"]
 [ext_resource type="PackedScene" uid="uid://lcyxlcx6pqpj" path="res://scenes/tiles_brik/tiles_brik_gris.tscn" id="3_kngtf"]
@@ -131,6 +131,12 @@
 [ext_resource type="AudioStream" uid="uid://iioy1s44f6mh" path="res://sons/water-on-rocks-calm-manitoulin-49557.wav" id="129_hvmtf"]
 [ext_resource type="PackedScene" uid="uid://p731aa5jogcr" path="res://scenes/tiles_brik/plateau_brick_sans_bordure.tscn" id="130_3xqba"]
 [ext_resource type="PackedScene" uid="uid://dksthndorw8de" path="res://scenes/deco/planche.tscn" id="131_e5yu4"]
+[ext_resource type="PackedScene" uid="uid://ce1fb1g13yups" path="res://scenes/item/bible_lvl.tscn" id="132_hkcwj"]
+[ext_resource type="PackedScene" uid="uid://8u0fkwhd8bxo" path="res://scenes/item/manuel_armure.tscn" id="133_6mpge"]
+[ext_resource type="PackedScene" uid="uid://dh63nfk5ynisy" path="res://scenes/item/roman_quete_myrtilles.tscn" id="134_fpade"]
+[ext_resource type="PackedScene" uid="uid://cxfgqnb5d1af4" path="res://scenes/item/livre_boissons.tscn" id="135_axmbm"]
+[ext_resource type="PackedScene" uid="uid://bkopw4vqd41p7" path="res://scenes/deco/coupe.tscn" id="136_wqo7r"]
+[ext_resource type="PackedScene" uid="uid://b1ee06fc7gddu" path="res://scenes/item/bouteille.tscn" id="137_t0vcf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvhaq"]
 albedo_color = Color(0.305801, 0.686153, 1, 1)
@@ -265,6 +271,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -15, 0)
 
 [node name="GridMap_celling" type="GridMap" parent="."]
+visible = false
 mesh_library = ExtResource("2_h6xd3")
 cell_size = Vector3(1, 1, 1)
 cell_octant_size = 4
@@ -4255,10 +4262,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.972
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.58584, -3, 10.6371)
 
 [node name="flowerpot" parent="." instance=ExtResource("114_ndlcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42578, -2.67731, 10.8214)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38539, -2.67731, 10.8214)
 
 [node name="plante_monotige6" parent="." instance=ExtResource("28_sl7uw")]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -3.42167, -2.62779, 10.8167)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -3.38128, -2.62779, 10.8167)
 
 [node name="caisse_ouvrable4" parent="." instance=ExtResource("36_5rrp6")]
 transform = Transform3D(0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, 0.12941, -3.29697, -3, 9.32512)
@@ -4557,3 +4564,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.52911, -15.5692, 16)
 
 [node name="Plateau_brick14" parent="." instance=ExtResource("130_3xqba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26343, -15.5692, 16)
+
+[node name="bibliothèque2" parent="." instance=ExtResource("70_ssxxn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -4.81892, -3, 13.8363)
+
+[node name="bible_lvl" parent="." instance=ExtResource("132_hkcwj")]
+transform = Transform3D(-0.358042, 0, 0.933705, 0, 1, 0, -0.933705, 0, -0.358042, -5.45239, -2.14789, 13.7019)
+
+[node name="manuel_armure" parent="." instance=ExtResource("133_6mpge")]
+transform = Transform3D(3.0598e-08, -0.7, -1.05697e-07, -0.7, -3.0598e-08, 0, -4.62017e-15, 1.05697e-07, -0.7, -5.31528, -2.5935, 13.6417)
+
+[node name="roman_quete_myrtilles" parent="." instance=ExtResource("134_fpade")]
+transform = Transform3D(-0.935986, 0, 0.352038, 0, 1, 0, -0.352038, 0, -0.935986, -3.49593, -2.70502, 10.7037)
+
+[node name="livre_boissons" parent="." instance=ExtResource("135_axmbm")]
+transform = Transform3D(2.40413e-08, -0.55, 8.30477e-08, -0.55, -2.40413e-08, 0, 3.63013e-15, -8.30477e-08, -0.55, -5.08392, -2.75865, 13.6311)
+
+[node name="coupe" parent="." instance=ExtResource("136_wqo7r")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.71385, -2.69, 13.405)
+
+[node name="bouteille" parent="." instance=ExtResource("137_t0vcf")]
+transform = Transform3D(0.703494, 0, 0.259993, 0, 0.75, 0, -0.259993, 0, 0.703494, -7.68895, -3, 13.0157)

@@ -165,6 +165,21 @@ var iiring13 = false
 var iiring14 = false
 var iiring15 = false
 
+#recettes possédées
+var ragout = false
+var soupe1 = false
+var soupe2 = false
+var salade1 = false
+var salade2 = false
+var compotte = false
+var boisson = false
+var bandage = false
+var poison1 = false
+var poison2 = false
+var poison3 = false
+var boisson_energisante = false
+var sirop = false
+
 func _process(_delta):
 	if Vie_Joueur >= maxlife:
 		Vie_Joueur = maxlife
@@ -181,5 +196,5 @@ func _process(_delta):
 		lvl = lvl +1
 		maxlife = maxlife +5
 		maxxp = maxxp + maxxp / 4.0
-		force += 0.01
-		armure += 0.01
+		force += 0.1
+		armure += 0.1

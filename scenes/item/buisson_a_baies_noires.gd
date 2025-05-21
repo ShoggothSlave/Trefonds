@@ -12,6 +12,8 @@ func _prendre():
 		$interaction_area.remove_from_group("prehensible")
 		$interaction_area/interaction_form.remove_from_group("prehensible")
 		$"Baies Noires".remove_from_group("prehensible")
+		if QuetesManager.quest_belladone == true:
+			QuetesManager.belladone += 1
 
 func _on_respawn_timer_timeout() -> void:
 	$anim_blackberries.play("spawn_berries")

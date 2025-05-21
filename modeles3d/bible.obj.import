@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsnfrgad2alrr"
+path="res://.godot/imported/bible.obj-3732f57e60385560e8331f3c30f0b33c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bible.obj-3732f57e60385560e8331f3c30f0b33c.mesh"]
+
+source_file="res://modeles3d/bible.obj"
+dest_files=["res://.godot/imported/bible.obj-3732f57e60385560e8331f3c30f0b33c.mesh", "res://.godot/imported/bible.obj-3732f57e60385560e8331f3c30f0b33c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
