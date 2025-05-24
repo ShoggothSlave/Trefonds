@@ -114,6 +114,7 @@ func collect_first_item():
 
 	prints(current_items)
 	if item.has_method("_prendre"):
+		_add_prenre_to_SceneTree(item)
 		item._prendre()
 		current_items.remove_at(0)
 
@@ -129,6 +130,7 @@ func collect_other_items():
 
 		send_player_notifiction_image()
 
+		_add_prenre_to_SceneTree(item)
 		item._prendre()
 		current_items.remove_at(i)
 		#prints(current_items,"-", item)
@@ -157,3 +159,6 @@ func _process(_delta):
 				notification_opened = false
 
  
+
+func _add_prenre_to_SceneTree(_item):
+	self.add_child(_item)

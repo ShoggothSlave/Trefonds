@@ -27,7 +27,6 @@ const crouch_translate = 0.325
 const crouch_jump_add = crouch_translate * 0.74
 var is_crouched := false
 
-var notification_sprite = Sprite2D.new()
 
 func _ready():
 	get_tree().call_group("monstres", "set_player", self)
@@ -417,6 +416,7 @@ func _on_anim_in_gas_animation_finished(_anim_name: StringName) -> void:
 
 
 func show_notification_crate_image(image_path:String):
+	var notification_sprite = Sprite2D.new()
 	get_parent().get_node("Notification_Control").show()
 	
 	var text_rect: TextureRect = get_parent().get_node("Notification_Control/notification_image")
@@ -445,6 +445,11 @@ func show_notification_crate_image(image_path:String):
 	else:
 		notification_sprite.frame = 1
 	
+	# lets remove the former children sprites if any
+	if text_rect.get_child_count() > 0:
+		for _child in text_rect.get_children():
+			_child.queue_free()
+		
 	text_rect.add_child(notification_sprite)
 	notification_sprite.position = Vector2.ZERO + (text_rect.size/2)
 	
