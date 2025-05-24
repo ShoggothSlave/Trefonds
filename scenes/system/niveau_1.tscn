@@ -329,6 +329,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -15, 0)
 
 [node name="GridMap_celling" type="GridMap" parent="."]
+visible = false
 mesh_library = ExtResource("2_h6xd3")
 cell_size = Vector3(1, 1, 1)
 cell_octant_size = 4

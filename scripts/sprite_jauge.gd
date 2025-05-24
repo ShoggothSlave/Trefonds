@@ -2,66 +2,85 @@ extends Sprite2D
 
 func _input(_event: InputEvent) -> void:
 #Access_po
-	if Input.is_action_just_pressed("po1"):
-		$"../../audio_boire".play()
-		if $"../access_po1".frame == 1:
-			InventoryManager.po_demi_min -= 1
-			Manager.Vie_Joueur += 10
-		elif $"../access_po1".frame == 2:
-			InventoryManager.po_min -= 1
-			Manager.Vie_Joueur += 20
-		elif $"../access_po1".frame == 3:
-			InventoryManager.po_demi_con -= 1
-			Manager.Vie_Joueur += 25
-		elif $"../access_po1".frame == 4:
-			InventoryManager.po_con -= 1
-			Manager.Vie_Joueur += 50
-		elif $"../access_po1".frame == 5:
-			InventoryManager.po_demi_sup -= 1
-			Manager.Vie_Joueur += 75
-		elif $"../access_po1".frame == 6:
-			InventoryManager.po_sup -= 1
-			Manager.Vie_Joueur += 100
-	if Input.is_action_just_pressed("po2"):
-		$"../../audio_boire".play()
-		if $"../access_po2".frame == 1:
-			InventoryManager.po_demi_min -= 1
-			Manager.Vie_Joueur += 10
-		elif $"../access_po2".frame == 2:
-			InventoryManager.po_min -= 1
-			Manager.Vie_Joueur += 20
-		elif $"../access_po2".frame == 3:
-			InventoryManager.po_demi_con -= 1
-			Manager.Vie_Joueur += 25
-		elif $"../access_po2".frame == 4:
-			InventoryManager.po_con -= 1
-			Manager.Vie_Joueur += 50
-		elif $"../access_po2".frame == 5:
-			InventoryManager.po_demi_sup -= 1
-			Manager.Vie_Joueur += 75
-		elif $"../access_po2".frame == 6:
-			InventoryManager.po_sup -= 1
-			Manager.Vie_Joueur += 100
-	if Input.is_action_just_pressed("po3"):
-		$"../../audio_boire".play()
-		if $"../access_po3".frame == 1:
-			InventoryManager.po_demi_min -= 1
-			Manager.Vie_Joueur += 10
-		elif $"../access_po3".frame == 2:
-			InventoryManager.po_min -= 1
-			Manager.Vie_Joueur += 20
-		elif $"../access_po3".frame == 3:
-			InventoryManager.po_demi_con -= 1
-			Manager.Vie_Joueur += 25
-		elif $"../access_po3".frame == 4:
-			InventoryManager.po_con -= 1
-			Manager.Vie_Joueur += 50
-		elif $"../access_po3".frame == 5:
-			InventoryManager.po_demi_sup -= 1
-			Manager.Vie_Joueur += 75
-		elif $"../access_po3".frame == 6:
-			InventoryManager.po_sup -= 1
-			Manager.Vie_Joueur += 100
+	if Manager.ceinture_simple == true or Manager.ceinture_double == true or Manager.ceinture_large == true:
+		if Input.is_action_just_pressed("po1"):
+			if $"../access_po1".frame == 1:
+				InventoryManager.po_demi_min -= 1
+				Manager.Vie_Joueur += 10
+				$"../../audio_boire".play()
+			elif $"../access_po1".frame == 2:
+				InventoryManager.po_min -= 1
+				Manager.Vie_Joueur += 20
+				$"../../audio_boire".play()
+			elif $"../access_po1".frame == 3:
+				InventoryManager.po_demi_con -= 1
+				Manager.Vie_Joueur += 25
+				$"../../audio_boire".play()
+			elif $"../access_po1".frame == 4:
+				InventoryManager.po_con -= 1
+				Manager.Vie_Joueur += 50
+				$"../../audio_boire".play()
+			elif $"../access_po1".frame == 5:
+				InventoryManager.po_demi_sup -= 1
+				Manager.Vie_Joueur += 75
+				$"../../audio_boire".play()
+			elif $"../access_po1".frame == 6:
+				InventoryManager.po_sup -= 1
+				Manager.Vie_Joueur += 100
+				$"../../audio_boire".play()
+	if Manager.ceinture_double == true or Manager.ceinture_large == true:
+		if Input.is_action_just_pressed("po2"):
+			if $"../access_po2".frame == 1:
+				InventoryManager.po_demi_min -= 1
+				Manager.Vie_Joueur += 10
+				$"../../audio_boire".play()
+			elif $"../access_po2".frame == 2:
+				InventoryManager.po_min -= 1
+				Manager.Vie_Joueur += 20
+				$"../../audio_boire".play()
+			elif $"../access_po2".frame == 3:
+				InventoryManager.po_demi_con -= 1
+				Manager.Vie_Joueur += 25
+				$"../../audio_boire".play()
+			elif $"../access_po2".frame == 4:
+				InventoryManager.po_con -= 1
+				Manager.Vie_Joueur += 50
+				$"../../audio_boire".play()
+			elif $"../access_po2".frame == 5:
+				InventoryManager.po_demi_sup -= 1
+				Manager.Vie_Joueur += 75
+				$"../../audio_boire".play()
+			elif $"../access_po2".frame == 6:
+				InventoryManager.po_sup -= 1
+				Manager.Vie_Joueur += 100
+				$"../../audio_boire".play()
+	if Manager.ceinture_large == true:
+		if Input.is_action_just_pressed("po3"):
+			$"../../audio_boire".play()
+			if $"../access_po3".frame == 1:
+				InventoryManager.po_demi_min -= 1
+				Manager.Vie_Joueur += 10
+				$"../../audio_boire".play()
+			elif $"../access_po3".frame == 2:
+				InventoryManager.po_min -= 1
+				Manager.Vie_Joueur += 20
+				$"../../audio_boire".play()
+			elif $"../access_po3".frame == 3:
+				InventoryManager.po_demi_con -= 1
+				Manager.Vie_Joueur += 25
+				$"../../audio_boire".play()
+			elif $"../access_po3".frame == 4:
+				InventoryManager.po_con -= 1
+				Manager.Vie_Joueur += 50
+				$"../../audio_boire".play()
+			elif $"../access_po3".frame == 5:
+				InventoryManager.po_demi_sup -= 1
+				Manager.Vie_Joueur += 75
+				$"../../audio_boire".play()
+			elif $"../access_po3".frame == 6:
+				InventoryManager.po_sup -= 1
+				Manager.Vie_Joueur += 100
+				$"../../audio_boire".play()
 
 func _process(_delta: float) -> void:
 
