@@ -1,0 +1,189 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdaorn1sgvamv"]
+
+[ext_resource type="PackedScene" uid="uid://cbkcm7jn0vinc" path="res://scenes/tiles_brik/cube_brik_gris_centre.tscn" id="1_gd2vl"]
+[ext_resource type="PackedScene" uid="uid://lcyxlcx6pqpj" path="res://scenes/tiles_brik/tiles_brik_gris.tscn" id="2_xr3nb"]
+[ext_resource type="PackedScene" uid="uid://b46epiikccpja" path="res://scenes/tiles_brik/tiles_brik_gris_sans_murs.tscn" id="3_devrp"]
+[ext_resource type="PackedScene" uid="uid://di6x1ep0xkxmm" path="res://scenes/tiles_brik/tiles_2_coin_2_base_2_brik_gris.tscn" id="4_r65so"]
+[ext_resource type="PackedScene" uid="uid://4n2gw22f3evf" path="res://scenes/tiles_brik/tiles_2_coin_brik_gris.tscn" id="5_iut4i"]
+[ext_resource type="PackedScene" uid="uid://bie25dc00ge73" path="res://scenes/tiles_brik/top_cube_brik_gris.tscn" id="6_lshok"]
+[ext_resource type="PackedScene" uid="uid://bv65ornim8fnx" path="res://scenes/tiles_brik/tiles_2_demi_brik_gris.tscn" id="7_iwli5"]
+[ext_resource type="PackedScene" uid="uid://bgimbieoiwl5v" path="res://scenes/deco/poutre_bois.tscn" id="8_6fkej"]
+[ext_resource type="PackedScene" uid="uid://bcy7yvhwynlof" path="res://scenes/deco/poutre_bois_plafond.tscn" id="9_01xhx"]
+
+[node name="salle_penchée" type="Node3D"]
+
+[node name="cube_brik_gris" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="cube_brik_gris2" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="cube_brik_gris3" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="cube_brik_gris4" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="cube_brik_gris5" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="cube_brik_gris6" parent="." instance=ExtResource("1_gd2vl")]
+
+[node name="cube_brik_gris7" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="cube_brik_gris8" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="cube_brik_gris9" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="cube_brik_gris10" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="cube_brik_gris17" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+
+[node name="cube_brik_gris18" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
+[node name="cube_brik_gris19" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4)
+
+[node name="cube_brik_gris11" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="cube_brik_gris12" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="cube_brik_gris13" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="cube_brik_gris14" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="cube_brik_gris15" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="cube_brik_gris16" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="tiles_base_brik_gris2" parent="." instance=ExtResource("2_xr3nb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 3)
+
+[node name="tiles_base_brik_gris3" parent="." instance=ExtResource("2_xr3nb")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 4)
+
+[node name="tiles_base_brik_gris" parent="." instance=ExtResource("3_devrp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 2)
+
+[node name="tiles_coin_2_brik_gris" parent="." instance=ExtResource("4_r65so")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 1)
+
+[node name="tiles_4_brik_gris" parent="." instance=ExtResource("5_iut4i")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 2)
+
+[node name="tiles_4_brik_gris2" parent="." instance=ExtResource("5_iut4i")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -2, 0, 0)
+
+[node name="tiles_4_brik_gris3" parent="." instance=ExtResource("5_iut4i")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 2, 0, -1)
+
+[node name="tiles_4_brik_gris4" parent="." instance=ExtResource("5_iut4i")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 3, 0, 1)
+
+[node name="cube_brik_gris20" parent="." instance=ExtResource("6_lshok")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 3)
+
+[node name="tiles_demi_brik_gris" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="tiles_demi_brik_gris2" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="tiles_demi_brik_gris3" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 1)
+
+[node name="tiles_demi_brik_gris4" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 0)
+
+[node name="tiles_demi_brik_gris5" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 0)
+
+[node name="tiles_demi_brik_gris7" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="tiles_demi_brik_gris6" parent="." instance=ExtResource("7_iwli5")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1, 0, 0)
+
+[node name="cube_brik_gris21" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 1)
+
+[node name="cube_brik_gris22" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 1)
+
+[node name="cube_brik_gris23" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
+
+[node name="cube_brik_gris24" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1)
+
+[node name="cube_brik_gris25" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 1)
+
+[node name="cube_brik_gris26" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 0)
+
+[node name="cube_brik_gris27" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 0)
+
+[node name="cube_brik_gris28" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="cube_brik_gris29" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0)
+
+[node name="cube_brik_gris30" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 0)
+
+[node name="cube_brik_gris31" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -1)
+
+[node name="cube_brik_gris32" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -1)
+
+[node name="cube_brik_gris33" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -1)
+
+[node name="cube_brik_gris34" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1)
+
+[node name="cube_brik_gris35" parent="." instance=ExtResource("1_gd2vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -1)
+
+[node name="poutre_bois" parent="." instance=ExtResource("8_6fkej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="poutre_bois2" parent="." instance=ExtResource("8_6fkej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="poutre_bois_plafond" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="poutre_bois_plafond2" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="poutre_bois_plafond3" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="poutre_bois_plafond4" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="poutre_bois_plafond5" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="poutre_bois_plafond6" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 0)
+
+[node name="poutre_bois_plafond7" parent="." instance=ExtResource("9_01xhx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 0, 0)

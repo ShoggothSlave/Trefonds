@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqwfbi6chgfkm"]
+
+[ext_resource type="PackedScene" uid="uid://bt08f6f3b8m6k" path="res://scenes/deco/4x_4.tscn" id="1_r0ct1"]
+
+[node name="poutre_bois" type="Node3D"]
+
+[node name="4x5" parent="." instance=ExtResource("1_r0ct1")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.5, 0, 0.5)
+
+[node name="4x6" parent="." instance=ExtResource("1_r0ct1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.95, 0)
+
+[node name="4x7" parent="." instance=ExtResource("1_r0ct1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0.95, 0.5)

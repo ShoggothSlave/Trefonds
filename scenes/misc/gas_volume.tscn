@@ -13,12 +13,12 @@ size = Vector3(1, 0.866089, 1)
 
 [node name="GasVolume" type="CSGBox3D"]
 transform = Transform3D(20, 0, 0, 0, 4, 0, 0, 0, 10, 0.5, 2, 0.5)
-layers = 4096
+layers = 4100
 material_override = SubResource("StandardMaterial3D_wj25a")
 script = ExtResource("1_3w724")
 
 [node name="Area3D" type="Area3D" parent="."]
-collision_layer = 0
+collision_layer = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0669556, 0)

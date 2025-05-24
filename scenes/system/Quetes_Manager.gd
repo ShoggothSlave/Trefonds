@@ -35,7 +35,7 @@ var coprinusmax = 4
 var araceaemax = 5
 var bandagemax = 5
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if rat >= 10:
 		rat = 0
 		Manager.xp += 100

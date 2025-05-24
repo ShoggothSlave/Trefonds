@@ -37,7 +37,6 @@ surface_material_override/1 = SubResource("StandardMaterial3D_1y7g0")
 
 [node name="interaction_area" type="Area3D" parent="." groups=["prehensible"]]
 collision_layer = 8
-collision_mask = 0
 
 [node name="interaction_form" type="CollisionShape3D" parent="interaction_area" groups=["prehensible"]]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0.0595974)

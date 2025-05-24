@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7ybp3s5iyopt"]
+
+[ext_resource type="PackedScene" uid="uid://bt08f6f3b8m6k" path="res://scenes/deco/4x_4.tscn" id="1_0r47l"]
+
+[node name="support_mine" type="Node3D"]
+
+[node name="4x5" parent="." instance=ExtResource("1_0r47l")]
+transform = Transform3D(-6.40138e-09, 0.353553, -0.353553, 1.54543e-08, 0.353553, 0.353553, 0.5, -6.40138e-09, -1.54543e-08, 1, 0.586665, 0)
+
+[node name="4x7" parent="." instance=ExtResource("1_0r47l")]
+transform = Transform3D(-3.731e-08, -0.353553, 0.353553, 1.54543e-08, 0.353553, 0.353553, -0.5, 3.731e-08, -1.54543e-08, 0, 0.586665, 0)

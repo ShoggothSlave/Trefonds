@@ -35,8 +35,7 @@ func _process(_delta: float) -> void:
 		$Control/canva_inventaire/texture_inventaire/mortierback.show()
 		$Control/canva_inventaire/texture_inventaire/mortierfront.show()
 	if InventoryManager.chaudron == true:
-		$Control/canva_inventaire/texture_inventaire/chaudronback.show()
-		$Control/canva_inventaire/texture_inventaire/chaudronfront.show()
+		$Control/canva_inventaire/texture_inventaire/chaudron.show()
 	if InventoryManager.planche == true:
 		$Control/canva_inventaire/texture_inventaire/planche.show()
 	if InventoryManager.jarre == true:
@@ -45,6 +44,21 @@ func _process(_delta: float) -> void:
 		$Control/canva_inventaire/texture_inventaire/bouteille.show()
 	if InventoryManager.bol == true:
 		$Control/canva_inventaire/texture_inventaire/bol.show()
+	if InventoryManager.assiette == false:
+		$Control/canva_inventaire/texture_inventaire/assiette.hide()
+	if InventoryManager.mortier == false:
+		$Control/canva_inventaire/texture_inventaire/mortierback.hide()
+		$Control/canva_inventaire/texture_inventaire/mortierfront.hide()
+	if InventoryManager.chaudron == false:
+		$Control/canva_inventaire/texture_inventaire/chaudron.hide()
+	if InventoryManager.planche == false:
+		$Control/canva_inventaire/texture_inventaire/planche.hide()
+	if InventoryManager.jarre == false:
+		$Control/canva_inventaire/texture_inventaire/jarre.hide()
+	if InventoryManager.bouteille == false:
+		$Control/canva_inventaire/texture_inventaire/bouteille.hide()
+	if InventoryManager.bol == false:
+		$Control/canva_inventaire/texture_inventaire/bol.hide()
 	if Manager.knife == true:
 		$Control/canva_inventaire/texture_inventaire/sprite_knife_inv.show()
 	if Manager.knife == false:

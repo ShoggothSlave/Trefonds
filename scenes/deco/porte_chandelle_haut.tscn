@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://c35yx4tx2o7i4"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwpoekh8hmqhq" path="res://modeles3d/high_candle_holder.obj" id="1_u4g67"]
+[ext_resource type="Texture2D" uid="uid://boyf1y87wrttw" path="res://images/textures/Rust004_1K-JPG_Metalness (1).png" id="2_sdtj8"]
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="3_qxftf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5rgj"]
+albedo_texture = ExtResource("2_sdtj8")
+metallic = 0.5
+roughness = 0.75
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm0ig"]
+albedo_texture = ExtResource("3_qxftf")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(5, 5, 5)
+uv1_offset = Vector3(0.5, 0.475, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cpvpv"]
+points = PackedVector3Array(0.0643233, -0.0031632, -0.0453052, -0.0745548, -0.0031632, -0.0233824, -0.0745548, -0.0031632, 0.0277614, 0.020449, 0.464555, 0.020449, 0.0350738, -0.0031632, 0.0716357, -0.0380071, 0.413319, -0.0453052, -0.0306948, 0.413319, 0.0496842, 0.0496842, 0.413319, -0.0306948, -0.0233824, -0.0031632, -0.0745548, 0.0716357, 0.011443, 0.0350738, 0.0277614, 0.413319, 0.0496842, -0.0306948, 0.011443, 0.0716357, -0.0526176, 0.413319, 0.020449, 0.020449, 0.413319, -0.0526176, 0.0277614, 0.00411698, -0.0745548, 0.0496842, 0.413319, 0.0277614, -0.0233824, 0.464555, -0.01607, -0.05993, 0.011443, -0.0526176, -0.0526176, 0.413319, -0.0233824, 0.0716357, 0.011443, -0.0306948, -0.0672424, 0.011443, 0.0423719, 0.0569966, -0.0031632, 0.0569966, -0.0233824, 0.413319, -0.0526176, 0.0131366, 0.464555, -0.0233824, 0.0423719, 0.011443, -0.0672424, -0.0453052, -0.0031632, 0.0643233, -0.01607, 0.464555, 0.020449, -0.0526176, 0.011443, -0.05993, 0.0350738, 0.413319, -0.0453052, -0.0453052, 0.413319, 0.0350738, -0.0745548, 0.011443, -0.0233824, -0.0233824, 0.011443, -0.0745548)
+
+[node name="porte_chandelle_haut" type="Node3D"]
+
+[node name="HighCandleHolder" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("1_u4g67")
+surface_material_override/0 = SubResource("StandardMaterial3D_p5rgj")
+surface_material_override/1 = SubResource("StandardMaterial3D_vm0ig")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HighCandleHolder"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HighCandleHolder/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cpvpv")

@@ -1,0 +1,144 @@
+[gd_scene load_steps=14 format=3 uid="uid://dafswrxswmo6p"]
+
+[ext_resource type="Script" path="res://scenes/item/roman_histoire_i.gd" id="1_4ghe7"]
+[ext_resource type="ArrayMesh" uid="uid://dqkkba4knioan" path="res://modeles3d/roman.obj" id="2_d0r2c"]
+[ext_resource type="Texture2D" uid="uid://b3sfia7xl4ygr" path="res://images/textures/livre_histoire_C.png" id="3_gsq01"]
+[ext_resource type="Texture2D" uid="uid://85ela27pmv87" path="res://images/textures/livre_histoire.png" id="4_fro0h"]
+[ext_resource type="Texture2D" uid="uid://cmb0jaj4otxry" path="res://images/textures/livre_pages.png" id="5_0h15s"]
+[ext_resource type="Texture2D" uid="uid://qmsjy3t8hngk" path="res://images/textures/livre_interieur.png" id="6_o20oc"]
+[ext_resource type="FontFile" uid="uid://cvib4ohcbk4hx" path="res://autres/Cardinal-Alternate.ttf" id="7_s44pm"]
+[ext_resource type="AudioStream" uid="uid://clv1y3wvgjpw1" path="res://sons/page-flip-47177.wav" id="8_4bw4e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5iba8"]
+albedo_texture = ExtResource("3_gsq01")
+metallic = 0.5
+uv1_scale = Vector3(1.95, 1.95, 1.95)
+uv1_offset = Vector3(0, 0.01, 0)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y2v2i"]
+albedo_texture = ExtResource("4_fro0h")
+metallic = 0.5
+uv1_scale = Vector3(6.5, 6.5, 6.5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdp05"]
+albedo_texture = ExtResource("5_0h15s")
+metallic = 0.5
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mx7mf"]
+points = PackedVector3Array(0.073337, 0.000943199, 0.0545651, -0.0708923, -0.0146, -0.0468462, -0.0708923, -0.0146, 0.0484061, -0.0736546, 0.0147611, -0.0487884, 0.0708923, -0.0146, -0.0468462, 0.0736546, 0.0147611, -0.0487884, -0.0718529, 0.0143951, 0.0490213, 0.0708923, -0.0146, 0.0484061, 0.0718529, 0.0143951, 0.0490213, -0.0733159, -0.00134287, 0.0545503, 0.0723288, -0.0126311, 0.0515862, -0.072679, 0.0122913, 0.0518214, -0.0723288, -0.0126311, 0.0515862, 0.072679, 0.0122913, 0.0518214, 0.0733159, -0.00134287, 0.0545503, -0.073337, 0.000943199, 0.0545651)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqmty"]
+size = Vector3(0.149719, 0.0304871, 0.10553)
+
+[node name="roman_histoire_I" type="Node3D" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0146676, 0)
+script = ExtResource("1_4ghe7")
+
+[node name="Roman" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = ExtResource("2_d0r2c")
+surface_material_override/0 = SubResource("StandardMaterial3D_5iba8")
+surface_material_override/1 = SubResource("StandardMaterial3D_y2v2i")
+surface_material_override/2 = SubResource("StandardMaterial3D_wdp05")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Roman"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Roman/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_mx7mf")
+
+[node name="La guerre des tréfonds" type="StaticBody3D" parent="." groups=["lisible"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="La guerre des tréfonds" groups=["lisible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000274658, 0.000167847, 0.00302124)
+shape = SubResource("BoxShape3D_dqmty")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(576, 325)
+scale = Vector2(2.72917, 2.44531)
+texture = ExtResource("6_o20oc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_s44pm")
+text = "I
+La guerre des tréfonds
+1350 fut l'année de l'une des plus grande victoire de l'humanité.
+C'est l'année ou les surfaçants gagnèrent contre les anciens une guerre qui durait depuis des millénaires.
+"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_s44pm")
+text = "                         II
+Ceux-ci portaient jusque-là un autre nom, mais les clercs ont interdient toute mention de ce nom après la victoire.
+
+(Retour pour tourner la page)"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+visible = false
+offset_left = -159.023
+offset_top = -97.7381
+offset_right = -2.02267
+offset_bottom = 84.2619
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_s44pm")
+text = "III
+On ne sait trop comment cette victoire fut acquise, mais une chose est certaine;
+les anciens étaient jusque-là militairement et technologiquement beaucoup plus puissants que les surfaçants...
+"
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer/Sprite2D"]
+visible = false
+offset_left = 17.9542
+offset_top = -99.7828
+offset_right = 174.954
+offset_bottom = 82.2172
+theme_override_colors/default_color = Color(0.317757, 0.232593, 0.157356, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_s44pm")
+text = "                        IV
+
+
+
+(Retour pour fermer le livre)"
+scroll_active = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4bw4e")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="timer_page" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="timer_page" to="." method="_on_timer_page_timeout"]

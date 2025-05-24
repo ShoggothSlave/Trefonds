@@ -16,8 +16,8 @@ uv1_scale = Vector3(0.1, 0.1, 0.1)
 uv1_triplanar = true
 texture_filter = 0
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wy6ty"]
-points = PackedVector3Array(0.0227389, 0.403452, -0.0610342, -0.00233062, 0.296865, -0.44345, -0.00233062, 0.303136, -0.449735, 0.0415497, 0.347029, -0.374438, 0.0227389, 0.296865, -0.0484651, -0.00233062, 0.403452, -0.44345, -0.00233062, 0.384631, -0.0484651, -0.00233062, 0.296865, -0.0484651, 0.0227389, 0.403452, -0.44345, 0.0227389, 0.296865, -0.44345, 0.0415497, 0.359549, -0.130007, -0.00233062, 0.403452, -0.0610342, 0.0415497, 0.359549, -0.374438, 0.0415497, 0.347029, -0.130007, 0.0227389, 0.384631, -0.0484651, 0.0227389, 0.390911, -0.449735, 0.0227389, 0.303136, -0.449735, -0.00233062, 0.390911, -0.449735, 0.0227389, 0.397182, -0.0547496, -0.00233062, 0.397182, -0.0547496)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ma5w0"]
+size = Vector3(0.0206146, 0.1026, 0.395264)
 
 [node name="rack_a_clees" type="Node3D"]
 
@@ -33,4 +33,5 @@ collision_layer = 4
 collision_mask = 19
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RackAClees/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_wy6ty")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0108871, 0.348785, -0.249634)
+shape = SubResource("BoxShape3D_ma5w0")

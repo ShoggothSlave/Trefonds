@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=3 uid="uid://d2l1ecp6m2dkd"]
+
+[ext_resource type="Script" path="res://scenes/deco/water_volume_model.gd" id="1_uqtyq"]
+[ext_resource type="PackedScene" uid="uid://c4ypbrmhn5akc" path="res://scenes/deco/water_surface_modele.tscn" id="2_qwae3"]
+[ext_resource type="AudioStream" uid="uid://c1j2b4urd83k0" path="res://sons/underwater-white-noise-46423.wav" id="3_7occ0"]
+[ext_resource type="AudioStream" uid="uid://iioy1s44f6mh" path="res://sons/water-on-rocks-calm-manitoulin-49557.wav" id="4_485m8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upncp"]
+transparency = 1
+albedo_color = Color(0.0117647, 0, 0.168627, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ccun5"]
+size = Vector3(2.51912, 1, 2.51367)
+
+[sub_resource type="Animation" id="Animation_5qe6n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_nen2k"]
+resource_name = "water_sound"
+length = 182.18
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgbq0"]
+_data = {
+"RESET": SubResource("Animation_5qe6n"),
+"water_sound": SubResource("Animation_nen2k")
+}
+
+[sub_resource type="Animation" id="Animation_nhhnf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_vloma"]
+resource_name = "subwater_sound"
+length = 7.39
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q5v7x"]
+_data = {
+"RESET": SubResource("Animation_nhhnf"),
+"subwater_sound": SubResource("Animation_vloma")
+}
+
+[node name="water_volume_model_double" type="Node3D"]
+script = ExtResource("1_uqtyq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0.5, -1, 0.5)
+layers = 4
+size = Vector3(1, 2, 1)
+material = SubResource("StandardMaterial3D_upncp")
+
+[node name="water_surface_modele" parent="." instance=ExtResource("2_qwae3")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.5, 0.007, 0.5)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.488651, -1.26078, 0.505859)
+shape = SubResource("BoxShape3D_ccun5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7occ0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_485m8")
+max_distance = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CSGBox3D")
+libraries = {
+"": SubResource("AnimationLibrary_cgbq0")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q5v7x")
+}
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

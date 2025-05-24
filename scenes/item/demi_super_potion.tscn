@@ -33,6 +33,7 @@ radius = 0.113369
 script = ExtResource("1_ciagj")
 
 [node name="DemiSuperPotion" type="MeshInstance3D" parent="."]
+layers = 4
 mesh = ExtResource("1_j8mmj")
 surface_material_override/0 = SubResource("StandardMaterial3D_2byji")
 surface_material_override/1 = SubResource("StandardMaterial3D_0e1ik")

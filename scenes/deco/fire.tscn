@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://micnnkvj30ck"]
+[gd_scene load_steps=27 format=3 uid="uid://micnnkvj30ck"]
 
+[ext_resource type="Script" path="res://scenes/deco/fire.gd" id="1_p7mh4"]
 [ext_resource type="Texture2D" uid="uid://fmfplotp0fhg" path="res://images/textures/Smoke30Frames.png" id="1_vxaa2"]
 [ext_resource type="Texture2D" uid="uid://ccs31kb3hiwxf" path="res://images/textures/Spark.png" id="2_q76ic"]
 
@@ -169,6 +170,7 @@ material = SubResource("StandardMaterial3D_x6y3l")
 size = Vector2(0.2, 0.2)
 
 [node name="Fire" type="Node3D"]
+script = ExtResource("1_p7mh4")
 
 [node name="fire" type="GPUParticles3D" parent="."]
 layers = 4

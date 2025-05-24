@@ -1,0 +1,432 @@
+[gd_scene load_steps=19 format=3 uid="uid://c0pslw7aj63pq"]
+
+[ext_resource type="Script" path="res://scenes/deco/foyer.gd" id="1_rhk78"]
+[ext_resource type="PackedScene" uid="uid://micnnkvj30ck" path="res://scenes/deco/fire.tscn" id="3_qoffw"]
+[ext_resource type="AudioStream" uid="uid://dfv1xlxinliyv" path="res://sons/campfirefireplace-crackling-268525.wav" id="4_84xsm"]
+[ext_resource type="AudioStream" uid="uid://benlhymptoc62" path="res://sons/food-cooking-in-oil-178795.wav" id="5_dxje3"]
+[ext_resource type="Texture2D" uid="uid://c6olaiphm33sl" path="res://images/autresimages/RawFriedMeat.png" id="6_ngumy"]
+[ext_resource type="Texture2D" uid="uid://b5fc2ueirvuhs" path="res://images/items/moss.png" id="8_5yqf4"]
+[ext_resource type="AudioStream" uid="uid://dwb5rj5ayxxo2" path="res://sons/flint-strike-38491.wav" id="9_4cheo"]
+[ext_resource type="PackedScene" uid="uid://c5j77c55s5l8m" path="res://scenes/tiles_brik/brique.tscn" id="10_atb5r"]
+[ext_resource type="Texture2D" uid="uid://bin8sfojx2pan" path="res://images/textures/cendres.png" id="10_ctijs"]
+[ext_resource type="Texture2D" uid="uid://m6q7p5qwyami" path="res://images/textures/foyer.png" id="11_1ah4h"]
+[ext_resource type="PackedScene" uid="uid://wvj4l8isgwxn" path="res://scenes/tiles_brik/cube_brik_gris.tscn" id="11_33k38"]
+[ext_resource type="PackedScene" uid="uid://byq5sdublf1kj" path="res://scenes/deco/buche.tscn" id="12_nhv7a"]
+
+[sub_resource type="Animation" id="Animation_0mp0d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:omni_range")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OmniLight3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.153, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("viande:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jo5sp"]
+resource_name = "animfire"
+length = 8.0
+loop_mode = 1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:omni_range")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.525, 0.575, 0.65, 1.325, 1.375, 1.4, 1.55, 1.625, 1.7, 3.25, 3.275, 3.3, 3.35, 3.425, 4.2, 4.25, 4.475, 4.525, 4.875, 4.9, 4.925, 5.05, 5.075, 5.125, 5.15, 5.525, 5.55, 5.575, 5.6, 6.775, 6.8, 6.975, 7, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0, 1.0, 2.0, 2.0, 0.5, 2.0, 2.0, 0.0, 2.0, 2.0, 2.0, 2.0, 0.25, 0.25, 2.0, 2.0, 0.1, 2.0, 2.0, 0.2, 0.2, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 1.0, 1.0, 2.0, 2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.525, 0.575, 0.6, 0.65, 1.325, 1.375, 1.4, 1.55, 1.625, 1.7, 3.25, 3.275, 3.3, 3.35, 3.425, 4.2, 4.25, 4.475, 4.525, 4.875, 4.9, 4.925, 5.05, 5.075, 5.125, 5.15, 5.525, 5.55, 5.575, 5.6, 6.775, 6.8, 6.975, 7, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0, 2.0, 1.0, 2.0, 2.0, 0.5, 2.0, 2.0, 0.0, 2.0, 2.0, 2.0, 2.0, 0.25, 0.25, 2.0, 2.0, 0.1, 2.0, 2.0, 0.2, 0.2, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 1.0, 1.0, 2.0, 2.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OmniLight3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2.575, 3.75, 6.125, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.153, 0), Vector3(0.1, 0.153, 0), Vector3(-0.015, 0.153, 0.1), Vector3(-0.1, 0.153, 0), Vector3(-0.044, 0.153, -0.1), Vector3(0, 0.153, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("viande:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+
+[sub_resource type="Animation" id="Animation_pmxbb"]
+resource_name = "cooking"
+length = 6.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioCooking:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("viande:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("viande:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.5, 6.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 1]
+}
+
+[sub_resource type="Animation" id="Animation_ve2x7"]
+resource_name = "shuttedfire"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fire:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OmniLight3D:omni_range")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a70vh"]
+_data = {
+"RESET": SubResource("Animation_0mp0d"),
+"animfire": SubResource("Animation_jo5sp"),
+"cooking": SubResource("Animation_pmxbb"),
+"shuttedfire": SubResource("Animation_ve2x7")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ekkhl"]
+height = 0.681629
+radius = 1.12001
+
+[node name="foyer" type="Node3D"]
+script = ExtResource("1_rhk78")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.153, 0)
+layers = 4
+light_color = Color(0.679125, 0.425071, 0.0288711, 1)
+light_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+omni_range = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.136759, -0.379294)
+stream = ExtResource("4_84xsm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a70vh")
+}
+
+[node name="AudioCooking" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.379294)
+stream = ExtResource("5_dxje3")
+
+[node name="viande" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.437359, -0.379294)
+visible = false
+layers = 4
+billboard = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("6_ngumy")
+hframes = 2
+frame = 1
+
+[node name="Firelife" type="Timer" parent="."]
+wait_time = 900.0
+
+[node name="Cookingzone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.379294)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cookingzone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.354549, 0)
+shape = SubResource("CylinderShape3D_ekkhl")
+
+[node name="TimerCook" type="Timer" parent="."]
+wait_time = 6.7
+one_shot = true
+
+[node name="Timertakemeat" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="moss" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0971222, -0.379294)
+visible = false
+layers = 4
+billboard = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("8_5yqf4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_4cheo")
+
+[node name="Timermeat" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Fire" parent="." instance=ExtResource("3_qoffw")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.136759, -0.379294)
+visible = false
+script = null
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.00563151, -0.45717)
+layers = 4
+shaded = true
+texture_filter = 0
+texture = ExtResource("10_ctijs")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.777745, 0, 0, 0, 0.802419, -0.0189357, 0, 0.0151971, 0.999821, 0, 0.484976, 0)
+layers = 4
+shaded = true
+texture_filter = 0
+texture = ExtResource("11_1ah4h")
+
+[node name="brique" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.174493, 0.81855, 0.0339888)
+
+[node name="brique2" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(0.965071, 0.261987, 0, -0.261987, 0.965071, 0, 0, 0, 1, 0.0940253, 0.822188, 0.0383864)
+
+[node name="brique3" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(0.770235, 0.63776, 0, -0.63776, 0.770235, 0, 0, 0, 1, 0.353408, 0.771822, 0.0206416)
+
+[node name="brique4" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(0.551355, 0.834271, 0, -0.834271, 0.551355, 0, 0, 0, 1, 0.576834, 0.611584, 0.0360494)
+
+[node name="brique5" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(0.30988, 0.950776, 0, -0.950776, 0.30988, 0, 0, 0, 1, 0.717657, 0.449487, 0.023482)
+
+[node name="brique6" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(0.0134385, 0.99991, 0, -0.99991, 0.0134385, 0, 0, 0, 1, 0.800666, 0.320336, 0.0282845)
+
+[node name="brique7" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(-0.965071, -0.261987, 8.74228e-08, -0.261987, 0.965071, 0, -8.43692e-08, -2.29036e-08, -1, -0.0706125, 0.822188, -0.0465455)
+
+[node name="brique8" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(-0.770235, -0.63776, 8.74228e-08, -0.63776, 0.770235, 0, -6.73361e-08, -5.57548e-08, -1, -0.329996, 0.771822, -0.0479024)
+
+[node name="brique9" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(-0.551355, -0.834271, 8.74228e-08, -0.834271, 0.551355, 0, -4.8201e-08, -7.29343e-08, -1, -0.553421, 0.611584, -0.0442085)
+
+[node name="brique10" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(-0.30988, -0.950776, 8.74228e-08, -0.950776, 0.30988, 0, -2.70906e-08, -8.31195e-08, -1, -0.694244, 0.449487, -0.0507428)
+
+[node name="brique11" parent="." instance=ExtResource("10_atb5r")]
+transform = Transform3D(-0.0134385, -0.99991, 8.74228e-08, -0.99991, 0.0134385, 0, -1.17483e-09, -8.74149e-08, -1, -0.774339, 0.320336, -0.0316412)
+
+[node name="cube_brik_gris" parent="." instance=ExtResource("11_33k38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.5, -0.5)
+
+[node name="cube_brik_gris2" parent="." instance=ExtResource("11_33k38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, -0.5)
+
+[node name="cube_brik_gris3" parent="." instance=ExtResource("11_33k38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, -1.5)
+
+[node name="cube_brik_gris4" parent="." instance=ExtResource("11_33k38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -1.5)
+
+[node name="buche" parent="." instance=ExtResource("12_nhv7a")]
+transform = Transform3D(0.620299, -0.589464, -0.517456, 0, 0.659713, -0.751518, 0.784365, 0.466166, 0.40922, -0.0617101, 0.098485, -0.344474)
+visible = false
+
+[node name="buche2" parent="buche" instance=ExtResource("12_nhv7a")]
+transform = Transform3D(-0.560249, -0.6225, -0.546457, 0.622501, 0.118805, -0.773549, 0.546457, -0.773549, 0.320946, -0.074853, -0.128671, -0.112953)
+
+[node name="buche3" parent="buche" instance=ExtResource("12_nhv7a")]
+transform = Transform3D(-0.180124, 0.739225, 0.648923, -0.739226, 0.333491, -0.585089, -0.648923, -0.585089, 0.486384, 0.0962104, -0.091134, -0.0800012)
+
+[connection signal="timeout" from="Firelife" to="." method="_on_firelife_timeout"]
+[connection signal="body_entered" from="Cookingzone" to="." method="_on_cookingzone_body_entered"]
+[connection signal="timeout" from="TimerCook" to="." method="_on_timer_cook_timeout"]
+[connection signal="timeout" from="Timertakemeat" to="." method="_on_timertakemeat_timeout"]
+[connection signal="timeout" from="Timermeat" to="." method="_on_timermeat_timeout"]

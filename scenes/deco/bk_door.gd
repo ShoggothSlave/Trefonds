@@ -42,3 +42,9 @@ func _fermer():
 func _on_close_timer_timeout() -> void:
 	$anim_door.play("close")
 	opened = false
+	self.remove_from_group("fermable")
+	$penture/porte.remove_from_group("fermable")
+	$penture/porte/porte.remove_from_group("fermable")
+	self.add_to_group("ouvrable")
+	$penture/porte.add_to_group("ouvrable")
+	$penture/porte/porte.add_to_group("ouvrable")

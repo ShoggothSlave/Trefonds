@@ -17,6 +17,6 @@ func _on_area_gourde_mouse_exited() -> void:
 func _on_area_gourde_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
 	if Input.is_action_just_released("attaque"):
 		if InventoryManager.gourde > 0:
-			InventoryManager.gourde = InventoryManager.gourde -1
+			InventoryManager.gourde -= 1
 			Manager.soif += 25
 			$audio_boire.play()

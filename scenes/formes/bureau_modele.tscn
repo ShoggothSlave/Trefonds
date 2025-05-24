@@ -106,6 +106,9 @@ layers = 4
 material_override = SubResource("StandardMaterial3D_ey08p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube_009" index="0"]
+visible = false
+collision_layer = 4
+collision_mask = 19
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_009/StaticBody3D" index="0"]
 shape = SubResource("ConvexPolygonShape3D_gyll0")
@@ -121,6 +124,8 @@ layers = 4
 material_override = SubResource("StandardMaterial3D_ey08p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube_003" index="0"]
+collision_layer = 4
+collision_mask = 19
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_003/StaticBody3D" index="0"]
 shape = SubResource("ConvexPolygonShape3D_1ruvp")
@@ -130,6 +135,8 @@ layers = 4
 material_override = SubResource("StandardMaterial3D_ey08p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube_004" index="0"]
+collision_layer = 4
+collision_mask = 19
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_004/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_gvqn2")
