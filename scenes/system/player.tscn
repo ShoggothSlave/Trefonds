@@ -1063,6 +1063,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 current = true
 fov = 37.8493
+far = 500.0
 
 [node name="player_raycast" type="RayCast3D" parent="player/head_original_position/player_head/player_camera" groups=["activable", "cuisinable", "deverrouillable", "fragile", "inflammable", "inspectable", "lisible", "monstres", "prehensible", "repos"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

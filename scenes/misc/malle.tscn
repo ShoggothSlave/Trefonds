@@ -1,0 +1,157 @@
+[gd_scene load_steps=10 format=3 uid="uid://osmcyvcuackm"]
+
+[ext_resource type="Script" path="res://scenes/misc/malle.gd" id="1_8f0q6"]
+[ext_resource type="PackedScene" uid="uid://ddiyvau4u2am8" path="res://scenes/misc/malle_bas.tscn" id="1_d75xn"]
+[ext_resource type="PackedScene" uid="uid://dbtcb6pviypbp" path="res://scenes/misc/malle_haut.tscn" id="2_fjaua"]
+[ext_resource type="AudioStream" uid="uid://c6h35vs5was0a" path="res://sons/wood-creak-single-v3-14657.wav" id="3_etmpt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3cea4"]
+size = Vector3(0.177948, 0.155457, 0.153564)
+
+[sub_resource type="Animation" id="Animation_gfape"]
+resource_name = "ouvrir"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("malle_haut:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0496569, 0.0505449, 0), Vector3(-0.0828947, 0.112649, 0), Vector3(-0.0970933, 0.232489, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("malle_haut:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.283026), Vector3(0, 0, -0.566053), Vector3(0, 0, -1.0472)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_od2oo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("malle_haut:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("malle_haut:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_law60"]
+resource_name = "fermer"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("malle_haut:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.566667, 0.9, 1.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0970933, 0.232489, 0), Vector3(-0.0832407, 0.112722, 0), Vector3(-0.0502464, 0.0506556, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("malle_haut:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.566667, 0.9, 1.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.0472), Vector3(0, 0, -0.566053), Vector3(0, 0, -0.283026), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlayl"]
+_data = {
+"RESET": SubResource("Animation_od2oo"),
+"fermer": SubResource("Animation_law60"),
+"ouvrir": SubResource("Animation_gfape")
+}
+
+[node name="malle" type="Node3D" groups=["ouvrable"]]
+script = ExtResource("1_8f0q6")
+
+[node name="malle_bas" parent="." instance=ExtResource("1_d75xn")]
+
+[node name="Malle" type="MeshInstance3D" parent="malle_bas" groups=["ouvrable"]]
+layers = 4
+
+[node name="Malle" type="StaticBody3D" parent="malle_bas/Malle" groups=["ouvrable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="malle_bas/Malle/Malle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123042, 0.202889, -0.0020752)
+shape = SubResource("BoxShape3D_3cea4")
+
+[node name="malle_haut" parent="." instance=ExtResource("2_fjaua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mlayl")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_etmpt")
+max_distance = 2.0
+
+[node name="close_timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[connection signal="timeout" from="close_timer" to="." method="_on_close_timer_timeout"]

@@ -11,4 +11,4 @@
 [node name="Niveau1" parent="." instance=ExtResource("2_aj7as")]
 
 [node name="player" parent="." instance=ExtResource("3_d6n0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428132, 15.0036, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428132, 15.0036, -1.04789)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2nhx5vf07u7s"]
+
+[ext_resource type="ArrayMesh" uid="uid://dti0xpvvvpxil" path="res://modeles3d/savon.obj" id="1_7o223"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go0n2"]
+albedo_color = Color(0.933821, 0.70168, 0.384483, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nm13m"]
+points = PackedVector3Array(-0.0110451, -0.00441746, -0.0152381, 0.012442, -0.00314749, 0.0158705, -0.0116801, -0.00314749, 0.0184122, -0.00914013, 0.00637619, -0.0171394, 0.011807, -0.00314749, -0.0184122, 0.00990203, 0.00637619, 0.0165069, -0.0116801, 0.00574121, 0.0177758, 0.011807, 0.00574121, -0.0171394, 0.00990203, -0.00441746, 0.0177758, -0.0116801, 0.00510622, -0.0184122, 0.00990203, 0.00510622, 0.0203175, -0.00977511, -0.00314749, -0.0203175, 0.00990203, 0.00510622, -0.0203175, 0.010537, -0.00441746, -0.0171394, -0.00977511, -0.00378248, 0.019681, -0.0123126, -0.00314749, -0.0171394, 0.012442, 0.00510622, 0.0158666, -0.0110451, -0.00441746, 0.0152381, -0.00977511, 0.00510622, 0.0203175, 0.00990203, -0.00314749, 0.0203175, -0.00914013, 0.00637619, 0.0171394, 0.00990203, 0.00637619, -0.0165069, -0.0123126, 0.00510622, 0.0171394, 0.012442, -0.00314749, -0.0158705, 0.00990203, -0.00314749, -0.0203175, -0.00977511, 0.00510622, -0.0203175, -0.0123126, -0.00378248, 0.0146017, -0.0123126, 0.00510622, -0.0171394, 0.012442, 0.00510622, -0.0158666, -0.00977511, -0.00314749, 0.0203175, -0.00977511, -0.00441746, -0.0177758, -0.0104101, 0.00637619, -0.0152381)
+
+[node name="savon" type="Node3D"]
+
+[node name="Savon" type="MeshInstance3D" parent="."]
+layers = 4
+material_override = SubResource("StandardMaterial3D_go0n2")
+mesh = ExtResource("1_7o223")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Savon"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Savon/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nm13m")

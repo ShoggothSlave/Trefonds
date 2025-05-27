@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp4tyub5nt2dt"
+path="res://.godot/imported/ti_banc.obj-e1f080888e0fe25102c3870ecb43c57e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ti_banc.obj-e1f080888e0fe25102c3870ecb43c57e.mesh"]
+
+source_file="res://modeles3d/ti_banc.obj"
+dest_files=["res://.godot/imported/ti_banc.obj-e1f080888e0fe25102c3870ecb43c57e.mesh", "res://.godot/imported/ti_banc.obj-e1f080888e0fe25102c3870ecb43c57e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

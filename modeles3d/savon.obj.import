@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dti0xpvvvpxil"
+path="res://.godot/imported/savon.obj-d1f76895dd4001e2ce01d7382d035539.mesh"
+
+[deps]
+
+files=["res://.godot/imported/savon.obj-d1f76895dd4001e2ce01d7382d035539.mesh"]
+
+source_file="res://modeles3d/savon.obj"
+dest_files=["res://.godot/imported/savon.obj-d1f76895dd4001e2ce01d7382d035539.mesh", "res://.godot/imported/savon.obj-d1f76895dd4001e2ce01d7382d035539.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

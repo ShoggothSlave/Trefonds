@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://gslxhqsmd7bi"]
+
+[ext_resource type="Script" path="res://scenes/misc/sarcophage.gd" id="1_hafmx"]
+[ext_resource type="PackedScene" uid="uid://t4c64hj8tn4o" path="res://scenes/formes/sarco_base.tscn" id="1_soilm"]
+[ext_resource type="PackedScene" uid="uid://bpi628b6crp08" path="res://scenes/formes/sarco_couvercle.tscn" id="2_me385"]
+[ext_resource type="AudioStream" uid="uid://b4y3lor628bx2" path="res://sons/stoneblockdragwoodgrind-82327.wav" id="4_sydhh"]
+[ext_resource type="PackedScene" uid="uid://cm0dmgdfdd65w" path="res://scenes/deco/skull.tscn" id="5_8hyd5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75nq2"]
+size = Vector3(0.300888, 0.0442047, 0.702057)
+
+[sub_resource type="Animation" id="Animation_pssrg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sarco_couvercle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sarco_couvercle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uff16"]
+resource_name = "ouvrir"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sarco_couvercle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1), Vector3(-0.0248967, 0, 0.864108)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sarco_couvercle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.387166, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h85dh"]
+_data = {
+"RESET": SubResource("Animation_pssrg"),
+"ouvrir": SubResource("Animation_uff16")
+}
+
+[node name="sarcophage" type="Node3D" groups=["ouvrable"]]
+script = ExtResource("1_hafmx")
+
+[node name="sarco_base" parent="." instance=ExtResource("1_soilm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="sarco_couvercle" parent="." instance=ExtResource("2_me385")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Sarcophage" type="Node3D" parent="sarco_couvercle" groups=["ouvrable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Sarcophage" type="StaticBody3D" parent="sarco_couvercle/Sarcophage" groups=["ouvrable"]]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sarco_couvercle/Sarcophage/Sarcophage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499143, 0.226143, 0.50007)
+shape = SubResource("BoxShape3D_75nq2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h85dh")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.510822, 0.261484, 0.543003)
+stream = ExtResource("4_sydhh")
+
+[node name="skull" parent="." instance=ExtResource("5_8hyd5")]
+transform = Transform3D(1.04506, 0.298761, -0.617329, 0, 1.12516, 0.54453, 0.685823, -0.455252, 0.940687, 0.523655, 0.0435993, 0.297772)

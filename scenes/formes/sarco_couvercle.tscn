@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpi628b6crp08"]
+
+[ext_resource type="PackedScene" uid="uid://de3b3aghlvruh" path="res://modeles3d/sarco_couvercle.glb" id="1_4jded"]
+[ext_resource type="Texture2D" uid="uid://bwvs6ra1eibih" path="res://images/textures/béton.png" id="2_dhy4i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6w2vh"]
+albedo_texture = ExtResource("2_dhy4i")
+metallic = 0.5
+uv1_scale = Vector3(3, 2, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ije64"]
+points = PackedVector3Array(-0.952629, -0.796575, -0.952628, 0.983168, 0.55533, 0.983204, 0.982943, -0.642562, 0.982979, 0.983168, 0.55533, -0.983204, -0.93093, 0.9024, 0.962037, -0.932442, -0.899138, 0.9636, 0.932436, -0.899169, -0.963632, -0.93093, 0.9024, -0.962037, 0.930892, 0.9024, -0.962037, 0.930892, 0.9024, 0.962037, 0.932436, -0.899169, 0.963632, -0.98317, 0.555311, 0.98317, -0.932442, -0.899138, -0.9636, -0.982947, -0.64254, -0.982946, -0.98317, 0.555311, -0.98317, 0.982943, -0.642562, -0.982979, -0.982947, -0.64254, 0.982946, -0.953692, 0.67922, -0.98453, -0.953692, 0.67922, 0.98453, 0.953544, -0.735896, 0.984416, 0.953544, -0.735896, -0.984416, 0.953655, 0.67922, -0.98453, 0.953655, 0.67922, 0.98453, -0.953582, -0.735896, 0.984416, -0.953582, -0.735896, -0.984416)
+
+[node name="sarco_couvercle" instance=ExtResource("1_4jded")]
+
+[node name="Cube_002" parent="." index="0"]
+transform = Transform3D(-0.15, 0, -3.0598e-08, 0, 0.025, 0, 1.31134e-08, 0, -0.35, 0.5, 0.223801, -0.5)
+material_override = SubResource("StandardMaterial3D_6w2vh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_002" index="0"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_002/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_ije64")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://yo8qerueqweo"]
+
+[ext_resource type="PackedScene" uid="uid://d3xpciac6trhu" path="res://modeles3d/flaque_trouee.glb" id="1_bmlke"]
+[ext_resource type="Texture2D" uid="uid://if3tykagcst6" path="res://images/textures/y2k_water_texture.png" id="2_gmprc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcguk"]
+transparency = 1
+albedo_color = Color(0.245282, 0.241821, 0.224522, 0.392157)
+roughness = 0.1
+normal_enabled = true
+normal_scale = 0.2
+normal_texture = ExtResource("2_gmprc")
+refraction_enabled = true
+uv1_scale = Vector3(1, 1, 0)
+
+[node name="flaque_trouee" instance=ExtResource("1_bmlke")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.16383, 1.19209e-07, 1.06799)
+
+[node name="Plan" parent="." index="0"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_qcguk")

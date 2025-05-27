@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://if3tykagcst6" path="res://images/textures/y2k_water_texture.png" id="1_1ucxq"]
 [ext_resource type="ArrayMesh" uid="uid://di0spyohhgngp" path="res://modeles3d/flaque.obj" id="2_g36c7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8137t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e36vu"]
 transparency = 1
-albedo_color = Color(0, 0.0196078, 0.121569, 0.392157)
+albedo_color = Color(0.245282, 0.241821, 0.224522, 0.392157)
 roughness = 0.1
 normal_enabled = true
 normal_scale = 0.2
@@ -18,5 +18,5 @@ uv1_scale = Vector3(1, 1, 0)
 [node name="Flaque" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00762956, 1)
 layers = 4
-material_override = SubResource("StandardMaterial3D_8137t")
+material_override = SubResource("StandardMaterial3D_e36vu")
 mesh = ExtResource("2_g36c7")

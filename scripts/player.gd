@@ -6,7 +6,7 @@ var speed
 var walk_speed = 1
 var sprint_speed = 2
 var jump_velocity = 5.0
-var sensitivity = 0.003
+var sensitivity = 0.002
 
 #bob head variables
 const bob_freq = 5.0

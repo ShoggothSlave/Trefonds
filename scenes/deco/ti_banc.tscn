@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://d35jsll01l77q"]
+
+[ext_resource type="ArrayMesh" uid="uid://cp4tyub5nt2dt" path="res://modeles3d/ti_banc.obj" id="1_xsdi5"]
+[ext_resource type="Texture2D" uid="uid://dkntanv7dyaq1" path="res://images/textures/boisplain.png" id="2_wl4t6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57xxe"]
+albedo_texture = ExtResource("2_wl4t6")
+metallic = 0.5
+roughness = 0.75
+uv1_scale = Vector3(2, 2, 1)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lltkd"]
+points = PackedVector3Array(-0.133089, 0.18254, -0.912593, 0.168497, 0.277768, 0.00773764, -0.164836, 0.277768, 0.00773764, 0.168497, 0.277768, -1.00774, 0.136749, 0.18254, -0.0874072, -0.164836, 0.277768, -1.00774, -0.133089, 0.18254, -0.0874072, 0.136749, 0.18254, -0.912593, 0.168497, 0.230154, -1.00774, -0.164836, 0.230154, 0.00773764, -0.164836, 0.230154, -1.00774, 0.168497, 0.230154, 0.00773764)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gvgol"]
+points = PackedVector3Array(-0.121871, 1.38778e-17, -0.910714, 0.120876, 0.182521, -0.880959, 0.1144, 0.177341, -0.911399, 0.136751, -0.00791787, -0.880959, -0.117216, 0.182521, -0.880959, -0.0536912, 0.0397105, -0.865084, -0.1145, 0.180349, -0.912151, 0.125532, -1.38778e-17, -0.910714, -0.13309, -0.00791787, -0.880959, 0.0573779, 0.0873016, -0.865084, 0.136751, 0.0873016, -0.912694, -0.13309, 0.103165, -0.912694, -0.0536912, 0.0873016, -0.865084, -0.13309, 0.103165, -0.880959, 0.0573779, 0.0397105, -0.865084, 0.136751, 0.0873016, -0.880959)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1ndau"]
+points = PackedVector3Array(-0.0537145, 0.0396825, -0.865044, 0.0573748, 0.0872969, -0.5, 0.0573748, 0.0396825, -0.5, 0.0573748, 0.0872969, -0.865044, -0.0537145, 0.0872969, -0.5, -0.0537145, 0.0396825, -0.5, 0.0573748, 0.0396825, -0.865044, -0.0537145, 0.0872969, -0.865044)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_14v7h"]
+points = PackedVector3Array(-0.0537145, 0.0396825, -0.5, 0.0573748, 0.0872969, -0.134921, 0.0573748, 0.0396825, -0.134921, 0.0573748, 0.0872969, -0.5, -0.0537145, 0.0872969, -0.134921, -0.0537145, 0.0396825, -0.134921, 0.0573748, 0.0396825, -0.5, -0.0537145, 0.0872969, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4otua"]
+points = PackedVector3Array(-0.0536912, 0.0397105, -0.134916, 0.1144, 0.177341, -0.0885967, 0.136751, 0.0873016, -0.0873016, -0.13309, 0.103165, -0.0873016, -0.117216, 0.182521, -0.119041, 0.120876, 0.182521, -0.119041, 0.136751, -0.00791787, -0.119041, -0.121871, 1.38778e-17, -0.0892813, -0.13309, -0.00791787, -0.119041, 0.125532, 1.38778e-17, -0.0892813, -0.1145, 0.180349, -0.0878447, 0.0573779, 0.0873016, -0.134916, -0.0536912, 0.0873016, -0.134916, -0.13309, 0.103165, -0.119041, 0.0573779, 0.0397105, -0.134916, 0.136751, 0.0873016, -0.119041)
+
+[node name="ti_banc" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="TiBanc" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
+layers = 4
+mesh = ExtResource("1_xsdi5")
+surface_material_override/0 = SubResource("StandardMaterial3D_57xxe")
+surface_material_override/1 = SubResource("StandardMaterial3D_57xxe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TiBanc"]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TiBanc/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_lltkd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="TiBanc/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_gvgol")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="TiBanc/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1ndau")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="TiBanc/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_14v7h")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="TiBanc/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_4otua")

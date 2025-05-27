@@ -250,5 +250,25 @@ descendre={
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/webp_compression/lossless_compression_factor=20.0
+limits/time/time_rollover_secs=5000.0
+lights_and_shadows/directional_shadow/16_bits=false
+global_illumination/gi/use_half_resolution=true
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+environment/ssil/quality=1
+environment/glow/upscale_mode=0
+limits/global_shader_variables/buffer_size=15000
+global_illumination/sdfgi/frames_to_converge=3
+global_illumination/sdfgi/frames_to_update_lights=3
+environment/volumetric_fog/use_filter=0
+limits/spatial_indexer/update_iterations_per_frame=75
+limits/spatial_indexer/threaded_cull_minimum_instances=400
+limits/cluster_builder/max_clustered_elements=400.0
+limits/opengl/max_renderable_elements=15000
+occlusion_culling/use_occlusion_culling=true
+mesh_lod/lod_change/threshold_pixels=2.0
+lights_and_shadows/positional_shadow/atlas_16_bits=false
+lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=3
