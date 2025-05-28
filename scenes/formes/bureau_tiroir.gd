@@ -46,7 +46,6 @@ func _fouiller():
 	$Tiroir/Tiroir/Tiroir.remove_from_group("fouillable")
 	inspect.start()
 	pb.show()
-	inspect.wait_time = pb.value 
 
 func _on_inspect_timer_timeout() -> void:
 	$inspect_progress.hide()
@@ -116,6 +115,7 @@ func collect_first_item():
 	if item.has_method("_prendre"):
 		_add_prenre_to_SceneTree(item)
 		item._prendre()
+		delete_picked_item(item)
 		current_items.remove_at(0)
 
 	if not current_items.is_empty():
@@ -132,6 +132,7 @@ func collect_other_items():
 
 		_add_prenre_to_SceneTree(item)
 		item._prendre()
+		delete_picked_item(item)
 		current_items.remove_at(i)
 		#prints(current_items,"-", item)
 
@@ -162,3 +163,11 @@ func _process(_delta):
 
 func _add_prenre_to_SceneTree(_item):
 	self.add_child(_item)
+
+func delete_picked_item(_item):
+	if not _item.is_in_group("prehensible"):
+		# only bushes
+		#if ("buisson_a_baies_noires" in _item.name) or ("buisson_a_mirtilles" in _item.name): 
+			#_item.queue_free()
+			
+		_item.queue_free()
